@@ -1,25 +1,52 @@
 const cases = [
   {
-    brand: "Surfer",
-    title: "Surfer Credits Giveaway",
-    tagline: "Always craving more credits? Now you can get some for free! You in?",
+    brand: "SURFER",
+    brandColor: "#E53935",
+    title: "Surfer Credits\nGiveaway",
+    tagline: "Always craving more credits?\nNow you can get some for free! You in?",
     cta: "How it works",
+    bottomText:
+      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
   },
   {
-    brand: "Notion",
-    title: "Notion Template Rewards",
+    brand: "NOTION",
+    brandColor: "#000000",
+    title: "Notion Template\nRewards",
     tagline:
-      "Share your favorite templates and earn premium workspace credits.",
+      "Share your favorite templates\nand earn premium workspace credits.",
     cta: "How it works",
+    bottomText:
+      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
   },
   {
-    brand: "Loom",
-    title: "Loom Pro Unlock",
+    brand: "LOOM",
+    brandColor: "#625DF5",
+    title: "Loom Pro\nUnlock",
     tagline:
-      "Record a video review and unlock Loom Pro features — no strings attached.",
+      "Record a video review and unlock\nLoom Pro features — no strings.",
     cta: "How it works",
+    bottomText:
+      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
   },
 ];
+
+function BrandLogo({ brand, color }: { brand: string; color: string }) {
+  return (
+    <div className="flex items-center gap-2">
+      <div
+        className="h-6 w-6 rounded-md flex items-center justify-center"
+        style={{ backgroundColor: color }}
+      >
+        <span className="text-white text-[10px] font-black leading-none">
+          {brand.charAt(0)}
+        </span>
+      </div>
+      <span className="text-sm font-bold tracking-tight text-white">
+        {brand}
+      </span>
+    </div>
+  );
+}
 
 export default function CaseStudies() {
   return (
@@ -39,34 +66,34 @@ export default function CaseStudies() {
           {cases.map((item) => (
             <div
               key={item.brand}
-              className="group relative rounded-2xl overflow-hidden bg-gradient-to-b from-gray-800 to-gray-950 text-white min-h-[480px] flex flex-col justify-between p-8"
+              className="group relative rounded-2xl overflow-hidden text-white min-h-[480px] flex flex-col"
             >
-              {/* Background pattern */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/60" />
+              {/* Background layers */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(100,100,255,0.15),transparent_60%)]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
 
-              <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-2 leading-snug text-center">
+              {/* Top section — title & tagline */}
+              <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-8 pb-4 text-center">
+                <h3 className="text-2xl font-bold leading-tight whitespace-pre-line mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-white/70 leading-relaxed text-center">
+                <p className="text-sm text-white/60 leading-relaxed whitespace-pre-line">
                   {item.tagline}
                 </p>
-              </div>
 
-              <div className="relative z-10 mt-6">
-                <button className="w-full rounded-full bg-violet-600 hover:bg-violet-700 text-white text-sm font-medium py-3 px-6 transition-colors">
+                {/* CTA button */}
+                <button className="mt-6 w-full max-w-[220px] rounded-full bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium py-3 px-6 transition-colors">
                   {item.cta} &darr;
                 </button>
               </div>
 
-              <div className="relative z-10 mt-4 pt-4 border-t border-white/10">
-                <p className="text-sm text-white/60 leading-relaxed">
-                  Rewards can be fulfilled through various methods. See how{" "}
-                  {item.brand} leveraged RewardBase to grow.
+              {/* Bottom section — description + brand */}
+              <div className="relative z-10 px-6 pb-6 pt-4">
+                <p className="text-sm text-white/50 leading-relaxed font-semibold mb-3">
+                  {item.bottomText}
                 </p>
-                <p className="text-base font-bold mt-2 tracking-tight">
-                  {item.brand.toUpperCase()}
-                </p>
+                <BrandLogo brand={item.brand} color={item.brandColor} />
               </div>
             </div>
           ))}
