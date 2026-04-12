@@ -31,7 +31,7 @@ function RewardRow({
   reward: { platform: string; action: string; reward: string };
 }) {
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-border bg-white p-3 hover:shadow-sm transition-shadow">
+    <div className="flex items-center gap-3 rounded-xl border border-border bg-white px-3 py-2 hover:shadow-sm transition-shadow">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
           <circle cx="12" cy="12" r="10" stroke="#E8503A" strokeWidth="2" />
@@ -58,7 +58,7 @@ function StageCard({ stage }: { stage: string }) {
       <p className="text-sm text-muted mb-4 leading-relaxed">
         {stageDescriptions[stage]}
       </p>
-      <div className="space-y-2.5">
+      <div className="space-y-1.5">
         {rewards.map((r, i) => (
           <RewardRow key={i} reward={r} />
         ))}
@@ -72,53 +72,51 @@ export default function Hero() {
   const [scrollPos, setScrollPos] = useState(0);
 
   return (
-    <section className="pt-20 pb-16 bg-white">
+    <section className="pt-14 pb-12 bg-white">
       <div className="mx-auto max-w-6xl px-6">
         {/* Headline */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1] mb-5">
+        <div className="text-center max-w-3xl mx-auto mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1] mb-3">
             Turn your users into your growth engine
           </h1>
-          <p className="text-lg text-muted leading-relaxed mb-8">
+          <p className="text-lg text-muted leading-relaxed mb-5">
             Start free. Unlimited support for $29/m. Offload to AI for $59/m.
             Live in 3 minutes.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-full bg-foreground text-white text-sm font-medium px-7 py-3 hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-lg bg-foreground text-white text-base font-medium px-7 py-3 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-full border border-border text-foreground text-sm font-medium px-7 py-3 hover:bg-card transition-colors"
+              className="inline-flex items-center justify-center rounded-lg border border-border text-foreground text-base font-medium px-7 py-3 hover:bg-card transition-colors"
             >
               Book Demo
             </a>
           </div>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex items-center justify-center gap-2 mb-10">
-          {categories.map((cat, i) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(i)}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
-                activeCategory === i
-                  ? "bg-foreground text-white"
-                  : "bg-card text-muted hover:bg-card-hover border border-border"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Stage Cards Carousel */}
-        <div className="relative">
-          <div className="flex items-center justify-end gap-2 mb-4">
+        {/* Category Tabs + Carousel Arrows */}
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-2">
+            {categories.map((cat, i) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(i)}
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+                  activeCategory === i
+                    ? "bg-foreground text-white"
+                    : "bg-card text-muted hover:bg-card-hover border border-border"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center gap-2">
             <button
               onClick={() => setScrollPos(Math.max(0, scrollPos - 1))}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-card transition-colors"
@@ -128,7 +126,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() =>
-                setScrollPos(Math.min(stages.length - 1, scrollPos + 1))
+                setScrollPos(Math.min(1, scrollPos + 1))
               }
               className="flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-card transition-colors"
               aria-label="Next"
@@ -136,6 +134,10 @@ export default function Hero() {
               <ChevronRight size={18} />
             </button>
           </div>
+        </div>
+
+        {/* Stage Cards Carousel */}
+        <div className="relative">
 
           <div className="overflow-x-auto scrollbar-hide -mx-6 px-6">
             <div

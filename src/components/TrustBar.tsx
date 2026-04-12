@@ -13,7 +13,7 @@ export default function TrustBar() {
   return (
     <section className="py-14 bg-white border-t border-border">
       <div className="mx-auto max-w-6xl px-6">
-        <p className="text-center text-sm text-muted mb-8 font-medium">
+        <p className="text-center text-base text-muted mb-8 font-medium">
           Trusted by businesses around the world
         </p>
 

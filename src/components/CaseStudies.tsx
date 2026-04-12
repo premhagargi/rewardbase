@@ -30,20 +30,20 @@ const cases = [
   },
 ];
 
-function BrandLogo({ brand, color }: { brand: string; color: string }) {
+const brandLogos: Record<string, string> = {
+  SURFER: "/surferseo-20240715151729-removebg-preview.png",
+  NOTION: "/notion-removebg-preview.png",
+  LOOM: "/loom-removebg-preview.png",
+};
+
+function BrandLogo({ brand }: { brand: string; color: string }) {
+  const src = brandLogos[brand];
+  if (!src) return null;
+
   return (
-    <div className="flex items-center gap-2">
-      <div
-        className="h-6 w-6 rounded-md flex items-center justify-center"
-        style={{ backgroundColor: color }}
-      >
-        <span className="text-white text-[10px] font-black leading-none">
-          {brand.charAt(0)}
-        </span>
-      </div>
-      <span className="text-sm font-bold tracking-tight text-white">
-        {brand}
-      </span>
+    <div className="flex items-center gap-2.5">
+      <img src={src} alt={brand} className="h-7 w-auto bg-white rounded-md p-0.5" />
+      <span className="text-base font-bold tracking-tight text-white">{brand}</span>
     </div>
   );
 }
@@ -70,12 +70,13 @@ export default function CaseStudies() {
             >
               {/* Background layers */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(100,100,255,0.15),transparent_60%)]" />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(80,80,255,0.3),transparent_50%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(100,60,255,0.25),transparent_50%)]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
 
               {/* Top section — title & tagline */}
               <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-8 pb-4 text-center">
-                <h3 className="text-2xl font-bold leading-tight whitespace-pre-line mb-3">
+                <h3 className="text-3xl font-bold leading-tight whitespace-pre-line mb-3">
                   {item.title}
                 </h3>
                 <p className="text-sm text-white/60 leading-relaxed whitespace-pre-line">
@@ -83,8 +84,8 @@ export default function CaseStudies() {
                 </p>
 
                 {/* CTA button */}
-                <button className="mt-6 w-full max-w-[220px] rounded-full bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium py-3 px-6 transition-colors">
-                  {item.cta} &darr;
+                <button className="mt-6 w-full rounded-lg bg-violet-600/80 hover:bg-violet-500/80 text-white text-base font-medium py-3 px-6 transition-colors">
+                  {item.cta} &nbsp;&darr;
                 </button>
               </div>
 

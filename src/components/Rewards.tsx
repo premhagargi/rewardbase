@@ -127,7 +127,8 @@ export default function Rewards() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label — left aligned */}
         <div className="mb-4">
-          <span className="inline-block rounded-full bg-white border border-border px-4 py-1.5 text-xs font-medium text-muted">
+          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
+            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
             Rewards
           </span>
         </div>
@@ -145,10 +146,10 @@ export default function Rewards() {
         </div>
 
         {/* Content — two columns */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
           {/* Left — Fulfillment methods */}
-          <div>
-            <h3 className="text-lg font-bold text-foreground mb-2">
+          <div className="lg:col-span-1 flex flex-col h-full">
+            <h3 className="text-sm font-semibold text-foreground mb-2">
               Reward Fulfillment Methods
             </h3>
             <p className="text-sm text-muted mb-6 leading-relaxed">
@@ -165,11 +166,11 @@ export default function Rewards() {
                 />
               ))}
             </div>
-            <p className="text-xs text-muted mt-4">* Features in development</p>
+            <p className="text-xs text-muted mt-auto pt-4">* Features in development</p>
           </div>
 
           {/* Right — Reward type cards */}
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
             {rewardTypes.map((reward) => (
               <div
                 key={reward.title}

@@ -57,7 +57,8 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label — left aligned */}
         <div className="mb-4">
-          <span className="inline-block rounded-full bg-white border border-border px-4 py-1.5 text-xs font-medium text-muted">
+          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
+            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
             Pricing
           </span>
         </div>
@@ -127,7 +128,7 @@ export default function Pricing() {
               )}
 
               <button
-                className={`w-full rounded-full text-sm font-medium py-3 px-6 transition-colors mb-6 ${
+                className={`w-full rounded-full text-base font-medium py-3 px-6 transition-colors mb-6 ${
                   plan.highlighted
                     ? "bg-foreground text-white hover:bg-foreground/90"
                     : "bg-card border border-border text-foreground hover:bg-card-hover"

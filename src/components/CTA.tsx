@@ -24,7 +24,7 @@ export default function CTA() {
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground leading-tight mb-3">
             Turn your users into your growth engine
           </h2>
-          <p className="text-sm text-muted leading-relaxed max-w-md mx-auto mb-8">
+          <p className="text-base text-muted leading-relaxed max-w-md mx-auto mb-8">
             Start free. Unlimited support for $29/m. Offload to AI for $59/m.
             Live in 3 minutes.
           </p>
@@ -32,13 +32,13 @@ export default function CTA() {
           <div className="flex items-center justify-center gap-3">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-full bg-foreground text-white text-sm font-medium px-7 py-3 hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-foreground text-white text-base font-medium px-7 py-3 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-full border border-border bg-white text-foreground text-sm font-medium px-7 py-3 hover:bg-card transition-colors"
+              className="inline-flex items-center justify-center rounded-full border border-border bg-white text-foreground text-base font-medium px-7 py-3 hover:bg-card transition-colors"
             >
               Book Demo
             </a>

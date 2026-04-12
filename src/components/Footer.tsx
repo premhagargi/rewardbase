@@ -111,12 +111,12 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-foreground mb-4">Legal</h4>
             <ul className="space-y-2.5">
               <li>
-                <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                <a href="/terms" className="text-sm text-muted hover:text-foreground transition-colors">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                <a href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">
                   Privacy Policy
                 </a>
               </li>
@@ -129,7 +129,7 @@ export default function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-5">
           <p className="text-center text-xs text-muted">
-            &copy; {new Date().getFullYear()} AITuber. All rights reserved.
+            &copy; {new Date().getFullYear()} Rewardbase. All rights reserved.
           </p>
         </div>
       </div>

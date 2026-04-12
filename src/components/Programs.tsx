@@ -121,7 +121,8 @@ export default function Programs() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label — left aligned */}
         <div className="mb-4">
-          <span className="inline-block rounded-full bg-card border border-border px-4 py-1.5 text-xs font-medium text-muted">
+          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
+            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
             Programs
           </span>
         </div>
@@ -139,9 +140,9 @@ export default function Programs() {
         </div>
 
         {/* Content — two columns */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Left — Program types */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-sm font-semibold text-foreground mb-3">
               Program types
             </h3>
@@ -164,7 +165,7 @@ export default function Programs() {
           </div>
 
           {/* Right — Reward type cards */}
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
             {rewardTypes.map((reward) => (
               <div
                 key={reward.title}

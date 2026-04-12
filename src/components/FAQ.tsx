@@ -44,7 +44,8 @@ export default function FAQ() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label — left aligned */}
         <div className="mb-4">
-          <span className="inline-block rounded-full bg-card border border-border px-4 py-1.5 text-xs font-medium text-muted">
+          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
+            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
             FAQ
           </span>
         </div>
@@ -55,7 +56,7 @@ export default function FAQ() {
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-5">
               Frequently Asked Questions
             </h2>
-            <p className="text-sm text-muted leading-relaxed">
+            <p className="text-base text-muted leading-relaxed">
               If you have any other questions, please reach out to us from the
               bottom right corner of your screen.
             </p>
@@ -71,7 +72,7 @@ export default function FAQ() {
                 >
                   <span
                     className={`text-base font-semibold transition-colors ${
-                      openIndex === i ? "text-accent" : "text-foreground"
+                      "text-foreground"
                     }`}
                   >
                     {faq.question}
