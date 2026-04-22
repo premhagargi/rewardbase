@@ -1,7 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Gift, Plus, X } from "lucide-react";
+import { Plus, X } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  AddTeamIcon,
+  Activity01Icon,
+  AccountRecoveryIcon,
+  StarSquareIcon,
+  Share08Icon,
+  Chat01Icon,
+} from "@hugeicons/core-free-icons";
 
 const programs = [
   {
@@ -9,36 +18,42 @@ const programs = [
     description:
       "Reward users for bringing in new signups or paying customers.",
     live: false,
+    icon: AddTeamIcon,
   },
   {
     title: "Onboarding & Activation",
     description:
       "Incentivize key onboarding steps to reduce drop-offs and reach 'wow' moment faster.",
     live: false,
+    icon: Activity01Icon,
   },
   {
     title: "Engagement & Retention",
     description:
       "Reward consistency, milestones, and meaningful actions to build habit and loyalty.",
     live: false,
+    icon: AccountRecoveryIcon,
   },
   {
     title: "Reviews & Testimonials",
     description:
       "Encourage users to share honest reviews across platforms to boost credibility.",
     live: true,
+    icon: StarSquareIcon,
   },
   {
     title: "UGC & Social Sharing",
     description:
       "Incentivize content creation and mentions across channels to drive awareness.",
     live: true,
+    icon: Share08Icon,
   },
   {
     title: "Feedback & Survey",
     description:
       "Reward users for feedback, surveys, and contribution towards product improvement.",
     live: true,
+    icon: Chat01Icon,
   },
 ];
 
@@ -164,7 +179,7 @@ export default function Programs() {
                   </span>
                 )}
                 <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
-                  <Gift size={20} className="text-muted" />
+                  <HugeiconsIcon icon={program.icon} size={20} className="text-muted" />
                 </div>
                 <h4 className="text-lg font-bold text-foreground mb-1.5">
                   {program.title}

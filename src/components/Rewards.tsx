@@ -1,7 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Gift, Plus, X } from "lucide-react";
+import { Plus, X } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  Coins02Icon,
+  SquareUnlock02Icon,
+  PercentSquareIcon,
+  Wallet03Icon,
+  GiftCard02Icon,
+  Money02Icon,
+} from "@hugeicons/core-free-icons";
 
 const rewards = [
   {
@@ -9,36 +18,42 @@ const rewards = [
     description:
       "Give users AI / usage credits they can spend directly inside your product.",
     live: true,
+    icon: Coins02Icon,
   },
   {
     title: "Access Unlocks",
     description:
       "Give users access to premium features, gated content or exclusive perks.",
     live: true,
+    icon: SquareUnlock02Icon,
   },
   {
     title: "Discount Codes",
     description:
       "Offer percentage or fixed, one-time or recurring discounts on purchases or upgrades.",
     live: false,
+    icon: PercentSquareIcon,
   },
   {
     title: "Wallet",
     description:
       "Let users accumulate RewardBase points and redeem rewards they choose.",
     live: false,
+    icon: Wallet03Icon,
   },
   {
     title: "Giftcards",
     description:
       "Let users redeem rewards as gift cards from popular global brands easily.",
     live: false,
+    icon: GiftCard02Icon,
   },
   {
     title: "Payout",
     description:
       "Send real cash rewards directly to users' bank account though managed payouts.",
     live: false,
+    icon: Money02Icon,
   },
 ];
 
@@ -164,7 +179,7 @@ export default function Rewards() {
                   </span>
                 )}
                 <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
-                  <Gift size={20} className="text-muted" />
+                  <HugeiconsIcon icon={reward.icon} size={20} className="text-muted" />
                 </div>
                 <h4 className="text-lg font-bold text-foreground mb-1.5">
                   {reward.title}

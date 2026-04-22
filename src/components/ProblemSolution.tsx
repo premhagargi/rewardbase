@@ -1,20 +1,28 @@
-import { Gift } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  CheckListIcon,
+  GiftIcon,
+  ChartUpIcon,
+} from "@hugeicons/core-free-icons";
 
 const previewRewards = [
   {
     title: "Turn users into growth drivers",
     description:
       "Tap into your user base to unlock a powerful new engine for growth.",
+    icon: CheckListIcon,
   },
   {
     title: "Reward actions that drive growth",
     description:
       "Incentivize users to take meaningful actions that directly contribute to your growth",
+    icon: GiftIcon,
   },
   {
     title: "Build a repeatable growth system",
     description:
       "Build a system that continuously drives growth and scales with your business.",
+    icon: ChartUpIcon,
   },
 ];
 
@@ -75,7 +83,7 @@ export default function ProblemSolution() {
                 className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-white hover:shadow-sm transition-shadow"
               >
                 <div className="h-12 w-12 shrink-0 rounded-xl bg-card border border-border flex items-center justify-center">
-                  <Gift size={22} className="text-muted" />
+                  <HugeiconsIcon icon={item.icon} size={22} className="text-muted" />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-foreground mb-0.5">
