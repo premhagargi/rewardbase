@@ -42,19 +42,19 @@ export default function ProblemSolution() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             Why RewardBase
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-[50%_40%] lg:gap-[10%] gap-12 items-start mb-16">
           {/* Left */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-5">
               Your users are the most powerful growth lever - yet the most underutilized
             </h2>
-            <div className="space-y-4 text-base text-muted leading-relaxed max-w-lg">
+            <div className="space-y-4 text-base text-muted leading-relaxed">
               <p>
                 Growth is getting harder - every channel is crowded, expensive, and ineffective.
               </p>

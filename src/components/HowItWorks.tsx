@@ -25,7 +25,7 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             How it works
           </span>

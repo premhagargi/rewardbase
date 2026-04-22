@@ -76,10 +76,10 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Headline */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-6">
-          <p className="font-semibold text-blue-600 uppercase tracking-wider mb-3">
+          <p className="text-[15px] font-semibold text-blue-600 uppercase tracking-wider mb-3">
             User-led Growth Platform
           </p>
-          <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.1] mb-3 text-balance">
+          <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.1] mb-3 lg:whitespace-nowrap">
             Turn your users into your growth engine
           </h1>
           <p className="text-lg text-muted leading-relaxed mb-5 max-w-2xl text-balance">
@@ -140,28 +140,31 @@ export default function Hero() {
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative">
+<div className="relative -mx-6">
+  
+  {/* Fade overlays — now aligned to FULL width */}
+  <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-20" />
+  <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-20" />
 
-          <div className="overflow-hidden -mx-6 px-6">
-            <div
-              className="flex gap-5 transition-transform duration-500 ease-out pb-4"
-              style={{
-                transform: `translateX(-${scrollPos * 300}px)`,
-              }}
-            >
-              {stages.map((stage) => (
-                <StageCard key={stage} stage={stage} />
-              ))}
-            </div>
-          </div>
+  {/* Clipping layer */}
+  <div className="overflow-hidden">
+    
+    {/* Content gets padding back */}
+    <div className="px-6">
+      <div
+        className="flex gap-5 transition-transform duration-500 ease-out pb-4"
+        style={{
+          transform: `translateX(-${scrollPos * 300}px)`,
+        }}
+      >
+        {stages.map((stage) => (
+          <StageCard key={stage} stage={stage} />
+        ))}
+      </div>
+    </div>
 
-          {scrollPos > 0 && (
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 sm:w-40 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
-          )}
-          {scrollPos < 1 && (
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 sm:w-40 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
-          )}
-        </div>
+  </div>
+</div>
       </div>
     </section>
   );

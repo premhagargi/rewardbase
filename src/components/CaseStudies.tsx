@@ -16,7 +16,7 @@ const cases = [
       "Share your favorite templates\nand earn premium workspace credits.",
     cta: "How it works",
     bottomText:
-      "Notion rewards users for submitting templates and referring teammates to paid plans",
+      "Base44 offers free credits for referrals and sharing projects on LinkedIn or X.",
   },
   {
     brand: "LOOM",
@@ -60,7 +60,7 @@ export default function CaseStudies() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             Case Studies
           </span>
@@ -99,8 +99,8 @@ export default function CaseStudies() {
 
               {/* Top section */}
 {/* Top section */}
-<div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-8 pb-6 text-center">
-  <h3 className="text-3xl font-bold leading-tight whitespace-pre-line mb-3">
+<div className="relative z-10 flex-1 flex flex-col items-center justify-start px-6 pt-10 pb-4 text-center">
+  <h3 className="text-3xl font-semibold leading-tight whitespace-pre-line mb-2">
     {item.title}
   </h3>
 
@@ -109,7 +109,7 @@ export default function CaseStudies() {
   </p>
 
   {/* CTA */}
-  <button className="mt-6 w-full rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white text-sm font-medium py-2.5 px-5 transition-all duration-200 shadow-lg shadow-purple-900/30">
+  <button className="mt-4 w-full rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white text-[18px] font-medium py-2.5 px-5 transition-all duration-200 shadow-lg shadow-purple-900/30">
     {item.cta} &nbsp;&darr;
   </button>
 
@@ -128,7 +128,7 @@ export default function CaseStudies() {
 
               {/* Bottom section */}
               <div className="relative z-10 px-6 pb-6">
-                <p className="text-sm text-white font-semibold leading-relaxed mb-4">
+                <p className="text-[18px] text-white font-normal leading-relaxed mb-4">
                   {item.bottomText}
                 </p>
 

@@ -70,19 +70,19 @@ const fulfillmentMethods = [
 ];
 
 export default function Rewards() {
-  const [addedStates, setAddedStates] = useState<boolean[]>(
-    fulfillmentMethods.map((_, i) => i !== 0),
+  const [openStates, setOpenStates] = useState<boolean[]>(
+    fulfillmentMethods.map((_, i) => i === 0),
   );
 
   const toggle = (i: number) =>
-    setAddedStates((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
+    setOpenStates((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
 
   return (
     <section className="py-20 bg-white">
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             Rewards
           </span>
@@ -110,13 +110,15 @@ export default function Rewards() {
             </p>
             <div className="space-y-3">
               {fulfillmentMethods.map((method, i) => {
-                const added = addedStates[i];
+                const open = openStates[i];
                 return (
                   <div
                     key={method.name}
                     className="rounded-xl border border-border p-4 bg-white"
                   >
-                    <div className="flex items-center justify-between gap-3 mb-2">
+                    <div
+                      className={`flex items-center justify-between gap-3 ${open ? "mb-2" : ""}`}
+                    >
                       <span className="text-sm font-semibold text-foreground min-w-0 truncate">
                         {method.name}
                       </span>
@@ -128,15 +130,18 @@ export default function Rewards() {
                         <button
                           onClick={() => toggle(i)}
                           className="h-6 w-6 rounded-full flex items-center justify-center text-muted hover:bg-card transition-colors"
-                          aria-label={added ? "Remove" : "Add"}
+                          aria-label={open ? "Collapse" : "Expand"}
+                          aria-expanded={open}
                         >
-                          {added ? <X size={14} /> : <Plus size={14} />}
+                          {open ? <X size={14} /> : <Plus size={14} />}
                         </button>
                       </div>
                     </div>
-                    <p className="text-xs text-muted leading-relaxed">
-                      {method.description}
-                    </p>
+                    {open && (
+                      <p className="text-xs text-muted leading-relaxed">
+                        {method.description}
+                      </p>
+                    )}
                   </div>
                 );
               })}
