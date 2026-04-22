@@ -36,6 +36,25 @@ body {
   font-size: 15px;
 }
 
+/* Section-label blue gradient text */
+.text-gradient-blue {
+  color: #2596be;
+}
+
+/* Pill toggle pop */
+@keyframes pillPop {
+  0% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pill-pop {
+  animation: pillPop 0.18s ease-out;
+}
+
 /* Marquee animation */
 @keyframes marquee {
   0% {

@@ -22,21 +22,21 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-20 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+          <span className="inline-flex items-center gap-3 text-base font-medium text-gradient-blue">
+            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
             How it works
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
             Launch your reward program in 3 simple steps
           </h2>
-          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
             Get started quickly with a simple setup, then gradually build a more sophisticated reward program as your growth strategy evolves.
           </p>
         </div>
@@ -46,15 +46,15 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="rounded-2xl border border-border p-6 bg-white"
+              className="rounded-3xl border border-border px-5 py-4 bg-[#f5f3f1]"
             >
-              <div className="h-9 w-9 rounded-lg bg-blue-500 flex items-center justify-center text-white text-sm font-bold mb-6">
+              <div className="h-9 w-9 rounded-lg bg-blue-500 flex items-center justify-center text-white text-sm font-bold mb-4">
                 {step.number}
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">
                 {step.title}
               </h3>
-              <p className="text-sm text-muted leading-relaxed mb-6">
+              <p className="text-sm text-muted leading-relaxed mb-4">
                 {step.description}
               </p>
               <div className="h-48 rounded-xl bg-card border border-border overflow-hidden flex items-center justify-center">

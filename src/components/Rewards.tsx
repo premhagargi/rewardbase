@@ -1,16 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, X } from "lucide-react";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  Coins02Icon,
-  SquareUnlock02Icon,
-  PercentSquareIcon,
-  Wallet03Icon,
-  GiftCard02Icon,
-  Money02Icon,
-} from "@hugeicons/core-free-icons";
+import { Gift, Plus, Minus } from "lucide-react";
 
 const rewards = [
   {
@@ -18,42 +9,36 @@ const rewards = [
     description:
       "Give users AI / usage credits they can spend directly inside your product.",
     live: true,
-    icon: Coins02Icon,
   },
   {
     title: "Access Unlocks",
     description:
       "Give users access to premium features, gated content or exclusive perks.",
     live: true,
-    icon: SquareUnlock02Icon,
   },
   {
     title: "Discount Codes",
     description:
-      "Offer percentage or fixed, one-time or recurring discounts on purchases or upgrades.",
+      "Offer percentage or fixed discounts, one-time or recurring, on any purchase.",
     live: false,
-    icon: PercentSquareIcon,
   },
   {
     title: "Wallet",
     description:
       "Let users accumulate RewardBase points and redeem rewards they choose.",
     live: false,
-    icon: Wallet03Icon,
   },
   {
     title: "Giftcards",
     description:
       "Let users redeem rewards as gift cards from popular global brands easily.",
     live: false,
-    icon: GiftCard02Icon,
   },
   {
     title: "Payout",
     description:
       "Send real cash rewards directly to users' bank account though managed payouts.",
     live: false,
-    icon: Money02Icon,
   },
 ];
 
@@ -66,13 +51,13 @@ const fulfillmentMethods = [
   },
   {
     name: "SDK",
-    status: "Live in May",
+    status: "Live",
     description:
       "Deliver rewards programmatically from inside your product using in-app events and user state.",
   },
   {
     name: "Payment Gateway",
-    status: "Live in June",
+    status: "Live",
     description:
       "Connect your payment provider to issue credits, discounts, or cashback directly at checkout.",
   },
@@ -94,21 +79,21 @@ export default function Rewards() {
 
   return (
     <section className="py-20 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+          <span className="inline-flex items-center gap-3 text-base font-medium text-gradient-blue">
+            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
             Rewards
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
             Drive action with tailored rewards your users care about
           </h2>
-          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
             Rewardbase helps you build a flexible reward system that adapts to any program. Configure reward types and rules for each program, and automatically fulfill rewards when users complete actions.
           </p>
         </div>
@@ -117,7 +102,7 @@ export default function Rewards() {
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Left — How it works */}
           <div className="lg:col-span-1">
-            <h3 className="text-lg font-bold text-foreground mb-1.5">
+            <h3 className="text-base font-bold text-foreground mb-1.5">
               How it works
             </h3>
             <p className="text-sm text-muted mb-5">
@@ -131,29 +116,34 @@ export default function Rewards() {
                     key={method.name}
                     className="rounded-xl border border-border p-4 bg-white"
                   >
-                    <div
-                      className={`flex items-center justify-between gap-3 ${open ? "mb-2" : ""}`}
+                    <button
+                      type="button"
+                      onClick={() => toggle(i)}
+                      aria-expanded={open}
+                      className={`flex w-full items-center justify-between gap-3 ${open ? "mb-2" : ""}`}
                     >
-                      <span className="text-sm font-semibold text-foreground min-w-0 truncate">
+                      <span className="text-[15px] font-semibold text-foreground min-w-0 truncate text-left">
                         {method.name}
                       </span>
                       <div className="flex items-center gap-2 shrink-0">
-                        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                        <span className="inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
                           <span className="h-1 w-1 rounded-full bg-blue-500" />
                           {method.status}
                         </span>
-                        <button
-                          onClick={() => toggle(i)}
-                          className="h-6 w-6 rounded-full flex items-center justify-center text-muted hover:bg-card transition-colors"
-                          aria-label={open ? "Collapse" : "Expand"}
-                          aria-expanded={open}
+                        <span
+                          className="h-6 w-6 rounded-full flex items-center justify-center text-muted"
+                          aria-hidden="true"
                         >
-                          {open ? <X size={14} /> : <Plus size={14} />}
-                        </button>
+                          {open ? (
+                            <Minus size={18} className="text-foreground" />
+                          ) : (
+                            <Plus size={18} className="text-muted" />
+                          )}
+                        </span>
                       </div>
-                    </div>
+                    </button>
                     {open && (
-                      <p className="text-xs text-muted leading-relaxed">
+                      <p className="text-[15px] text-muted leading-relaxed">
                         {method.description}
                       </p>
                     )}
@@ -168,20 +158,18 @@ export default function Rewards() {
             {rewards.map((reward) => (
               <div
                 key={reward.title}
-                className={`relative rounded-2xl border p-5 bg-white transition-shadow hover:shadow-md ${
-                  reward.live ? "border-blue-500" : "border-border"
-                }`}
+                className="relative rounded-3xl border border-border px-5 py-3.5 bg-[#f5f3f1] transition-shadow hover:shadow-md"
               >
                 {reward.live && (
-                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[10px] font-medium text-blue-600 border border-blue-200 rounded-full px-2 py-0.5">
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-blue-600 border border-border rounded-full px-2 py-0.5">
                     <span className="h-1 w-1 rounded-full bg-blue-500" />
                     Live
                   </span>
                 )}
-                <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
-                  <HugeiconsIcon icon={reward.icon} size={20} className="text-muted" />
+                <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-3">
+                  <Gift size={20} className="text-muted" />
                 </div>
-                <h4 className="text-lg font-bold text-foreground mb-1.5">
+                <h4 className="text-base font-bold text-foreground mb-1.5">
                   {reward.title}
                 </h4>
                 <p className="text-sm text-muted leading-relaxed">

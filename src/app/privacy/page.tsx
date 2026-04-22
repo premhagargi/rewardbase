@@ -13,16 +13,16 @@ export default function PrivacyPolicy() {
     <>
       <Navbar />
       <main className="py-16 bg-white">
-        <div className="mx-auto max-w-3xl px-6">
-          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider mb-4">
-            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+        <div className="mx-auto max-w-3xl px-8 sm:px-10 lg:px-12">
+          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500 mb-4">
+            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
             Legal
           </span>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-3">
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
             Privacy Policy
           </h1>
           <p className="text-sm text-muted mb-10">
-            Last updated: April 12, 2026
+            Last updated: April 22, 2026
           </p>
 
           <div className="space-y-8 text-base text-muted leading-relaxed">
@@ -159,10 +159,10 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please
                 contact us at{" "}
                 <a
-                  href="mailto:privacy@rewardbase.com"
+                  href="mailto:team@rewardbase.app"
                   className="text-foreground underline underline-offset-2 hover:text-accent transition-colors"
                 >
-                  privacy@rewardbase.com
+                  team@rewardbase.app
                 </a>
                 .
               </p>

@@ -128,27 +128,27 @@ function RewardWidget() {
 export default function ProductDemo() {
   return (
     <section className="py-20 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
             RewardBase Widget
           </span>
         </div>
 
         {/* Top: heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
             Run reward programs right inside your product
           </h2>
-          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[30px]">
-            Add RewardBase directly inside your app or website, customize to match your brand, and auto-identify users.No logins, no redirects, no friction.
+          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[30px]">
+            Add RewardBase directly inside your app or website, customize to match your brand, and auto-identify users. No logins, no redirects, no friction.
           </p>
         </div>
 
         {/* Mockup container */}
-        <div className="relative rounded-2xl p-6 sm:p-10 lg:p-12">
+        <div className="relative rounded-2xl bg-[#f5f3f1] p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window */}
             <div className="rounded-2xl bg-white border border-border shadow-lg overflow-hidden">

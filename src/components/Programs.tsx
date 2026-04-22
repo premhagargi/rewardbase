@@ -1,16 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, X } from "lucide-react";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  AddTeamIcon,
-  Activity01Icon,
-  AccountRecoveryIcon,
-  StarSquareIcon,
-  Share08Icon,
-  Chat01Icon,
-} from "@hugeicons/core-free-icons";
+import { Gift, Plus, Minus } from "lucide-react";
 
 const programs = [
   {
@@ -18,55 +9,49 @@ const programs = [
     description:
       "Reward users for bringing in new signups or paying customers.",
     live: false,
-    icon: AddTeamIcon,
   },
   {
     title: "Onboarding & Activation",
     description:
-      "Incentivize key onboarding steps to reduce drop-offs and reach 'wow' moment faster.",
+      "Incentivize onboarding steps to cut drop-offs and reach the 'wow' moment faster.",
     live: false,
-    icon: Activity01Icon,
   },
   {
     title: "Engagement & Retention",
     description:
-      "Reward consistency, milestones, and meaningful actions to build habit and loyalty.",
+      "Reward consistency, milestones, and key actions to build habit and loyalty.",
     live: false,
-    icon: AccountRecoveryIcon,
   },
   {
     title: "Reviews & Testimonials",
     description:
       "Encourage users to share honest reviews across platforms to boost credibility.",
     live: true,
-    icon: StarSquareIcon,
   },
   {
     title: "UGC & Social Sharing",
     description:
       "Incentivize content creation and mentions across channels to drive awareness.",
     live: true,
-    icon: Share08Icon,
   },
   {
     title: "Feedback & Survey",
     description:
-      "Reward users for feedback, surveys, and contribution towards product improvement.",
+      "Reward users for feedback, surveys, and contributions that shape your product.",
     live: true,
-    icon: Chat01Icon,
   },
 ];
 
 const programMethods = [
   {
     name: "Referral Codes",
-    status: "Live in June",
+    status: "Live",
     description:
       "Generate unique referral codes for each user. Track conversions automatically with no manual effort.",
   },
   {
     name: "SDK",
-    status: "Live in May",
+    status: "Live",
     description:
       "Install the RewardBase SDK and fire reward triggers directly from in-app events and user actions.",
   },
@@ -94,30 +79,30 @@ export default function Programs() {
 
   return (
     <section id="programs" className="py-20 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+          <span className="inline-flex items-center gap-3 text-base font-medium text-gradient-blue">
+            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
             Programs
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
             Turn key user actions into reward programs that drive growth
           </h2>
-          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
             RewardBase helps you create reward programs for every stage of the user lifecycle. Incentivize actions that matter and turn user behavior into a consistent, scalable growth engine.
           </p>
         </div>
 
         {/* Content — two columns */}
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
+        <div className="grid lg:grid-cols-[35%_60%] lg:gap-[5%] gap-8 items-start">
           {/* Left — Program Methods */}
-          <div className="lg:col-span-1">
-            <h3 className="text-lg font-bold text-foreground mb-1.5">
+          <div>
+            <h3 className="text-base font-bold text-foreground mb-1.5">
               Program Methods
             </h3>
             <p className="text-sm text-muted mb-5">
@@ -131,29 +116,34 @@ export default function Programs() {
                     key={method.name}
                     className="rounded-xl border border-border p-4 bg-white"
                   >
-                    <div
-                      className={`flex items-center justify-between gap-3 ${open ? "mb-2" : ""}`}
+                    <button
+                      type="button"
+                      onClick={() => toggle(i)}
+                      aria-expanded={open}
+                      className={`flex w-full items-center justify-between gap-3 ${open ? "mb-2" : ""}`}
                     >
-                      <span className="text-sm font-semibold text-foreground min-w-0 truncate">
+                      <span className="text-[15px] font-semibold text-foreground min-w-0 truncate text-left">
                         {method.name}
                       </span>
                       <div className="flex items-center gap-2 shrink-0">
-                        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                        <span className="inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
                           <span className="h-1 w-1 rounded-full bg-blue-500" />
                           {method.status}
                         </span>
-                        <button
-                          onClick={() => toggle(i)}
-                          className="h-6 w-6 rounded-full flex items-center justify-center text-muted hover:bg-card transition-colors"
-                          aria-label={open ? "Collapse" : "Expand"}
-                          aria-expanded={open}
+                        <span
+                          className="h-6 w-6 rounded-full flex items-center justify-center text-muted"
+                          aria-hidden="true"
                         >
-                          {open ? <X size={14} /> : <Plus size={14} />}
-                        </button>
+                          {open ? (
+                            <Minus size={18} className="text-foreground" />
+                          ) : (
+                            <Plus size={18} className="text-muted" />
+                          )}
+                        </span>
                       </div>
-                    </div>
+                    </button>
                     {open && (
-                      <p className="text-xs text-muted leading-relaxed">
+                      <p className="text-[15px] text-muted leading-relaxed">
                         {method.description}
                       </p>
                     )}
@@ -164,24 +154,22 @@ export default function Programs() {
           </div>
 
           {/* Right — Program cards */}
-          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             {programs.map((program) => (
               <div
                 key={program.title}
-                className={`relative rounded-2xl border p-5 bg-white transition-shadow hover:shadow-md ${
-                  program.live ? "border-blue-500" : "border-border"
-                }`}
+                className="relative rounded-3xl border border-border px-5 py-3.5 bg-[#f5f3f1] transition-shadow hover:shadow-md"
               >
                 {program.live && (
-                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[10px] font-medium text-blue-600 border border-blue-200 rounded-full px-2 py-0.5">
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-blue-600 border border-border rounded-full px-2 py-0.5">
                     <span className="h-1 w-1 rounded-full bg-blue-500" />
                     Live
                   </span>
                 )}
-                <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
-                  <HugeiconsIcon icon={program.icon} size={20} className="text-muted" />
+                <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-3">
+                  <Gift size={20} className="text-muted" />
                 </div>
-                <h4 className="text-lg font-bold text-foreground mb-1.5">
+                <h4 className="text-base font-bold text-foreground mb-1.5">
                   {program.title}
                 </h4>
                 <p className="text-sm text-muted leading-relaxed">

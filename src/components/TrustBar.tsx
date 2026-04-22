@@ -12,7 +12,7 @@ const logos = [
 export default function TrustBar() {
   return (
     <section className="py-14 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         <p className="text-center text-base text-muted mb-8 font-medium">
           Trusted by businesses around the world
         </p>

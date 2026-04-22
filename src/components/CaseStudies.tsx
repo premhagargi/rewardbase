@@ -2,76 +2,57 @@ const cases = [
   {
     brand: "SURFER",
     brandColor: "#E53935",
-    title: "Surfer Credits\nGiveaway",
-    tagline: "Always craving more credits?\nNow you can get some for free! You in?",
-    cta: "How it works",
+    image: "/surfer.png",
     bottomText:
-      "SurferSEO rewards users for reviewing on G2 and for sharing results on socials",
+      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
   },
   {
     brand: "NOTION",
     brandColor: "#000000",
-    title: "Notion Template\nRewards",
-    tagline:
-      "Share your favorite templates\nand earn premium workspace credits.",
-    cta: "How it works",
+    image: "/notion.png",
     bottomText:
-      "Base44 offers free credits for referrals and sharing projects on LinkedIn or X.",
+      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
   },
   {
-    brand: "LOOM",
+    brand: "BASE44",
     brandColor: "#625DF5",
-    title: "Loom Pro\nUnlock",
-    tagline:
-      "Record a video review and unlock\nLoom Pro features — no strings.",
-    cta: "How it works",
+    image: "/base44.png",
     bottomText:
-      "Loom rewards users for recording video testimonials and inviting their team onto Loom",
+      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
   },
 ];
 
-const brandLogos: Record<string, string> = {
-  SURFER: "/surferseo-20240715151729-removebg-preview.png",
-  NOTION: "/notion-removebg-preview.png",
-  LOOM: "/loom-removebg-preview.png",
+const brandLogos: Record<string, { src: string; className: string }> = {
+  SURFER: { src: "/surferlogo.svg", className: "h-[18px] w-auto" },
+  NOTION: { src: "/notionlogo.svg", className: "h-[26px] w-auto" },
+  BASE44: { src: "/base44logo.svg", className: "h-5 w-auto" },
 };
 
 function BrandLogo({ brand }: { brand: string; color: string }) {
-  const src = brandLogos[brand];
-  if (!src) return null;
+  const logo = brandLogos[brand];
+  if (!logo) return null;
 
-  return (
-    <div className="flex items-center gap-2.5 opacity-90">
-      <img
-        src={src}
-        alt={brand}
-        className="h-7 w-auto bg-white/90 rounded-md p-0.5"
-      />
-      <span className="text-base font-semibold tracking-tight text-white">
-        {brand}
-      </span>
-    </div>
-  );
+  return <img src={logo.src} alt={brand} className={logo.className} />;
 }
 
 export default function CaseStudies() {
   return (
     <section className="py-20 bg-card/50">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+          <span className="inline-flex items-center gap-3 text-base font-medium text-gradient-blue">
+            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
             Case Studies
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
             Proven playbook used by the best growth teams
           </h2>
-          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
             Top growth teams already incentivize users for referrals, reviews, onboarding and sharing. Now you can grow using the same playbook effortlessly with RewardBase.
           </p>
         </div>
@@ -80,58 +61,30 @@ export default function CaseStudies() {
           {cases.map((item) => (
             <div
               key={item.brand}
-              className="group relative rounded-2xl overflow-hidden text-white min-h-[480px] flex flex-col border border-white/10 backdrop-blur-xl"
+              className="group relative rounded-2xl overflow-hidden text-white min-h-[460px] flex flex-col"
             >
               {/* Background layers */}
-              <div className="absolute inset-0">
-                {/* Base gradient */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#1b1b2f] via-[#141428] to-[#0c0c16]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(80,80,255,0.3),transparent_50%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(100,60,255,0.25),transparent_50%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_45%,rgba(0,0,0,0.85)_65%,#000_80%)]" />
 
-                {/* Soft glow (top-left) */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(120,100,255,0.35),transparent_55%)]" />
-
-                {/* Secondary glow (bottom-left) */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_85%,rgba(80,60,255,0.25),transparent_60%)]" />
-
-                {/* Bottom fade */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/90" />
+              {/* Top section — image with gradient overlay */}
+              <div className="relative z-10 flex-1 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={`${item.brand} case study`}
+                  className="absolute inset-0 h-full w-full object-cover brightness-95"
+                />
+                {/* Gradient rising from bottom, dulling the image up to the top */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               </div>
 
-              {/* Top section */}
-{/* Top section */}
-<div className="relative z-10 flex-1 flex flex-col items-center justify-start px-6 pt-10 pb-4 text-center">
-  <h3 className="text-3xl font-semibold leading-tight whitespace-pre-line mb-2">
-    {item.title}
-  </h3>
-
-  <p className="text-sm text-white/70 leading-relaxed whitespace-pre-line">
-    {item.tagline}
-  </p>
-
-  {/* CTA */}
-  <button className="mt-4 w-full rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white text-[18px] font-medium py-2.5 px-5 transition-all duration-200 shadow-lg shadow-purple-900/30">
-    {item.cta} &nbsp;&darr;
-  </button>
-
-{/* Subtle B/W overlay that preserves purple glow */}
-<div className="absolute inset-0 pointer-events-none">
-  {/* partial desaturation (not full grayscale) */}
-  <div className="absolute inset-0 backdrop-saturate-[0.6] backdrop-brightness-[0.85]" />
-
-  {/* soft white haze */}
-  <div className="absolute inset-0 bg-white/5" />
-
-  {/* gentle dark fade */}
-  <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/15 via-white/5 to-black/40" />
-</div>
-</div>
-
-              {/* Bottom section */}
-              <div className="relative z-10 px-6 pb-6">
-                <p className="text-[18px] text-white font-normal leading-relaxed mb-4">
+              {/* Bottom section — description + brand */}
+              <div className="relative z-10 bg-black px-6 pb-4 pt-5">
+                <p className="text-sm text-white leading-relaxed font-semibold mb-5">
                   {item.bottomText}
                 </p>
-
                 <BrandLogo brand={item.brand} color={item.brandColor} />
               </div>
             </div>

@@ -26,40 +26,22 @@ const previewRewards = [
   },
 ];
 
-const bottomCards = [
-  {
-    title: "Reward an amount / credits",
-    description:
-      "Reward an amount of usable credits, which are essentially virtual currency. Users can spend these on premium features, upgrades, or in-app purchases.",
-  },
-  {
-    title: "Reward an amount / credits",
-    description:
-      "Reward an amount of usable credits, which are essentially virtual currency. Users can spend these on premium features, upgrades, or in-app purchases.",
-  },
-  {
-    title: "Reward an amount / credits",
-    description:
-      "Reward an amount of usable credits, which are essentially virtual currency. Users can spend these on premium features, upgrades, or in-app purchases.",
-  },
-];
-
 export default function ProblemSolution() {
   return (
     <section className="py-20 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
             Why RewardBase
           </span>
         </div>
 
-        <div className="grid lg:grid-cols-[50%_40%] lg:gap-[10%] gap-12 items-start mb-16">
+        <div className="grid lg:grid-cols-[60%_35%] lg:gap-[5%] gap-12 items-start mb-16">
           {/* Left */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-5">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight mb-5">
               Your users are the most powerful growth lever - yet the most underutilized
             </h2>
             <div className="space-y-4 text-base text-muted leading-relaxed">
@@ -80,7 +62,7 @@ export default function ProblemSolution() {
             {previewRewards.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-white hover:shadow-sm transition-shadow"
+                className="flex items-center gap-4 rounded-3xl border border-border p-4 bg-white hover:shadow-sm transition-shadow"
               >
                 <div className="h-12 w-12 shrink-0 rounded-xl bg-card border border-border flex items-center justify-center">
                   <HugeiconsIcon icon={item.icon} size={22} className="text-muted" />

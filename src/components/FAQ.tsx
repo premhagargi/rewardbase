@@ -1,18 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
     question: "What is a participant and how is billing calculated?",
     answer:
-      "A participant is any unique user who submits a proof of action for one of your reward programs. Each user is counted once per month, regardless of how many programs they participate in or how many times they submit.\n\nBilling is calculated on the 1st of each month based on your previous month's participant count, and you're automatically charged based on whichever pricing tier that count falls into.",
+      "A participant is any unique user who submits a proof of action for one of your reward program. Each user is counted once per month, regardless of how many programs they participate in or how many times they submit.\n\nEach participant is counted once per month, regardless of how many programs they join or how many times they submit. Billing is calculated on the 1st of each month based on your previous month's participant count, and you're automatically charged based on whichever pricing tier that count falls into.",
   },
   {
     question: "Do I need engineering support to set up RewardBase?",
     answer:
-      "Yes. Initial setup requires engineering support to install the widget on your site or app and configure the rewards. We're happy to work with your team through this process and offer continued support along the way. We're also actively building no-code features to reduce engineering dependency.",
+      "Yes. Initial setup requires engineering support to install the widget on your site or app and configure the rewards.\nWe're happy to work with your team through this process and offer continued support along the way.\nWe're also actively building no-code features to reduce engineering dependency.",
   },
   {
     question: "How do I integrate RewardBase into my app or website?",
@@ -22,32 +22,32 @@ const faqs = [
   {
     question: "Do users need to log in or create an account to participate?",
     answer:
-      "No separate login is required. If user details are passed during widget initialization, users are identified automatically. If not set up, users can be identified through email and OTP sign-in as a fallback.",
+      "No separate login is required. If user details are passed during widget initialization, users are identified automatically.\nIf not set up, users can be identified through email and OTP sign-in as a fallback.",
   },
   {
     question: "What programs can I create with RewardBase?",
     answer:
-      "Currently, you can create programs that accept manual submissions - users submit screenshots, URLs, or text for review and approval. We're actively building more program types, including in-app event tracking, referrals, and more.",
+      "Currently, you can create programs that accept manual submissions - users submit screenshots, URLs, or text for review and approval.\nWe're actively building more program types, including in-app event tracking, referrals, and more.",
   },
   {
-    question: "I already have a referral or affiliate program?",
+    question: "I already have a referral or affiliate program",
     answer:
-      "Yes. You can add external programs to RewardBase using the placeholder program template. This makes the external programs visible alongside RewardBase's programs in one unified interface. Participants in these programs are handled by the respective external systems and are not counted toward your billing.",
+      "Yes. You can add external programs to RewardBase using the placeholder program template. This makes the external programs visible alongside RewardBase's programs in one unified interface.\n\nParticipants in these programs are handled by the respective external systems and are not counted toward your billing.",
   },
   {
-    question: "How do I verify that an action actually happened?",
+    question: "How does I verify that an action actually happened?",
     answer:
       "Users submit proof as screenshot, URL, or text directly through the RewardBase widget. Submissions land in the dashboard, where you can review and approve or reject them with comments.\n\nYou'll receive email reminders for any pending reviews. Users are notified by email on the status of their submission.",
   },
   {
-    question: "How are rewards issued?",
+    question: "How are rewards issued",
     answer:
-      "Currently, rewards can be issued via webhook or manually. With webhooks - once you approve a submission, RewardBase automatically triggers a webhook to your system where you handle fulfillment - credits, perks, etc. With manual method - you fulfill the reward directly and update the status in your dashboard.",
+      "Currently, Rewards can be issued via webhook or manually.\n\nWith webhooks - once you approve a submission, RewardBase automatically triggers a webhook to your system where you handle fulfillment - credits, perks, etc.\n\nWith manual method - you fulfill the reward directly and update the status in your dashboard.",
   },
   {
     question: "How does RewardBase handle user data?",
     answer:
-      "You own all your user and reward data. We process data securely using industry-standard practices on secure cloud infrastructure. If you prefer stricter control, you can share only user_id with RewardBase - we'll use it to track participation and process rewards.",
+      "You own all your user and reward data. We process data securely using industry-standard practices on secure cloud infrastructure.\nIf you prefer stricter control, you can share only user_id with RewardBase - we'll use it to track participation and process rewards.",
   },
   {
     question: "What support do you offer?",
@@ -59,19 +59,29 @@ const faqs = [
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
+  useEffect(() => {
+    const SRC =
+      "https://heyo.so/embed/script?projectId=69e7723bfc7fb07ef5d276a4";
+    if (document.querySelector(`script[src="${SRC}"]`)) return;
+    const script = document.createElement("script");
+    script.src = SRC;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <section id="faq" className="py-20 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-start">
           {/* Left */}
           <div>
             <div className="mb-4">
-              <span className="inline-flex items-center gap-3 text-[15px] font-medium text-blue-600 uppercase tracking-wider">
-                <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
+              <span className="inline-flex items-center gap-3 text-base font-medium text-gradient-blue">
+                <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
                 FAQ
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-5">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight mb-5">
               Frequently Asked Questions
             </h2>
             <p className="text-base text-muted leading-relaxed mb-1">
@@ -81,27 +91,6 @@ export default function FAQ() {
               We would like to chat with you
             </p>
 
-            {/* Chat card */}
-            <div className="inline-flex items-center gap-3 rounded-2xl bg-foreground text-white px-2 py-2">
-              <div className="relative shrink-0">
-                <div className="h-9 w-9 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white text-sm font-bold">
-                  N
-                </div>
-                <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-gray-400 border-2 border-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-sm font-semibold leading-tight">
-                  Nico &middot; Founder
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-xs text-white/60 leading-tight">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
-                  Offline
-                </span>
-              </div>
-              <button className="ml-1 rounded-xl bg-white text-foreground text-sm font-medium px-4 py-1.5 hover:bg-white/90 transition-colors">
-                Chat now
-              </button>
-            </div>
           </div>
 
           {/* Right — Accordion */}
@@ -130,7 +119,10 @@ export default function FAQ() {
                 {openIndex === i && (
                   <div className="mt-3 pr-8 space-y-3">
                     {faq.answer.split("\n\n").map((para, idx) => (
-                      <p key={idx} className="text-sm text-muted leading-relaxed">
+                      <p
+                        key={idx}
+                        className="text-sm text-muted leading-relaxed whitespace-pre-line"
+                      >
                         {para}
                       </p>
                     ))}

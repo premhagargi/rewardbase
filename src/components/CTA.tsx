@@ -1,39 +1,34 @@
 export default function CTA() {
   return (
-    <section className="py-12 bg-white">
-      <div className="mx-auto max-w-6xl px-6">
-        <div
-          className="relative overflow-hidden rounded-2xl py-10 px-6 text-center bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('/assets/BG%20Gradient%20-%20full%20logo%20(1).png')",
-          }}
-        >
+    <section className="py-20 bg-white">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
+        <div className="relative overflow-hidden rounded-2xl py-8 px-6 text-center bg-[#f5f3f1]">
           <div className="relative">
+          {/* Icon */}
           <img
-            src="/assets/RewardBase%20Icon%20(White).svg"
+            src="/assets/RewardBase%20Icon.svg"
             alt="RewardBase"
-            className="mx-auto h-10 w-10 mb-3"
+            className="mx-auto mb-3 h-16 w-16"
           />
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight mb-2">
-            You have the users. Now you have RewardBase.
-            <br />
-            Growth has no excuse now.
+
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground leading-tight mb-2">
+            Turn your users into your growth engine
           </h2>
-          <p className="text-base text-white/80 leading-relaxed mx-auto mb-5">
-            Launch your reward program in minutes. Start turning user actions into growth.
+          <p className="text-base text-muted leading-relaxed max-w-md mx-auto mb-5">
+            Start free. Unlimited support for $29/m. Offload to AI for $59/m.
+            Live in 3 minutes.
           </p>
 
           <div className="flex items-center justify-center gap-3">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-2xl border border-transparent bg-white text-foreground text-sm font-medium px-5 py-2.5 hover:bg-white/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-2xl border border-white/40 text-white text-sm font-medium px-5 py-2.5 hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center rounded-2xl border border-border bg-white text-foreground text-base font-medium px-5 py-2.5 hover:bg-card transition-colors"
             >
               Book Demo
             </a>
