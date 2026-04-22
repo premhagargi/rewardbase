@@ -6,7 +6,7 @@ const cases = [
     tagline: "Always craving more credits?\nNow you can get some for free! You in?",
     cta: "How it works",
     bottomText:
-      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
+      "SurferSEO rewards users for reviewing on G2 and for sharing results on socials",
   },
   {
     brand: "NOTION",
@@ -16,7 +16,7 @@ const cases = [
       "Share your favorite templates\nand earn premium workspace credits.",
     cta: "How it works",
     bottomText:
-      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
+      "Notion rewards users for submitting templates and referring teammates to paid plans",
   },
   {
     brand: "LOOM",
@@ -26,7 +26,7 @@ const cases = [
       "Record a video review and unlock\nLoom Pro features — no strings.",
     cta: "How it works",
     bottomText:
-      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
+      "Loom rewards users for recording video testimonials and inviting their team onto Loom",
   },
 ];
 
@@ -41,9 +41,15 @@ function BrandLogo({ brand }: { brand: string; color: string }) {
   if (!src) return null;
 
   return (
-    <div className="flex items-center gap-2.5">
-      <img src={src} alt={brand} className="h-7 w-auto bg-white rounded-md p-0.5" />
-      <span className="text-base font-bold tracking-tight text-white">{brand}</span>
+    <div className="flex items-center gap-2.5 opacity-90">
+      <img
+        src={src}
+        alt={brand}
+        className="h-7 w-auto bg-white/90 rounded-md p-0.5"
+      />
+      <span className="text-base font-semibold tracking-tight text-white">
+        {brand}
+      </span>
     </div>
   );
 }
@@ -54,15 +60,15 @@ export default function CaseStudies() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
-            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             Case Studies
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
             Proven playbook used by the best growth teams
           </h2>
           <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
@@ -74,34 +80,58 @@ export default function CaseStudies() {
           {cases.map((item) => (
             <div
               key={item.brand}
-              className="group relative rounded-2xl overflow-hidden text-white min-h-[480px] flex flex-col"
+              className="group relative rounded-2xl overflow-hidden text-white min-h-[480px] flex flex-col border border-white/10 backdrop-blur-xl"
             >
               {/* Background layers */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(80,80,255,0.3),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(100,60,255,0.25),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_45%,rgba(0,0,0,0.85)_65%,#000_80%)]" />
+              <div className="absolute inset-0">
+                {/* Base gradient */}
+                <div className="absolute inset-0 bg-gradient-to-b from-[#1b1b2f] via-[#141428] to-[#0c0c16]" />
 
-              {/* Top section — title & tagline */}
-              <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-8 pb-4 text-center">
-                <h3 className="text-3xl font-bold leading-tight whitespace-pre-line mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-white/60 leading-relaxed whitespace-pre-line">
-                  {item.tagline}
-                </p>
+                {/* Soft glow (top-left) */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(120,100,255,0.35),transparent_55%)]" />
 
-                {/* CTA button */}
-                <button className="mt-6 w-full rounded-lg bg-violet-600/80 hover:bg-violet-500/80 text-white text-base font-medium py-3 px-6 transition-colors">
-                  {item.cta} &nbsp;&darr;
-                </button>
+                {/* Secondary glow (bottom-left) */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_85%,rgba(80,60,255,0.25),transparent_60%)]" />
+
+                {/* Bottom fade */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/90" />
               </div>
 
-              {/* Bottom section — description + brand */}
-              <div className="relative z-10 bg-black px-6 pb-6 pt-5">
-                <p className="text-sm text-white leading-relaxed font-semibold mb-3">
+              {/* Top section */}
+{/* Top section */}
+<div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-8 pb-6 text-center">
+  <h3 className="text-3xl font-bold leading-tight whitespace-pre-line mb-3">
+    {item.title}
+  </h3>
+
+  <p className="text-sm text-white/70 leading-relaxed whitespace-pre-line">
+    {item.tagline}
+  </p>
+
+  {/* CTA */}
+  <button className="mt-6 w-full rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white text-sm font-medium py-2.5 px-5 transition-all duration-200 shadow-lg shadow-purple-900/30">
+    {item.cta} &nbsp;&darr;
+  </button>
+
+{/* Subtle B/W overlay that preserves purple glow */}
+<div className="absolute inset-0 pointer-events-none">
+  {/* partial desaturation (not full grayscale) */}
+  <div className="absolute inset-0 backdrop-saturate-[0.6] backdrop-brightness-[0.85]" />
+
+  {/* soft white haze */}
+  <div className="absolute inset-0 bg-white/5" />
+
+  {/* gentle dark fade */}
+  <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white/15 via-white/5 to-black/40" />
+</div>
+</div>
+
+              {/* Bottom section */}
+              <div className="relative z-10 px-6 pb-6">
+                <p className="text-sm text-white font-semibold leading-relaxed mb-4">
                   {item.bottomText}
                 </p>
+
                 <BrandLogo brand={item.brand} color={item.brandColor} />
               </div>
             </div>

@@ -75,27 +75,27 @@ export default function Hero() {
     <section className="pt-14 pb-12 bg-white">
       <div className="mx-auto max-w-6xl px-6">
         {/* Headline */}
-        <div className="text-center max-w-3xl mx-auto mb-6">
-          <p className="text-sm sm:text-base font-semibold text-blue-600 mb-3">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-6">
+          <p className="font-semibold text-blue-600 uppercase tracking-wider mb-3">
             User-led Growth Platform
           </p>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.1] mb-3 whitespace-nowrap">
+          <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.1] mb-3 text-balance">
             Turn your users into your growth engine
           </h1>
-          <p className="text-lg text-muted leading-relaxed mb-5">
+          <p className="text-lg text-muted leading-relaxed mb-5 max-w-2xl text-balance">
             Unlock user-driven growth with reward programs for referrals, testimonials, feedback
             and more - built into your product and managed in one place.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-2xl border border-transparent bg-foreground text-white text-sm font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-2xl border border-border text-foreground text-base font-medium px-5 py-2.5 hover:bg-card transition-colors"
+              className="inline-flex items-center justify-center rounded-2xl border border-border text-foreground text-sm font-medium px-5 py-2.5 hover:bg-card transition-colors"
             >
               Book Demo
             </a>

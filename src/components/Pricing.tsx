@@ -43,15 +43,15 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
-            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             Pricing
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
             Start for free.
             <br />
             Pay when you grow.
@@ -64,7 +64,7 @@ export default function Pricing() {
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {/* Left — free trial info (no card) */}
           <div className="flex flex-col p-2">
-            <h3 className="text-base font-bold text-foreground mb-1">
+            <h3 className="text-lg font-bold text-foreground mb-1">
               15-day Free Trial
             </h3>
             <p className="text-sm text-muted mb-5">
@@ -73,7 +73,7 @@ export default function Pricing() {
             <p className="text-sm text-muted leading-relaxed mb-6">
               Set up and launch your reward programs - see your users drive measurable growth through their actions
             </p>
-            <button className="rounded-xl bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors">
+            <button className="rounded-xl bg-foreground text-white text-sm font-medium py-2.5 px-5 hover:bg-foreground/90 transition-colors">
               Get Started
             </button>
           </div>
@@ -100,7 +100,7 @@ export default function Pricing() {
               <div className="relative w-full">
                 {isDragging && (
                   <div
-                    className="absolute bottom-full mb-2 -translate-x-1/2 bg-foreground text-white text-[11px] font-semibold rounded-md px-2 py-1 pointer-events-none whitespace-nowrap shadow-md z-10"
+                    className="absolute bottom-full mb-2 -translate-x-1/2 bg-foreground text-white text-xs font-semibold rounded-md px-2 py-1 pointer-events-none whitespace-nowrap shadow-md z-10"
                     style={{ left: `calc(${percent}% + (${8 - percent * 0.16}px))` }}
                   >
                     {formatParticipants(participants)}
@@ -124,14 +124,16 @@ export default function Pricing() {
               </div>
             </div>
 
-            <button className="w-full rounded-xl bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mb-6">
+            <button className="w-full rounded-xl bg-foreground text-white text-sm font-medium py-2.5 px-5 hover:bg-foreground/90 transition-colors mb-6">
               Get Started
             </button>
 
             <ul className="space-y-3 mt-auto">
               {proFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-2.5">
-                  <Check size={16} className="text-foreground shrink-0" />
+                  <span className="shrink-0 h-5 w-5 rounded-full bg-card border border-border flex items-center justify-center">
+                    <Check size={12} className="text-foreground" strokeWidth={2.5} />
+                  </span>
                   <span className="text-sm text-muted">{feature}</span>
                 </li>
               ))}
@@ -144,7 +146,7 @@ export default function Pricing() {
               <h3 className="text-lg font-bold text-foreground">
                 Life Time Deal
               </h3>
-              <span className="text-[11px] font-bold bg-foreground text-white rounded-full px-2.5 py-1">
+              <span className="text-xs font-bold bg-foreground text-white rounded-full px-2.5 py-1">
                 Only 10 left
               </span>
             </div>
@@ -157,14 +159,16 @@ export default function Pricing() {
               <span className="text-sm text-muted font-medium">Pay Once</span>
             </div>
 
-            <button className="w-full rounded-xl bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mb-6">
+            <button className="w-full rounded-xl bg-foreground text-white text-sm font-medium py-2.5 px-5 hover:bg-foreground/90 transition-colors mb-6">
               Claim Deal
             </button>
 
             <ul className="space-y-3 mt-auto">
               {lifetimeFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-2.5">
-                  <Check size={16} className="text-foreground shrink-0" />
+                  <span className="shrink-0 h-5 w-5 rounded-full bg-card border border-border flex items-center justify-center">
+                    <Check size={12} className="text-foreground" strokeWidth={2.5} />
+                  </span>
                   <span className="text-sm text-muted">{feature}</span>
                 </li>
               ))}

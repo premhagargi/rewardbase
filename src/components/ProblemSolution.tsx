@@ -42,8 +42,8 @@ export default function ProblemSolution() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
-            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             Why RewardBase
           </span>
         </div>

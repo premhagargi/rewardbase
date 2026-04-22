@@ -73,12 +73,12 @@ function RewardWidget() {
           </svg>
           <span className="text-[10px] font-medium text-white/70">Web to Figma</span>
         </div>
-        <p className="text-[13px] font-bold leading-snug">
+        <p className="text-sm font-bold leading-snug">
           Get free access to RewardBase by helping us spread the word!
         </p>
         <div className="mt-2.5 flex items-center gap-1.5 bg-white/20 rounded-full px-2.5 py-1 w-fit">
           <Check size={12} />
-          <span className="text-[11px] font-medium">
+          <span className="text-xs font-medium">
             Yay! Your submission got approved.
           </span>
         </div>
@@ -92,7 +92,7 @@ function RewardWidget() {
             <div className="shrink-0">{task.icon}</div>
             <div className="flex-1 min-w-0">
               <span
-                className={`inline-flex items-center gap-1 text-[9px] font-semibold leading-none ${
+                className={`inline-flex items-center gap-1 text-[10px] font-semibold leading-none ${
                   task.status === "approved"
                     ? "text-green-600"
                     : task.status === "rejected"
@@ -105,7 +105,7 @@ function RewardWidget() {
                 {task.status === "reviewing" && <Clock size={9} />}
                 {task.status.charAt(0).toUpperCase() + task.status.slice(1)}
               </span>
-              <p className="text-[11px] font-medium text-foreground truncate mt-0.5">
+              <p className="text-xs font-medium text-foreground truncate mt-0.5">
                 {task.title}
               </p>
               <p className="text-[10px] text-brand font-medium">
@@ -131,8 +131,8 @@ export default function ProductDemo() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
-            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             RewardBase Widget
           </span>
         </div>
@@ -191,7 +191,7 @@ export default function ProductDemo() {
                         <p className="text-xs font-semibold text-foreground">Andrew Miller</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
                       </div>
-                      <p className="text-[11px] text-muted truncate mt-0.5">
+                      <p className="text-xs text-muted truncate mt-0.5">
                         Yes, as you&apos;re already...
                       </p>
                     </div>
@@ -200,7 +200,7 @@ export default function ProductDemo() {
                         <p className="text-xs font-semibold text-foreground">Felippe Nardi</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
                       </div>
-                      <p className="text-[11px] text-muted truncate mt-0.5">
+                      <p className="text-xs text-muted truncate mt-0.5">
                         Hi, Felippe! You can us...
                       </p>
                     </div>
@@ -213,7 +213,7 @@ export default function ProductDemo() {
                   <div className="flex items-center justify-between px-5 py-3 border-b border-border">
                     <p className="text-sm font-semibold text-foreground">Andrew Miller</p>
                     <div className="flex items-center gap-3">
-                      <span className="text-[11px] font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
+                      <span className="text-xs font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
                         Unresolved
                       </span>
                     </div>
@@ -221,7 +221,7 @@ export default function ProductDemo() {
 
                   {/* Messages */}
                   <div className="flex-1 p-5 space-y-4 overflow-y-auto">
-                    <p className="text-center text-[11px] text-muted font-medium">Yesterday</p>
+                    <p className="text-center text-xs text-muted font-medium">Yesterday</p>
 
                     {/* User messages */}
                     <div className="flex flex-col items-start">
@@ -270,7 +270,7 @@ export default function ProductDemo() {
                         <span className="text-xs">&#9776;</span>
                         <span className="text-xs">&lt;/&gt;</span>
                         <span className="text-xs">&mdash;</span>
-                        <span className="ml-2 text-[11px] text-muted bg-card rounded px-2 py-0.5 border border-border font-medium">
+                        <span className="ml-2 text-xs text-muted bg-card rounded px-2 py-0.5 border border-border font-medium">
                           AI Assist
                         </span>
                       </div>
@@ -280,7 +280,7 @@ export default function ProductDemo() {
 
                 {/* Right metadata panel */}
                 <div className="hidden lg:block w-[180px] border-l border-border p-4">
-                  <span className="text-[11px] font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
+                  <span className="text-xs font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
                     Unresolved
                   </span>
                   <div className="mt-5">

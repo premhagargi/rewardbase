@@ -10,24 +10,12 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/40 backdrop-blur-md border-b border-border/50">
       <div className="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 32 32"
-            fill="none"
-            className="shrink-0"
-          >
-            <circle cx="16" cy="16" r="15" stroke="#1a7a8a" strokeWidth="2" />
-            <circle cx="16" cy="16" r="6" fill="#1a7a8a" />
-            <path d="M16 4 L16 10" stroke="#1a7a8a" strokeWidth="2" />
-            <path d="M16 22 L16 28" stroke="#1a7a8a" strokeWidth="2" />
-            <path d="M4 16 L10 16" stroke="#1a7a8a" strokeWidth="2" />
-            <path d="M22 16 L28 16" stroke="#1a7a8a" strokeWidth="2" />
-          </svg>
-          <span className="text-lg font-bold tracking-tight text-foreground">
-            RewardBase
-          </span>
+        <a href="/" className="flex items-center">
+          <img
+            src="/assets/RewardBase%20Logo%20(Gradient%20-%20Blacktext).svg"
+            alt="RewardBase"
+            className="h-7 w-auto"
+          />
         </a>
 
         {/* Right side: nav links + CTA */}
@@ -42,7 +30,7 @@ export default function Navbar() {
           </nav>
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
+            className="inline-flex items-center justify-center rounded-2xl border border-transparent bg-foreground text-white text-sm font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
           >
             Start for Free
           </a>
@@ -77,7 +65,7 @@ export default function Navbar() {
           </a>
           <a
             href="#pricing"
-            className="block text-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5"
+            className="block text-center rounded-2xl border border-transparent bg-foreground text-white text-sm font-medium px-5 py-2.5"
             onClick={() => setMobileOpen(false)}
           >
             Start for Free

@@ -6,7 +6,7 @@ export default function Walkthrough() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 mb-10">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
             From setup to live programs
             <br />
             in minutes
@@ -58,14 +58,14 @@ export default function Walkthrough() {
                         <p className="text-xs font-semibold text-foreground">Andrew Miller</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
                       </div>
-                      <p className="text-[11px] text-muted truncate mt-0.5">Yes, as you&apos;re already...</p>
+                      <p className="text-xs text-muted truncate mt-0.5">Yes, as you&apos;re already...</p>
                     </div>
                     <div className="rounded-lg px-3 py-2.5">
                       <div className="flex items-center justify-between">
                         <p className="text-xs font-semibold text-foreground">Felippe Nardi</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
                       </div>
-                      <p className="text-[11px] text-muted truncate mt-0.5">Hi, Felippe! You can us...</p>
+                      <p className="text-xs text-muted truncate mt-0.5">Hi, Felippe! You can us...</p>
                     </div>
                   </div>
                 </div>
@@ -75,14 +75,14 @@ export default function Walkthrough() {
                   {/* Conversation header */}
                   <div className="flex items-center justify-between px-5 py-3 border-b border-border">
                     <p className="text-sm font-semibold text-foreground">Andrew Miller</p>
-                    <span className="text-[11px] font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
+                    <span className="text-xs font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
                       Unresolved
                     </span>
                   </div>
 
                   {/* Messages */}
                   <div className="flex-1 p-5 space-y-4">
-                    <p className="text-center text-[11px] text-muted font-medium">Yesterday</p>
+                    <p className="text-center text-xs text-muted font-medium">Yesterday</p>
 
                     <div className="flex flex-col items-start">
                       <div className="rounded-2xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
@@ -123,7 +123,7 @@ export default function Walkthrough() {
                         <span className="text-xs">&#9776;</span>
                         <span className="text-xs">&lt;/&gt;</span>
                         <span className="text-xs">&mdash;</span>
-                        <span className="ml-2 text-[11px] text-muted bg-card rounded px-2 py-0.5 border border-border font-medium">
+                        <span className="ml-2 text-xs text-muted bg-card rounded px-2 py-0.5 border border-border font-medium">
                           AI Assist
                         </span>
                       </div>
@@ -140,7 +140,7 @@ export default function Walkthrough() {
 
                 {/* Right metadata panel */}
                 <div className="hidden lg:block w-[180px] border-l border-border p-4">
-                  <span className="text-[11px] font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
+                  <span className="text-xs font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
                     Unresolved
                   </span>
                   <div className="mt-5">

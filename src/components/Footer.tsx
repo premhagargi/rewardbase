@@ -5,30 +5,12 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
           {/* Brand */}
           <div className="lg:max-w-sm">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 32 32"
-                fill="none"
-                className="shrink-0"
-              >
-                <circle
-                  cx="16"
-                  cy="16"
-                  r="15"
-                  stroke="#1a7a8a"
-                  strokeWidth="2"
-                />
-                <circle cx="16" cy="16" r="6" fill="#1a7a8a" />
-                <path d="M16 4 L16 10" stroke="#1a7a8a" strokeWidth="2" />
-                <path d="M16 22 L16 28" stroke="#1a7a8a" strokeWidth="2" />
-                <path d="M4 16 L10 16" stroke="#1a7a8a" strokeWidth="2" />
-                <path d="M22 16 L28 16" stroke="#1a7a8a" strokeWidth="2" />
-              </svg>
-              <span className="text-lg font-bold tracking-tight text-foreground">
-                RewardBase
-              </span>
+            <a href="#" className="flex items-center mb-4">
+              <img
+                src="/assets/RewardBase%20Logo%20(Gradient%20-%20Blacktext).svg"
+                alt="RewardBase"
+                className="h-6 w-auto"
+              />
             </a>
             <p className="text-sm text-muted leading-relaxed mb-5 max-w-xs">
               Turn your users into your growth engine. Start free. Pay as you

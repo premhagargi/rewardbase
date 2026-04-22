@@ -66,8 +66,8 @@ export default function FAQ() {
           {/* Left */}
           <div>
             <div className="mb-4">
-              <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
-                <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+              <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+                <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
                 FAQ
               </span>
             </div>
@@ -93,7 +93,7 @@ export default function FAQ() {
                 <span className="text-sm font-semibold leading-tight">
                   Nico &middot; Founder
                 </span>
-                <span className="inline-flex items-center gap-1.5 text-[11px] text-white/60 leading-tight">
+                <span className="inline-flex items-center gap-1.5 text-xs text-white/60 leading-tight">
                   <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
                   Offline
                 </span>

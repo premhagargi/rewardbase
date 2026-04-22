@@ -25,15 +25,15 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
-            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             How it works
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
             Launch your reward program in 3 simple steps
           </h2>
           <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">

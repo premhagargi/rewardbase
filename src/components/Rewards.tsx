@@ -82,15 +82,15 @@ export default function Rewards() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
-            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+          <span className="inline-flex items-center gap-3 font-medium text-blue-600 uppercase tracking-wider">
+            <span className="w-[3px] h-5 rounded-full bg-blue-200"></span>
             Rewards
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
             Drive action with tailored rewards your users care about
           </h2>
           <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
@@ -102,7 +102,7 @@ export default function Rewards() {
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Left — How it works */}
           <div className="lg:col-span-1">
-            <h3 className="text-base font-bold text-foreground mb-1.5">
+            <h3 className="text-lg font-bold text-foreground mb-1.5">
               How it works
             </h3>
             <p className="text-sm text-muted mb-5">
@@ -161,7 +161,7 @@ export default function Rewards() {
                 <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
                   <Gift size={20} className="text-muted" />
                 </div>
-                <h4 className="text-base font-bold text-foreground mb-1.5">
+                <h4 className="text-lg font-bold text-foreground mb-1.5">
                   {reward.title}
                 </h4>
                 <p className="text-sm text-muted leading-relaxed">
