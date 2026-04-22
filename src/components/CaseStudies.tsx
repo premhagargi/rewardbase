@@ -52,13 +52,21 @@ export default function CaseStudies() {
   return (
     <section className="py-20 bg-card/50">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Heading — left aligned */}
-        <div className="max-w-xl mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-4">
-            Proven growth strategies that work
+        {/* Section label */}
+        <div className="mb-4">
+          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
+            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+            Case Studies
+          </span>
+        </div>
+
+        {/* Heading row */}
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+            Proven playbook used by the best growth teams
           </h2>
-          <p className="text-base text-muted leading-relaxed">
-            Simple by design, from day one to every day.
+          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+            Top growth teams already incentivize users for referrals, reviews, onboarding and sharing. Now you can grow using the same playbook effortlessly with RewardBase.
           </p>
         </div>
 
@@ -72,7 +80,7 @@ export default function CaseStudies() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(80,80,255,0.3),transparent_50%)]" />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(100,60,255,0.25),transparent_50%)]" />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_45%,rgba(0,0,0,0.85)_65%,#000_80%)]" />
 
               {/* Top section — title & tagline */}
               <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 pt-8 pb-4 text-center">
@@ -90,8 +98,8 @@ export default function CaseStudies() {
               </div>
 
               {/* Bottom section — description + brand */}
-              <div className="relative z-10 px-6 pb-6 pt-4">
-                <p className="text-sm text-white/50 leading-relaxed font-semibold mb-3">
+              <div className="relative z-10 bg-black px-6 pb-6 pt-5">
+                <p className="text-sm text-white leading-relaxed font-semibold mb-3">
                   {item.bottomText}
                 </p>
                 <BrandLogo brand={item.brand} color={item.brandColor} />

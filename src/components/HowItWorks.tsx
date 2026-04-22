@@ -1,174 +1,75 @@
-import { Play, MessageCircle } from "lucide-react";
+const steps = [
+  {
+    number: 1,
+    title: "Create programs",
+    description:
+      "Use pre-built templates to create programs aligned with your business goals.",
+  },
+  {
+    number: 2,
+    title: "Set up reward",
+    description:
+      "Configure reward fulfillment via available methods (webhook or manual).",
+  },
+  {
+    number: 3,
+    title: "Add widget",
+    description:
+      "Add script to your site or app, set up actions, and identify users (optional).",
+  },
+];
 
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-20 bg-white">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Heading — left aligned */}
-        <div className="max-w-2xl mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-3">
-            Takes less than 3 minutes to setup
+        {/* Section label */}
+        <div className="mb-4">
+          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
+            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+            How it works
+          </span>
+        </div>
+
+        {/* Heading row */}
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+            Launch your reward program in 3 simple steps
           </h2>
-          <p className="text-base text-muted leading-relaxed">
-            Simple by design, from day one to every day.
+          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+            Get started quickly with a simple setup, then gradually build a more sophisticated reward program as your growth strategy evolves.
           </p>
         </div>
 
-        {/* Video / Demo mockup container */}
-        <div className="relative rounded-2xl bg-blue-100/60 p-6 sm:p-10 lg:p-12">
-          <div className="relative max-w-4xl mx-auto">
-            {/* Chat window mockup */}
-            <div className="rounded-2xl bg-white border border-border shadow-lg overflow-hidden">
-              {/* Header */}
-              <div className="flex items-center justify-between border-b border-border px-5 py-3">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5">
-                    <div className="h-6 w-6 rounded-md bg-blue-500 flex items-center justify-center">
-                      <MessageCircle size={12} className="text-white" />
-                    </div>
-                    <span className="text-[10px] text-muted">/</span>
-                    <div className="h-6 w-6 rounded-md bg-blue-400 flex items-center justify-center">
-                      <MessageCircle size={12} className="text-white" />
-                    </div>
-                  </div>
-                  <span className="text-sm font-semibold text-foreground">Helploom</span>
-                </div>
-                <div className="flex items-center gap-5 text-xs text-muted font-medium">
-                  <span>Inbox</span>
-                  <span>Settings</span>
-                  <div className="h-7 w-7 rounded-full bg-card border border-border" />
-                </div>
+        {/* Steps */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="rounded-2xl border border-border p-6 bg-white"
+            >
+              <div className="h-9 w-9 rounded-lg bg-blue-500 flex items-center justify-center text-white text-sm font-bold mb-6">
+                {step.number}
               </div>
-
-              {/* Body */}
-              <div className="flex min-h-[420px]">
-                {/* Sidebar */}
-                <div className="hidden sm:block w-[200px] border-r border-border">
-                  <div className="px-4 pt-4 pb-3">
-                    <div className="flex gap-4 text-xs font-medium text-muted">
-                      <span className="text-foreground font-semibold">Unresolved (2)</span>
-                      <span>All (11)</span>
-                    </div>
-                  </div>
-                  <div className="px-2 space-y-0.5">
-                    <div className="rounded-lg bg-card px-3 py-2.5 border-l-2 border-blue-500">
-                      <div className="flex items-center justify-between">
-                        <p className="text-xs font-semibold text-foreground">Andrew Miller</p>
-                        <span className="text-[10px] text-muted">Yesterday</span>
-                      </div>
-                      <p className="text-[11px] text-muted truncate mt-0.5">Yes, as you&apos;re already...</p>
-                    </div>
-                    <div className="rounded-lg px-3 py-2.5">
-                      <div className="flex items-center justify-between">
-                        <p className="text-xs font-semibold text-foreground">Felippe Nardi</p>
-                        <span className="text-[10px] text-muted">Yesterday</span>
-                      </div>
-                      <p className="text-[11px] text-muted truncate mt-0.5">Hi, Felippe! You can us...</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Messages */}
-                <div className="flex-1 flex flex-col relative">
-                  {/* Conversation header */}
-                  <div className="flex items-center justify-between px-5 py-3 border-b border-border">
-                    <p className="text-sm font-semibold text-foreground">Andrew Miller</p>
-                    <span className="text-[11px] font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
-                      Unresolved
-                    </span>
-                  </div>
-
-                  {/* Messages */}
-                  <div className="flex-1 p-5 space-y-4">
-                    <p className="text-center text-[11px] text-muted font-medium">Yesterday</p>
-
-                    <div className="flex flex-col items-start">
-                      <div className="rounded-2xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
-                        <p className="text-sm text-foreground">I signed up for free. How do I upgrade?</p>
-                      </div>
-                      <span className="text-[10px] text-muted mt-1 ml-1">Andrew &middot; 12:00 PM</span>
-                    </div>
-
-                    <div className="flex flex-col items-start">
-                      <div className="rounded-2xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
-                        <p className="text-sm text-foreground">I&apos;d like to subscribe to the paid plan.</p>
-                      </div>
-                      <span className="text-[10px] text-muted mt-1 ml-1">Andrew &middot; 12:01 PM</span>
-                    </div>
-
-                    <div className="flex flex-col items-end">
-                      <div className="rounded-2xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
-                        <p className="text-sm text-white">Hi, Andrew!</p>
-                      </div>
-                      <span className="text-[10px] text-muted mt-1 mr-1">12:02 PM &middot; You</span>
-                    </div>
-
-                    <div className="flex flex-col items-end">
-                      <div className="rounded-2xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
-                        <p className="text-sm text-white">You can subscribe to a paid plan from Settings &gt; Billing.</p>
-                      </div>
-                      <span className="text-[10px] text-muted mt-1 mr-1">12:03 PM &middot; You</span>
-                    </div>
-                  </div>
-
-                  {/* Input bar */}
-                  <div className="border-t border-border px-5 py-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted/40">Type here...</span>
-                      <div className="flex items-center gap-2 text-muted/40">
-                        <span className="text-xs font-medium">B</span>
-                        <span className="text-xs font-medium italic">I</span>
-                        <span className="text-xs">&#9776;</span>
-                        <span className="text-xs">&lt;/&gt;</span>
-                        <span className="text-xs">&mdash;</span>
-                        <span className="ml-2 text-[11px] text-muted bg-card rounded px-2 py-0.5 border border-border font-medium">
-                          AI Assist
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Play button overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <button className="pointer-events-auto h-20 w-20 rounded-full bg-white/80 backdrop-blur-sm shadow-xl flex items-center justify-center hover:bg-white hover:scale-105 transition-all">
-                      <Play size={32} className="text-foreground ml-1" fill="currentColor" />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Right metadata panel */}
-                <div className="hidden lg:block w-[180px] border-l border-border p-4">
-                  <span className="text-[11px] font-medium text-orange-500 bg-orange-50 rounded-full px-3 py-1">
-                    Unresolved
-                  </span>
-                  <div className="mt-5">
-                    <p className="text-[10px] text-muted font-medium uppercase tracking-wider mb-3">Metadata</p>
-                    <div className="space-y-2.5">
-                      <div className="flex items-center gap-2">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted">
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                          <circle cx="12" cy="7" r="4" />
-                        </svg>
-                        <span className="text-xs text-foreground">Andrew Miller</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted">
-                          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                          <polyline points="22,6 12,13 2,6" />
-                        </svg>
-                        <span className="text-xs text-foreground">andrew@miller.co</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <h3 className="text-lg font-bold text-foreground mb-2">
+                {step.title}
+              </h3>
+              <p className="text-sm text-muted leading-relaxed mb-6">
+                {step.description}
+              </p>
+              <div className="h-48 rounded-xl bg-card border border-border overflow-hidden flex items-center justify-center">
+                <svg
+                  viewBox="0 0 200 120"
+                  preserveAspectRatio="none"
+                  className="w-full h-full text-muted/40"
+                  fill="currentColor"
+                >
+                  <path d="M0 80 Q 40 50 80 70 T 160 60 L 200 40 L 200 120 L 0 120 Z" />
+                  <circle cx="60" cy="60" r="5" fill="currentColor" />
+                </svg>
               </div>
             </div>
-          </div>
-
-          {/* Help button */}
-          <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 h-12 w-12 rounded-full bg-blue-500 flex items-center justify-center text-white shadow-lg">
-            <span className="text-lg font-bold">?</span>
-          </div>
+          ))}
         </div>
       </div>
     </section>

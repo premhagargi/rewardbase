@@ -2,19 +2,19 @@ import { Gift } from "lucide-react";
 
 const previewRewards = [
   {
-    title: "Reward an amount",
+    title: "Turn users into growth drivers",
     description:
-      "Reward an amount of usable credits, which are essentially virtual currency inside your product.",
+      "Tap into your user base to unlock a powerful new engine for growth.",
   },
   {
-    title: "Reward an amount",
+    title: "Reward actions that drive growth",
     description:
-      "Reward users with feature access, premium tiers, or gated content they wouldn't otherwise have.",
+      "Incentivize users to take meaningful actions that directly contribute to your growth",
   },
   {
-    title: "Reward an amount",
+    title: "Build a repeatable growth system",
     description:
-      "Send discount codes, coupons, or promo credits redeemable at checkout or inside the app.",
+      "Build a system that continuously drives growth and scales with your business.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function ProblemSolution() {
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
             <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
-            Programs
+            Why RewardBase
           </span>
         </div>
 
@@ -52,14 +52,19 @@ export default function ProblemSolution() {
           {/* Left */}
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight mb-5">
-              Your users are already sharing, inviting, and engaging with your
-              product
+              Your users are the most powerful growth lever - yet the most underutilized
             </h2>
-            <p className="text-base text-muted leading-relaxed max-w-lg">
-              A reward represents a level of access, feature, offering, or
-              content that a user is &ldquo;rewarded&rdquo; with. RewardBase
-              offers six reward types to fit any growth strategy.
-            </p>
+            <div className="space-y-4 text-base text-muted leading-relaxed max-w-lg">
+              <p>
+                Growth is getting harder - every channel is crowded, expensive, and ineffective.
+              </p>
+              <p>
+                Meanwhile, your existing users already influence discovery, trust, and adoption - through referrals, reviews and sharing. But you don&apos;t have a system to activate and scale that behavior.
+              </p>
+              <p>
+                RewardBase turns this untapped potential into a structured, repeatable growth engine.
+              </p>
+            </div>
           </div>
 
           {/* Right — stacked preview cards */}
@@ -85,25 +90,7 @@ export default function ProblemSolution() {
           </div>
         </div>
 
-        {/* Bottom 3 cards */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {bottomCards.map((card, i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-border p-6 bg-white hover:shadow-md transition-shadow"
-            >
-              <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
-                <Gift size={20} className="text-muted" />
-              </div>
-              <h4 className="text-base font-bold text-foreground mb-2">
-                {card.title}
-              </h4>
-              <p className="text-sm text-muted leading-relaxed">
-                {card.description}
-              </p>
-            </div>
-          ))}
-        </div>
+  
       </div>
     </section>
   );

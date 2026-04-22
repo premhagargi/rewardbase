@@ -30,26 +30,23 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm text-muted font-medium">
-          <a href="#programs" className="hover:text-foreground transition-colors">
-            Roadmap
+        {/* Right side: nav links + CTA */}
+        <div className="hidden md:flex items-center gap-8">
+          <nav className="flex items-center gap-8 text-sm text-muted font-medium">
+            <a href="#how-it-works" className="hover:text-foreground transition-colors">
+              Docs
+            </a>
+            <a href="#pricing" className="hover:text-foreground transition-colors">
+              Pricing
+            </a>
+          </nav>
+          <a
+            href="#pricing"
+            className="inline-flex items-center justify-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
+          >
+            Start for Free
           </a>
-          <a href="#how-it-works" className="hover:text-foreground transition-colors">
-            Docs
-          </a>
-          <a href="#pricing" className="hover:text-foreground transition-colors">
-            Pricing
-          </a>
-        </nav>
-
-        {/* CTA */}
-        <a
-          href="#pricing"
-          className="hidden md:inline-flex items-center justify-center rounded-full bg-foreground text-white text-base font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
-        >
-          Start for Free
-        </a>
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -64,13 +61,6 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden border-t border-border bg-white px-6 py-4 space-y-3">
-          <a
-            href="#programs"
-            className="block text-sm font-medium text-muted hover:text-foreground"
-            onClick={() => setMobileOpen(false)}
-          >
-            Roadmap
-          </a>
           <a
             href="#how-it-works"
             className="block text-sm font-medium text-muted hover:text-foreground"
@@ -87,7 +77,7 @@ export default function Navbar() {
           </a>
           <a
             href="#pricing"
-            className="block text-center rounded-full bg-foreground text-white text-base font-medium px-5 py-2.5"
+            className="block text-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5"
             onClick={() => setMobileOpen(false)}
           >
             Start for Free

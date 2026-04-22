@@ -46,3 +46,44 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Custom range slider */
+.rb-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 12px;
+  border-radius: 9999px;
+  background: #e5e7eb;
+  border: 1px solid #d1d5db;
+  outline: none;
+  cursor: pointer;
+}
+
+.rb-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #3b82f6;
+  border: 3px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: grab;
+  transition: transform 0.1s ease;
+}
+
+.rb-slider:active::-webkit-slider-thumb {
+  transform: scale(1.1);
+  cursor: grabbing;
+}
+
+.rb-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #3b82f6;
+  border: 3px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: grab;
+}

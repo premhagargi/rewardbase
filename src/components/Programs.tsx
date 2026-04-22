@@ -1,125 +1,86 @@
 "use client";
 
 import { useState } from "react";
-import { Gift, Plus, Minus } from "lucide-react";
+import { Gift, Plus, X } from "lucide-react";
 
-const rewardTypes = [
+const programs = [
   {
-    title: "AI Credits",
+    title: "Referrals",
     description:
-      "Reward users with AI-powered credits they can spend on premium features inside your product.",
+      "Reward users for bringing in new signups or paying customers.",
+    live: false,
   },
   {
-    title: "Access Unlock",
+    title: "Onboarding & Activation",
     description:
-      "Grant temporary or permanent access to gated features, tiers, or content as a reward.",
+      "Incentivize key onboarding steps to reduce drop-offs and reach 'wow' moment faster.",
+    live: false,
   },
   {
-    title: "Discounts & Coupons",
+    title: "Engagement & Retention",
     description:
-      "Offer percentage or fixed-amount discount codes redeemable at checkout.",
+      "Reward consistency, milestones, and meaningful actions to build habit and loyalty.",
+    live: false,
   },
   {
-    title: "Wallet Credits",
+    title: "Reviews & Testimonials",
     description:
-      "Add spendable balance directly to the user's in-app wallet for future purchases.",
+      "Encourage users to share honest reviews across platforms to boost credibility.",
+    live: true,
   },
   {
-    title: "Payout",
+    title: "UGC & Social Sharing",
     description:
-      "Send real cash rewards via PayPal, Stripe, or bank transfer to qualifying users.",
+      "Incentivize content creation and mentions across channels to drive awareness.",
+    live: true,
   },
   {
-    title: "Gift Cards",
+    title: "Feedback & Survey",
     description:
-      "Deliver digital gift cards from popular brands like Amazon, Starbucks, and more.",
+      "Reward users for feedback, surveys, and contribution towards product improvement.",
+    live: true,
   },
 ];
 
-const programTypes = [
+const programMethods = [
   {
-    name: "Referral",
+    name: "Referral Codes",
+    status: "Live in June",
     description:
-      "Let your existing users invite friends and colleagues. Both the referrer and the referred user can earn rewards — driving viral, compounding growth.",
+      "Generate unique referral codes for each user. Track conversions automatically with no manual effort.",
   },
   {
-    name: "Social Share",
+    name: "SDK",
+    status: "Live in May",
     description:
-      "Reward users for sharing your product on social media. Each share amplifies your reach to a warm, trusted audience at zero ad spend.",
+      "Install the RewardBase SDK and fire reward triggers directly from in-app events and user actions.",
   },
   {
-    name: "Review & Rating",
+    name: "Manual Submission",
+    status: "Live",
     description:
-      "Incentivize authentic reviews on platforms like G2, Capterra, and Trustpilot. Build social proof that converts visitors into customers.",
+      "Users submit proof of action via a form or link. You review, approve, and trigger the reward.",
   },
   {
-    name: "Community Join",
+    name: "Custom",
+    status: "Live",
     description:
-      "Encourage users to join your Discord, Slack, or forum community. Grow an engaged user base that supports each other and reduces churn.",
+      "Define your own trigger logic, eligibility rules, and reward conditions for any program type you need.",
   },
 ];
-
-function ProgramItem({
-  program,
-  isOpen,
-  onToggle,
-}: {
-  program: (typeof programTypes)[number];
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div
-      className={`rounded-xl border transition-all duration-300 ${
-        isOpen
-          ? "border-brand/30 bg-brand/5"
-          : "border-border hover:bg-card"
-      }`}
-    >
-      <button
-        onClick={onToggle}
-        className="flex items-center justify-between w-full px-4 py-3 text-left"
-      >
-        <span className="text-sm font-medium text-foreground">
-          {program.name}
-        </span>
-        <div
-          className={`h-7 w-7 rounded-full flex items-center justify-center transition-colors ${
-            isOpen
-              ? "bg-brand/20"
-              : "border border-border hover:bg-card"
-          }`}
-        >
-          {isOpen ? (
-            <Minus size={14} className="text-brand" />
-          ) : (
-            <Plus size={14} className="text-muted" />
-          )}
-        </div>
-      </button>
-
-      <div
-        className={`grid transition-all duration-300 ease-in-out ${
-          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <p className="px-4 pb-4 text-sm text-muted leading-relaxed">
-            {program.description}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function Programs() {
-  const [openIndex, setOpenIndex] = useState(1);
+  const [addedStates, setAddedStates] = useState<boolean[]>(
+    programMethods.map((_, i) => i !== 0),
+  );
+
+  const toggle = (i: number) =>
+    setAddedStates((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
 
   return (
     <section id="programs" className="py-20 bg-white">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Section label — left aligned */}
+        {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
             <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
@@ -127,58 +88,84 @@ export default function Programs() {
           </span>
         </div>
 
-        {/* Heading row — two columns */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
-            Incentivize users to take action with rewards
+        {/* Heading row */}
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+            Turn key user actions into reward programs that drive growth
           </h2>
-          <p className="text-base text-muted leading-relaxed lg:pt-2">
-            A reward represents a level of access, feature, offering, or
-            content that a user is &ldquo;rewarded&rdquo; with. RewardBase
-            offers six reward types to fit any growth strategy.
+          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+            RewardBase helps you create reward programs for every stage of the user lifecycle. Incentivize actions that matter and turn user behavior into a consistent, scalable growth engine.
           </p>
         </div>
 
         {/* Content — two columns */}
         <div className="grid lg:grid-cols-3 gap-8 items-start">
-          {/* Left — Program types */}
+          {/* Left — Program Methods */}
           <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-foreground mb-3">
-              Program types
+            <h3 className="text-base font-bold text-foreground mb-1.5">
+              Program Methods
             </h3>
-            <p className="text-sm text-muted mb-4">
-              Rewards can be fulfilled through various methods tailored to
-              your product and audience.
+            <p className="text-sm text-muted mb-5">
+              Pick a method, connect it to an action, and start rewarding.
             </p>
-            <div className="space-y-2.5">
-              {programTypes.map((program, i) => (
-                <ProgramItem
-                  key={program.name}
-                  program={program}
-                  isOpen={openIndex === i}
-                  onToggle={() =>
-                    setOpenIndex(openIndex === i ? -1 : i)
-                  }
-                />
-              ))}
+            <div className="space-y-3">
+              {programMethods.map((method, i) => {
+                const added = addedStates[i];
+                return (
+                  <div
+                    key={method.name}
+                    className="rounded-xl border border-border p-4 bg-white"
+                  >
+                    <div className="flex items-center justify-between gap-3 mb-2">
+                      <span className="text-sm font-semibold text-foreground min-w-0 truncate">
+                        {method.name}
+                      </span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                          <span className="h-1 w-1 rounded-full bg-blue-500" />
+                          {method.status}
+                        </span>
+                        <button
+                          onClick={() => toggle(i)}
+                          className="h-6 w-6 rounded-full flex items-center justify-center text-muted hover:bg-card transition-colors"
+                          aria-label={added ? "Remove" : "Add"}
+                        >
+                          {added ? <X size={14} /> : <Plus size={14} />}
+                        </button>
+                      </div>
+                    </div>
+                    <p className="text-xs text-muted leading-relaxed">
+                      {method.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Right — Reward type cards */}
+          {/* Right — Program cards */}
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
-            {rewardTypes.map((reward) => (
+            {programs.map((program) => (
               <div
-                key={reward.title}
-                className="rounded-2xl border border-border p-5 hover:shadow-md transition-shadow bg-white"
+                key={program.title}
+                className={`relative rounded-2xl border p-5 bg-white transition-shadow hover:shadow-md ${
+                  program.live ? "border-blue-500" : "border-border"
+                }`}
               >
+                {program.live && (
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[10px] font-medium text-blue-600 border border-blue-200 rounded-full px-2 py-0.5">
+                    <span className="h-1 w-1 rounded-full bg-blue-500" />
+                    Live
+                  </span>
+                )}
                 <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
                   <Gift size={20} className="text-muted" />
                 </div>
                 <h4 className="text-base font-bold text-foreground mb-1.5">
-                  {reward.title}
+                  {program.title}
                 </h4>
                 <p className="text-sm text-muted leading-relaxed">
-                  {reward.description}
+                  {program.description}
                 </p>
               </div>
             ))}

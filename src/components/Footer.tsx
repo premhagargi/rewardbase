@@ -2,9 +2,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-white">
       <div className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
           {/* Brand */}
-          <div>
+          <div className="lg:max-w-sm">
             <a href="#" className="flex items-center gap-2 mb-4">
               <svg
                 width="24"
@@ -57,70 +57,73 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Product */}
-          <div>
-            <h4 className="text-sm font-bold text-foreground mb-4">Product</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <a href="#pricing" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="text-sm text-muted hover:text-foreground transition-colors">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Link columns — grouped right */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 lg:gap-16">
+            {/* Product */}
+            <div>
+              <h4 className="text-sm font-bold text-foreground mb-4">Product</h4>
+              <ul className="space-y-2.5">
+                <li>
+                  <a href="#pricing" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="text-sm text-muted hover:text-foreground transition-colors">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Support */}
-          <div>
-            <h4 className="text-sm font-bold text-foreground mb-4">Support</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Feature Request
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Roadmap
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Changelog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+            {/* Support */}
+            <div>
+              <h4 className="text-sm font-bold text-foreground mb-4">Support</h4>
+              <ul className="space-y-2.5">
+                <li>
+                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Feature Request
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Roadmap
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Changelog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-sm font-bold text-foreground mb-4">Legal</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <a href="/terms" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-            </ul>
+            {/* Legal */}
+            <div>
+              <h4 className="text-sm font-bold text-foreground mb-4">Legal</h4>
+              <ul className="space-y-2.5">
+                <li>
+                  <a href="/terms" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

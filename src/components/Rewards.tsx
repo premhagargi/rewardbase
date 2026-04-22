@@ -1,131 +1,86 @@
 "use client";
 
 import { useState } from "react";
-import { Gift, Plus, Minus, X } from "lucide-react";
+import { Gift, Plus, X } from "lucide-react";
 
-const rewardTypes = [
+const rewards = [
   {
-    title: "AI Credits",
+    title: "Credits",
     description:
-      "Reward users with AI-powered credits they can spend on premium features.",
+      "Give users AI / usage credits they can spend directly inside your product.",
+    live: true,
   },
   {
-    title: "Access Unlock",
+    title: "Access Unlocks",
     description:
-      "Grant temporary or permanent access to gated features as a reward.",
+      "Give users access to premium features, gated content or exclusive perks.",
+    live: true,
   },
   {
-    title: "Discounts & Coupons",
+    title: "Discount Codes",
     description:
-      "Offer percentage or fixed-amount discount codes redeemable at checkout.",
+      "Offer percentage or fixed, one-time or recurring discounts on purchases or upgrades.",
+    live: false,
   },
   {
     title: "Wallet",
     description:
-      "Add spendable balance directly to the user's in-app wallet.",
-  },
-  {
-    title: "Payout",
-    description:
-      "Send real cash rewards via PayPal, Stripe, or bank transfer.",
+      "Let users accumulate RewardBase points and redeem rewards they choose.",
+    live: false,
   },
   {
     title: "Giftcards",
     description:
-      "Deliver digital gift cards from popular brands like Amazon and more.",
+      "Let users redeem rewards as gift cards from popular global brands easily.",
+    live: false,
+  },
+  {
+    title: "Payout",
+    description:
+      "Send real cash rewards directly to users' bank account though managed payouts.",
+    live: false,
   },
 ];
 
 const fulfillmentMethods = [
   {
-    title: "Webhook & Zapier",
+    name: "Webhook",
+    status: "Live",
     description:
-      "Connect to thousands of apps and automate reward delivery with webhooks or Zapier integrations.",
-    available: true,
+      "Trigger reward delivery through your existing automation stack the moment a condition is met.",
   },
   {
-    title: "SDK / API",
+    name: "SDK",
+    status: "Live in May",
     description:
-      "Use our developer-friendly SDK and REST API for full control over reward fulfillment logic.",
-    coming: true,
+      "Deliver rewards programmatically from inside your product using in-app events and user state.",
   },
   {
-    title: "Payment Gateway",
+    name: "Payment Gateway",
+    status: "Live in June",
     description:
-      "Process payouts through integrated payment gateways like Stripe and PayPal.",
-    coming: true,
-    expanded: true,
+      "Connect your payment provider to issue credits, discounts, or cashback directly at checkout.",
+  },
+  {
+    name: "Manual",
+    status: "Live",
+    description:
+      "Review user submissions and approve rewards manually for actions that need human verification.",
   },
 ];
 
-function FulfillmentItem({
-  method,
-  isOpen,
-  onToggle,
-}: {
-  method: (typeof fulfillmentMethods)[number];
-  isOpen: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <div
-      className={`rounded-xl border transition-all duration-300 ${
-        isOpen
-          ? "border-brand/30 bg-brand/5"
-          : "border-border hover:bg-card"
-      }`}
-    >
-      <button
-        onClick={onToggle}
-        className="flex items-center justify-between w-full px-4 py-3 text-left"
-      >
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-foreground">
-            {method.title}
-          </span>
-          {method.coming && (
-            <span className="text-[10px] font-semibold text-amber-600 bg-amber-50 rounded-full px-2 py-0.5">
-              Coming Soon
-            </span>
-          )}
-        </div>
-        <div className="flex items-center gap-1.5">
-          {isOpen ? (
-            <div className="h-7 w-7 rounded-full bg-brand/20 flex items-center justify-center">
-              <X size={14} className="text-brand" />
-            </div>
-          ) : (
-            <>
-              <div className="h-7 w-7 rounded-full border border-border flex items-center justify-center hover:bg-card">
-                <Plus size={14} className="text-muted" />
-              </div>
-            </>
-          )}
-        </div>
-      </button>
-
-      <div
-        className={`grid transition-all duration-300 ease-in-out ${
-          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <p className="px-4 pb-4 text-sm text-muted leading-relaxed">
-            {method.description}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Rewards() {
-  const [openIndex, setOpenIndex] = useState(2);
+  const [addedStates, setAddedStates] = useState<boolean[]>(
+    fulfillmentMethods.map((_, i) => i !== 0),
+  );
+
+  const toggle = (i: number) =>
+    setAddedStates((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
 
   return (
-    <section className="py-20 bg-card/50">
+    <section className="py-20 bg-white">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Section label — left aligned */}
+        {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500">
             <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
@@ -133,49 +88,76 @@ export default function Rewards() {
           </span>
         </div>
 
-        {/* Heading row — two columns */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground leading-tight">
-            Incentivize users to take action with rewards
+        {/* Heading row */}
+        <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl lg:text-3xl font-bold tracking-tight text-foreground leading-tight">
+            Drive action with tailored rewards your users care about
           </h2>
-          <p className="text-base text-muted leading-relaxed lg:pt-2">
-            A reward represents a level of access, feature, offering, or content
-            that a user is &ldquo;rewarded&rdquo; with. RewardBase offers six
-            reward types for every use case.
+          <p className="lg:w-2/5 text-base text-muted leading-relaxed lg:leading-[25px]">
+            Rewardbase helps you build a flexible reward system that adapts to any program. Configure reward types and rules for each program, and automatically fulfill rewards when users complete actions.
           </p>
         </div>
 
         {/* Content — two columns */}
-        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-          {/* Left — Fulfillment methods */}
-          <div className="lg:col-span-1 flex flex-col h-full">
-            <h3 className="text-sm font-semibold text-foreground mb-2">
-              Reward Fulfillment Methods
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
+          {/* Left — How it works */}
+          <div className="lg:col-span-1">
+            <h3 className="text-base font-bold text-foreground mb-1.5">
+              How it works
             </h3>
-            <p className="text-sm text-muted mb-6 leading-relaxed">
-              Rewards can be fulfilled through various methods tailored to your
-              product and audience.
+            <p className="text-sm text-muted mb-5">
+              Pick how each reward reaches the user — automated, instant, or on approval.
             </p>
-            <div className="space-y-2.5">
-              {fulfillmentMethods.map((method, i) => (
-                <FulfillmentItem
-                  key={method.title}
-                  method={method}
-                  isOpen={openIndex === i}
-                  onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
-                />
-              ))}
+            <div className="space-y-3">
+              {fulfillmentMethods.map((method, i) => {
+                const added = addedStates[i];
+                return (
+                  <div
+                    key={method.name}
+                    className="rounded-xl border border-border p-4 bg-white"
+                  >
+                    <div className="flex items-center justify-between gap-3 mb-2">
+                      <span className="text-sm font-semibold text-foreground min-w-0 truncate">
+                        {method.name}
+                      </span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <span className="inline-flex items-center gap-1 text-[10px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                          <span className="h-1 w-1 rounded-full bg-blue-500" />
+                          {method.status}
+                        </span>
+                        <button
+                          onClick={() => toggle(i)}
+                          className="h-6 w-6 rounded-full flex items-center justify-center text-muted hover:bg-card transition-colors"
+                          aria-label={added ? "Remove" : "Add"}
+                        >
+                          {added ? <X size={14} /> : <Plus size={14} />}
+                        </button>
+                      </div>
+                    </div>
+                    <p className="text-xs text-muted leading-relaxed">
+                      {method.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
-            <p className="text-xs text-muted mt-auto pt-4">* Features in development</p>
           </div>
 
-          {/* Right — Reward type cards */}
+          {/* Right — Reward cards */}
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
-            {rewardTypes.map((reward) => (
+            {rewards.map((reward) => (
               <div
                 key={reward.title}
-                className="rounded-2xl border border-border p-5 hover:shadow-md transition-shadow bg-white"
+                className={`relative rounded-2xl border p-5 bg-white transition-shadow hover:shadow-md ${
+                  reward.live ? "border-blue-500" : "border-border"
+                }`}
               >
+                {reward.live && (
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[10px] font-medium text-blue-600 border border-blue-200 rounded-full px-2 py-0.5">
+                    <span className="h-1 w-1 rounded-full bg-blue-500" />
+                    Live
+                  </span>
+                )}
                 <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-4">
                   <Gift size={20} className="text-muted" />
                 </div>

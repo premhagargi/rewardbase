@@ -9,13 +9,13 @@ const stages = ["Acquire", "Activate", "Engage", "Advocate"] as const;
 
 const stageDescriptions: Record<string, string> = {
   Acquire:
-    "Drive new sign-ups with irresistible referral rewards that turn every user into a growth channel.",
+    "Get more qualified customers by incentivizing referrals, shoutouts and user-generated content.",
   Activate:
-    "Motivate first actions with milestone-based incentives that guide users to their aha moment.",
+    "Improve time-to-value and adoption by incentivizing key onboarding steps and value-driving actions.",
   Engage:
-    "Keep users coming back with reward programs that celebrate consistency and contribution.",
+    "Drive deeper engagement by incentivizing feedback and participation beyond core usage.",
   Advocate:
-    "Transform loyal users into brand champions with social sharing and review rewards.",
+    "Build trust and social proof by incentivizing testimonials, reviews, and endorsements.",
 };
 
 const rewards = [
@@ -76,23 +76,26 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-6">
         {/* Headline */}
         <div className="text-center max-w-3xl mx-auto mb-6">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.1] mb-3">
+          <p className="text-sm sm:text-base font-semibold text-blue-600 mb-3">
+            User-led Growth Platform
+          </p>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.1] mb-3 whitespace-nowrap">
             Turn your users into your growth engine
           </h1>
           <p className="text-lg text-muted leading-relaxed mb-5">
-            Start free. Unlimited support for $29/m. Offload to AI for $59/m.
-            Live in 3 minutes.
+            Unlock user-driven growth with reward programs for referrals, testimonials, feedback
+            and more - built into your product and managed in one place.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-lg bg-foreground text-white text-base font-medium px-7 py-3 hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-lg border border-border text-foreground text-base font-medium px-7 py-3 hover:bg-card transition-colors"
+              className="inline-flex items-center justify-center rounded-2xl border border-border text-foreground text-base font-medium px-5 py-2.5 hover:bg-card transition-colors"
             >
               Book Demo
             </a>
@@ -106,10 +109,10 @@ export default function Hero() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(i)}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors border ${
                   activeCategory === i
-                    ? "bg-foreground text-white"
-                    : "bg-card text-muted hover:bg-card-hover border border-border"
+                    ? "bg-white text-foreground border-foreground"
+                    : "bg-card text-muted hover:bg-card-hover border-border"
                 }`}
               >
                 {cat}
@@ -139,7 +142,7 @@ export default function Hero() {
         {/* Stage Cards Carousel */}
         <div className="relative">
 
-          <div className="overflow-x-auto scrollbar-hide -mx-6 px-6">
+          <div className="overflow-hidden -mx-6 px-6">
             <div
               className="flex gap-5 transition-transform duration-500 ease-out pb-4"
               style={{
@@ -151,6 +154,13 @@ export default function Hero() {
               ))}
             </div>
           </div>
+
+          {scrollPos > 0 && (
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-32 sm:w-40 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+          )}
+          {scrollPos < 1 && (
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-32 sm:w-40 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
+          )}
         </div>
       </div>
     </section>

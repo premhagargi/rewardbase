@@ -6,6 +6,7 @@ import ProblemSolution from "@/components/ProblemSolution";
 import Programs from "@/components/Programs";
 import Rewards from "@/components/Rewards";
 import HowItWorks from "@/components/HowItWorks";
+import Walkthrough from "@/components/Walkthrough";
 import CaseStudies from "@/components/CaseStudies";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -24,6 +25,7 @@ export default function Home() {
         <Programs />
         <Rewards />
         <HowItWorks />
+        <Walkthrough />
         <CaseStudies />
         <Pricing />
         <FAQ />
