@@ -35,7 +35,7 @@ function RewardRow({
   reward: { platform: string; action: string; reward: string };
 }) {
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-border bg-background px-3 py-2 hover:shadow-sm transition-shadow">
+    <div className="flex items-center gap-3 rounded-lg border border-border bg-background px-3 py-2 hover:shadow-sm transition-shadow">
       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
           <circle cx="12" cy="12" r="10" stroke="#E8503A" strokeWidth="2" />
@@ -57,7 +57,7 @@ function RewardRow({
 
 function StageCard({ stage }: { stage: string }) {
   return (
-    <div className="w-[285px] shrink-0 rounded-3xl border border-border bg-background p-[18px] shadow-sm">
+    <div className="snap-start w-[220px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-background p-3.5 sm:p-[18px]">
       <h3 className="text-[18px] font-bold text-foreground mb-1">{stage}</h3>
       <p className="text-[15px] text-muted mb-3.5 leading-relaxed">
         {stageDescriptions[stage]}
@@ -80,10 +80,13 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="text-[15px] font-normal text-gradient-blue mb-3">
+          <p className="text-[18px] font-semibold text-gradient-blue mb-3">
             User-led Growth Platform
           </p>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground leading-[1.1] mb-3 whitespace-nowrap">
+          <h1
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight text-foreground leading-[1.1] mb-3 lg:whitespace-nowrap"
+            style={{ fontWeight: 650 }}
+          >
             Turn your users into your growth engine
           </h1>
           <p className="text-lg text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
@@ -93,13 +96,13 @@ export default function Hero() {
           <div className="flex items-center justify-center gap-4">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-lg bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-xl border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
+              className="inline-flex items-center justify-center rounded-lg border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
               Book Demo
             </a>
@@ -108,14 +111,14 @@ export default function Hero() {
 
         {/* Category Tabs + Carousel Arrows */}
         <div className="flex items-center justify-between mb-3">
-          <div className="inline-flex items-center rounded-full border border-border">
+          <div className="inline-flex items-center rounded-full">
             {categories.map((cat, i) => (
               <button
                 key={cat.name}
                 onClick={() => setActiveCategory(i)}
                 className={`rounded-full px-3.5 py-1.5 text-[15px] font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
                   activeCategory === i
-                    ? "bg-gradient-to-b from-background to-blue-50/60 text-foreground border-border/60 animate-pill-pop"
+                    ? "bg-transparent text-foreground border-black"
                     : "text-muted hover:text-foreground border-transparent"
                 }`}
               >
@@ -123,7 +126,7 @@ export default function Hero() {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="hidden sm:flex items-center gap-2">
             <button
               onClick={() => setScrollPos(Math.max(0, scrollPos - 1))}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-card transition-colors"
@@ -144,11 +147,11 @@ export default function Hero() {
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div
             className="flex gap-4 transition-transform duration-500 ease-out pb-4"
             style={{
-              transform: `translateX(-${scrollPos * 301}px)`,
+              transform: `translateX(-${scrollPos * 321}px)`,
             }}
           >
             {stages.map((stage) => (
@@ -157,10 +160,10 @@ export default function Hero() {
           </div>
 
           {scrollPos > 0 && (
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10" />
           )}
           {scrollPos < 1 && (
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent z-10" />
           )}
         </div>
       </div>

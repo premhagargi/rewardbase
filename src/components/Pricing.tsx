@@ -58,7 +58,10 @@ export default function Pricing() {
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h2
+            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
+            style={{ fontWeight: 650 }}
+          >
             Start for free
             <br />
             Pay when you grow
@@ -70,7 +73,7 @@ export default function Pricing() {
 
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {/* Left — free trial info (no card) */}
-          <div className="flex flex-col p-6">
+          <div className="flex flex-col">
             <h3 className="text-lg font-bold text-foreground mb-1.5">
               15-day Free Trial
             </h3>
@@ -80,13 +83,13 @@ export default function Pricing() {
             <p className="text-sm text-muted leading-relaxed mb-3">
               Set up and launch your reward programs - see your users drive measurable growth through their actions
             </p>
-            <button className="rounded-xl bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors">
+            <button className="rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors">
               Get Started
             </button>
           </div>
 
           {/* Middle — Pro card */}
-          <div className="rounded-3xl border-2 border-blue-500 bg-background p-6 flex flex-col">
+          <div className="rounded-2xl border-2 border-blue-500 bg-background p-6 flex flex-col">
             <h3 className="text-lg font-bold text-foreground mb-1.5">Pro</h3>
             <p className="text-sm text-muted mb-5 leading-relaxed">
               For teams ready to drive consistent growth through user-driven actions.
@@ -131,7 +134,7 @@ export default function Pricing() {
               </div>
             </div>
 
-            <button className="w-full rounded-xl bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mb-6">
+            <button className="w-full rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mb-6">
               Get Started
             </button>
 
@@ -146,7 +149,7 @@ export default function Pricing() {
           </div>
 
           {/* Right — Lifetime Deal card */}
-          <div className="rounded-3xl border border-border bg-background p-6 flex flex-col">
+          <div className="rounded-2xl border border-border bg-background p-6 flex flex-col">
             <div className="flex items-center gap-2 mb-1.5">
               <h3 className="text-lg font-bold text-foreground">
                 Life Time Deal
@@ -164,7 +167,7 @@ export default function Pricing() {
               <span className="text-sm text-muted font-medium">Pay Once</span>
             </div>
 
-            <button className="w-full rounded-xl bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mb-6">
+            <button className="w-full rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mb-6">
               Claim Deal
             </button>
 

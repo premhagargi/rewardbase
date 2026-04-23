@@ -8,13 +8,13 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/40 backdrop-blur-md border-b border-border/50">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12 flex items-center justify-between h-12">
+      <div className="mx-auto max-w-6xl px-3 sm:px-4 lg:px-5 flex items-center justify-between h-14">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
             src="/assets/RewardBase%20Logo%20(Gradient%20-%20Blacktext).svg"
             alt="RewardBase"
-            className="h-8 w-auto"
+            className="h-10 w-auto"
           />
         </a>
 
@@ -30,7 +30,7 @@ export default function Navbar() {
           </nav>
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-sm font-medium px-3 py-1.5 hover:bg-foreground/90 transition-colors"
+            className="inline-flex items-center justify-center rounded-lg bg-foreground text-white text-sm font-medium px-3 py-1.5 hover:bg-foreground/90 transition-colors"
           >
             Start for Free
           </a>
@@ -38,7 +38,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className="md:hidden p-1 text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -65,7 +65,7 @@ export default function Navbar() {
           </a>
           <a
             href="#pricing"
-            className="block text-center rounded-xl bg-foreground text-white text-sm font-medium px-4 py-2"
+            className="block text-center rounded-lg bg-foreground text-white text-sm font-medium px-4 py-2"
             onClick={() => setMobileOpen(false)}
           >
             Start for Free

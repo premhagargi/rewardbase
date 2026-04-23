@@ -23,9 +23,9 @@ const cases = [
 ];
 
 const brandLogos: Record<string, { src: string; className: string }> = {
-  SURFER: { src: "/surferlogo.svg", className: "h-[18px] w-auto" },
-  NOTION: { src: "/notionlogo.svg", className: "h-[26px] w-auto" },
-  BASE44: { src: "/base44logo.svg", className: "h-5 w-auto" },
+  SURFER: { src: "/surferlogo.svg", className: "h-[22px] w-auto" },
+  NOTION: { src: "/notionlogo.svg", className: "h-[32px] w-auto" },
+  BASE44: { src: "/base44logo.svg", className: "h-7 w-auto" },
 };
 
 function BrandLogo({ brand }: { brand: string; color: string }) {
@@ -42,14 +42,17 @@ export default function CaseStudies() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
             Case Studies
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h2
+            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
+            style={{ fontWeight: 650 }}
+          >
             Proven playbook used by the best growth teams
           </h2>
           <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
@@ -61,7 +64,7 @@ export default function CaseStudies() {
           {cases.map((item) => (
             <div
               key={item.brand}
-              className="group relative rounded-2xl overflow-hidden text-white min-h-[460px] flex flex-col"
+              className="group relative rounded-xl overflow-hidden text-white min-h-[460px] flex flex-col"
             >
               {/* Background layers */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />

@@ -57,7 +57,7 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   useEffect(() => {
     const SRC =
@@ -77,11 +77,14 @@ export default function FAQ() {
           <div>
             <div className="mb-4">
               <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-                <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
+                <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
                 FAQ
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight mb-5">
+            <h2
+              className="text-3xl sm:text-4xl tracking-tight text-foreground leading-tight mb-5"
+              style={{ fontWeight: 650 }}
+            >
               Frequently Asked Questions
             </h2>
             <p className="text-base text-muted leading-relaxed mb-1">
@@ -110,7 +113,7 @@ export default function FAQ() {
                   </span>
                   <span className="shrink-0 mt-0.5">
                     {openIndex === i ? (
-                      <Minus size={18} className="text-foreground" />
+                      <Minus size={18} className="text-muted" />
                     ) : (
                       <Plus size={18} className="text-muted" />
                     )}

@@ -6,7 +6,10 @@ export default function Walkthrough() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 mb-10">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h2
+            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
+            style={{ fontWeight: 650 }}
+          >
             From setup to live programs
             <br />
             in minutes
@@ -17,10 +20,10 @@ export default function Walkthrough() {
         </div>
 
         {/* Demo mockup container */}
-        <div className="relative rounded-2xl bg-[#f5f3f1] p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-xl bg-[#f3f4f6] p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window mockup */}
-            <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">
+            <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">
               {/* Header */}
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
                 <div className="flex items-center gap-3">
@@ -53,14 +56,14 @@ export default function Walkthrough() {
                     </div>
                   </div>
                   <div className="px-2 space-y-0.5">
-                    <div className="rounded-lg bg-card px-3 py-2.5 border-l-2 border-blue-500">
+                    <div className="rounded-md bg-card px-3 py-2.5 border-l-2 border-blue-500">
                       <div className="flex items-center justify-between">
                         <p className="text-xs font-semibold text-foreground">Andrew Miller</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
                       </div>
                       <p className="text-[11px] text-muted truncate mt-0.5">Yes, as you&apos;re already...</p>
                     </div>
-                    <div className="rounded-lg px-3 py-2.5">
+                    <div className="rounded-md px-3 py-2.5">
                       <div className="flex items-center justify-between">
                         <p className="text-xs font-semibold text-foreground">Felippe Nardi</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
@@ -85,28 +88,28 @@ export default function Walkthrough() {
                     <p className="text-center text-[11px] text-muted font-medium">Yesterday</p>
 
                     <div className="flex flex-col items-start">
-                      <div className="rounded-2xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-foreground">I signed up for free. How do I upgrade?</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 ml-1">Andrew &middot; 12:00 PM</span>
                     </div>
 
                     <div className="flex flex-col items-start">
-                      <div className="rounded-2xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-foreground">I&apos;d like to subscribe to the paid plan.</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 ml-1">Andrew &middot; 12:01 PM</span>
                     </div>
 
                     <div className="flex flex-col items-end">
-                      <div className="rounded-2xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-white">Hi, Andrew!</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 mr-1">12:02 PM &middot; You</span>
                     </div>
 
                     <div className="flex flex-col items-end">
-                      <div className="rounded-2xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-white">You can subscribe to a paid plan from Settings &gt; Billing.</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 mr-1">12:03 PM &middot; You</span>

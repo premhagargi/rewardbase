@@ -61,7 +61,7 @@ function RewardWidget() {
   ];
 
   return (
-    <div className="w-[260px] rounded-2xl bg-background shadow-2xl border border-border/60 overflow-hidden">
+    <div className="w-[260px] rounded-xl bg-background shadow-2xl border border-border/60 overflow-hidden">
       <div className="bg-violet-600 px-4 pt-4 pb-3.5 text-white relative">
         <button className="absolute top-2.5 right-2.5">
           <X size={14} className="text-white/60" />
@@ -87,7 +87,7 @@ function RewardWidget() {
         {tasks.map((task, i) => (
           <div
             key={i}
-            className="flex items-center gap-2.5 rounded-lg border border-border p-2.5"
+            className="flex items-center gap-2.5 rounded-md border border-border p-2.5"
           >
             <div className="shrink-0">{task.icon}</div>
             <div className="flex-1 min-w-0">
@@ -132,26 +132,29 @@ export default function ProductDemo() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
             RewardBase Widget
           </span>
         </div>
 
         {/* Top: heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-snug">
+          <h2
+            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-snug"
+            style={{ fontWeight: 650 }}
+          >
             Run reward programs right inside your product
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto text-[15px] text-muted leading-relaxed lg:leading-[30px]">
+          <p className="lg:w-2/5 lg:ml-auto text-[15px] text-muted leading-relaxed lg:leading-[25px]">
             Add RewardBase directly inside your app or website, customize to match your brand, and auto-identify users. No logins, no redirects, no friction.
           </p>
         </div>
 
         {/* Mockup container */}
-        <div className="relative rounded-2xl bg-[#f5f3f1] p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-xl bg-[#f3f4f6] p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window */}
-            <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">
+            <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">
               {/* Chat header */}
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
                 <div className="flex items-center gap-3">
@@ -186,7 +189,7 @@ export default function ProductDemo() {
                     </div>
                   </div>
                   <div className="px-2 space-y-0.5">
-                    <div className="rounded-lg bg-card px-3 py-2.5 border-l-2 border-blue-500">
+                    <div className="rounded-md bg-card px-3 py-2.5 border-l-2 border-blue-500">
                       <div className="flex items-center justify-between">
                         <p className="text-xs font-semibold text-foreground">Andrew Miller</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
@@ -195,7 +198,7 @@ export default function ProductDemo() {
                         Yes, as you&apos;re already...
                       </p>
                     </div>
-                    <div className="rounded-lg px-3 py-2.5 hover:bg-card/50 transition-colors">
+                    <div className="rounded-md px-3 py-2.5 hover:bg-card/50 transition-colors">
                       <div className="flex items-center justify-between">
                         <p className="text-xs font-semibold text-foreground">Felippe Nardi</p>
                         <span className="text-[10px] text-muted">Yesterday</span>
@@ -225,7 +228,7 @@ export default function ProductDemo() {
 
                     {/* User messages */}
                     <div className="flex flex-col items-start">
-                      <div className="rounded-2xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-foreground">I signed up for free. How do I upgrade?</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 ml-1 flex items-center gap-1">
@@ -235,7 +238,7 @@ export default function ProductDemo() {
                     </div>
 
                     <div className="flex flex-col items-start">
-                      <div className="rounded-2xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-bl-sm bg-card border border-border px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-foreground">I&apos;d like to subscribe to the paid plan.</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 ml-1 flex items-center gap-1">
@@ -246,14 +249,14 @@ export default function ProductDemo() {
 
                     {/* Agent messages */}
                     <div className="flex flex-col items-end">
-                      <div className="rounded-2xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-white">Hi, Andrew!</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 mr-1">12:02 PM &middot; You</span>
                     </div>
 
                     <div className="flex flex-col items-end">
-                      <div className="rounded-2xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
+                      <div className="rounded-xl rounded-br-sm bg-foreground px-4 py-2.5 max-w-[300px]">
                         <p className="text-sm text-white">You can subscribe to a paid plan from Settings &gt; Billing.</p>
                       </div>
                       <span className="text-[10px] text-muted mt-1 mr-1">12:03 PM &middot; You</span>

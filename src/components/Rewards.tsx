@@ -71,7 +71,7 @@ const fulfillmentMethods = [
 
 export default function Rewards() {
   const [openStates, setOpenStates] = useState<boolean[]>(
-    fulfillmentMethods.map((_, i) => i === 0),
+    fulfillmentMethods.map(() => false),
   );
 
   const toggle = (i: number) =>
@@ -83,14 +83,17 @@ export default function Rewards() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
             Rewards
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h2
+            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
+            style={{ fontWeight: 650 }}
+          >
             Drive action with tailored rewards your users care about
           </h2>
           <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
@@ -99,7 +102,7 @@ export default function Rewards() {
         </div>
 
         {/* Content — two columns */}
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
+        <div className="grid lg:grid-cols-3 gap-6 items-start">
           {/* Left — How it works */}
           <div className="lg:col-span-1">
             <h3 className="text-base font-bold text-foreground mb-1.5">
@@ -114,7 +117,7 @@ export default function Rewards() {
                 return (
                   <div
                     key={method.name}
-                    className="rounded-xl border border-border p-4 bg-background"
+                    className="rounded-lg border border-border p-4 bg-background"
                   >
                     <button
                       type="button"
@@ -135,7 +138,7 @@ export default function Rewards() {
                           aria-hidden="true"
                         >
                           {open ? (
-                            <Minus size={18} className="text-foreground" />
+                            <Minus size={18} className="text-muted" />
                           ) : (
                             <Plus size={18} className="text-muted" />
                           )}
@@ -154,11 +157,11 @@ export default function Rewards() {
           </div>
 
           {/* Right — Reward cards */}
-          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
             {rewards.map((reward) => (
               <div
                 key={reward.title}
-                className="relative rounded-3xl border border-border px-5 py-3.5 bg-[#f5f3f1] transition-shadow hover:shadow-md"
+                className="relative rounded-2xl border border-border px-5 py-3.5 bg-[#fdfcfb]"
               >
                 {reward.live && (
                   <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
@@ -166,7 +169,7 @@ export default function Rewards() {
                     Live
                   </span>
                 )}
-                <div className="h-10 w-10 rounded-xl bg-card border border-border flex items-center justify-center mb-3">
+                <div className="h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center mb-3">
                   <Gift size={20} className="text-muted" />
                 </div>
                 <h4 className="text-base font-bold text-foreground mb-1.5">

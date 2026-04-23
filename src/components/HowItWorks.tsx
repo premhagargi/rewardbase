@@ -26,14 +26,17 @@ export default function HowItWorks() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
             How it works
           </span>
         </div>
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h2
+            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
+            style={{ fontWeight: 650 }}
+          >
             Launch your reward program in 3 simple steps
           </h2>
           <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
@@ -46,9 +49,9 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="rounded-3xl border border-border px-5 py-4 bg-[#f5f3f1]"
+              className="rounded-2xl border border-border px-5 py-4 bg-[#fdfcfb]"
             >
-              <div className="h-9 w-9 rounded-lg bg-blue-500 flex items-center justify-center text-white text-sm font-bold mb-4">
+              <div className="h-9 w-9 rounded-md bg-blue-500 flex items-center justify-center text-white text-sm font-bold mb-4">
                 {step.number}
               </div>
               <h3 className="text-lg font-bold text-foreground mb-2">
@@ -57,7 +60,7 @@ export default function HowItWorks() {
               <p className="text-sm text-muted leading-relaxed mb-4">
                 {step.description}
               </p>
-              <div className="h-48 rounded-xl bg-card border border-border overflow-hidden flex items-center justify-center">
+              <div className="h-48 rounded-lg bg-card border border-border overflow-hidden flex items-center justify-center">
                 <svg
                   viewBox="0 0 200 120"
                   preserveAspectRatio="none"

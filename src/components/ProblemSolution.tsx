@@ -33,7 +33,7 @@ export default function ProblemSolution() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
             Why RewardBase
           </span>
         </div>
@@ -41,7 +41,10 @@ export default function ProblemSolution() {
         <div className="grid lg:grid-cols-[60%_35%] lg:gap-[5%] gap-12 items-start mb-16">
           {/* Left */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight mb-5">
+            <h2
+              className="text-3xl sm:text-4xl tracking-tight text-foreground leading-tight mb-5"
+              style={{ fontWeight: 650 }}
+            >
               Your users are the most powerful growth lever - yet the most underutilized
             </h2>
             <div className="space-y-4 text-base text-muted leading-relaxed">
@@ -62,9 +65,9 @@ export default function ProblemSolution() {
             {previewRewards.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 rounded-3xl border border-border p-4 bg-background hover:shadow-sm transition-shadow"
+                className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-background hover:shadow-sm transition-shadow"
               >
-                <div className="h-12 w-12 shrink-0 rounded-xl bg-card border border-border flex items-center justify-center">
+                <div className="h-12 w-12 shrink-0 rounded-lg bg-card border border-border flex items-center justify-center">
                   <HugeiconsIcon icon={item.icon} size={22} className="text-muted" />
                 </div>
                 <div>
