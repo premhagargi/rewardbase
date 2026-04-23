@@ -7,14 +7,14 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/40 backdrop-blur-md border-b border-border/50">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12 flex items-center justify-between h-14">
+    <header className="sticky top-0 z-50 bg-background/40 backdrop-blur-md border-b border-border/50">
+      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12 flex items-center justify-between h-12">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
             src="/assets/RewardBase%20Logo%20(Gradient%20-%20Blacktext).svg"
             alt="RewardBase"
-            className="h-7 w-auto"
+            className="h-8 w-auto"
           />
         </a>
 
@@ -30,7 +30,7 @@ export default function Navbar() {
           </nav>
           <a
             href="#pricing"
-            className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-sm font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
+            className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-sm font-medium px-3 py-1.5 hover:bg-foreground/90 transition-colors"
           >
             Start for Free
           </a>
@@ -48,7 +48,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-white px-6 py-4 space-y-3">
+        <div className="md:hidden border-t border-border bg-background px-6 py-4 space-y-3">
           <a
             href="#how-it-works"
             className="block text-sm font-medium text-muted hover:text-foreground"
@@ -65,7 +65,7 @@ export default function Navbar() {
           </a>
           <a
             href="#pricing"
-            className="block text-center rounded-2xl bg-foreground text-white text-base font-medium px-5 py-2.5"
+            className="block text-center rounded-xl bg-foreground text-white text-sm font-medium px-4 py-2"
             onClick={() => setMobileOpen(false)}
           >
             Start for Free

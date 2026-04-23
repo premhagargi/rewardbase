@@ -2,7 +2,7 @@ import { Play, MessageCircle } from "lucide-react";
 
 export default function Walkthrough() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 mb-10">
@@ -20,7 +20,7 @@ export default function Walkthrough() {
         <div className="relative rounded-2xl bg-[#f5f3f1] p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window mockup */}
-            <div className="rounded-2xl bg-white border border-border shadow-lg overflow-hidden">
+            <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">
               {/* Header */}
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
                 <div className="flex items-center gap-3">
@@ -132,7 +132,7 @@ export default function Walkthrough() {
 
                   {/* Play button overlay */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <button className="pointer-events-auto h-20 w-20 rounded-full bg-white/80 backdrop-blur-sm shadow-xl flex items-center justify-center hover:bg-white hover:scale-105 transition-all">
+                    <button className="pointer-events-auto h-20 w-20 rounded-full bg-background/80 backdrop-blur-sm shadow-xl flex items-center justify-center hover:bg-background hover:scale-105 transition-all">
                       <Play size={32} className="text-foreground ml-1" fill="currentColor" />
                     </button>
                   </div>

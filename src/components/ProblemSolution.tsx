@@ -28,7 +28,7 @@ const previewRewards = [
 
 export default function ProblemSolution() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
@@ -62,7 +62,7 @@ export default function ProblemSolution() {
             {previewRewards.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 rounded-3xl border border-border p-4 bg-white hover:shadow-sm transition-shadow"
+                className="flex items-center gap-4 rounded-3xl border border-border p-4 bg-background hover:shadow-sm transition-shadow"
               >
                 <div className="h-12 w-12 shrink-0 rounded-xl bg-card border border-border flex items-center justify-center">
                   <HugeiconsIcon icon={item.icon} size={22} className="text-muted" />

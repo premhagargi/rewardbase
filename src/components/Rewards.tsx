@@ -78,7 +78,7 @@ export default function Rewards() {
     setOpenStates((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
@@ -114,7 +114,7 @@ export default function Rewards() {
                 return (
                   <div
                     key={method.name}
-                    className="rounded-xl border border-border p-4 bg-white"
+                    className="rounded-xl border border-border p-4 bg-background"
                   >
                     <button
                       type="button"
@@ -161,7 +161,7 @@ export default function Rewards() {
                 className="relative rounded-3xl border border-border px-5 py-3.5 bg-[#f5f3f1] transition-shadow hover:shadow-md"
               >
                 {reward.live && (
-                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-blue-600 border border-border rounded-full px-2 py-0.5">
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
                     <span className="h-1 w-1 rounded-full bg-blue-500" />
                     Live
                   </span>

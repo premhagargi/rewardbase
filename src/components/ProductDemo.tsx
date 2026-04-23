@@ -61,7 +61,7 @@ function RewardWidget() {
   ];
 
   return (
-    <div className="w-[260px] rounded-2xl bg-white shadow-2xl border border-border/60 overflow-hidden">
+    <div className="w-[260px] rounded-2xl bg-background shadow-2xl border border-border/60 overflow-hidden">
       <div className="bg-violet-600 px-4 pt-4 pb-3.5 text-white relative">
         <button className="absolute top-2.5 right-2.5">
           <X size={14} className="text-white/60" />
@@ -76,7 +76,7 @@ function RewardWidget() {
         <p className="text-sm font-bold leading-snug">
           Get free access to RewardBase by helping us spread the word!
         </p>
-        <div className="mt-2.5 flex items-center gap-1.5 bg-white/20 rounded-full px-2.5 py-1 w-fit">
+        <div className="mt-2.5 flex items-center gap-1.5 bg-background/20 rounded-full px-2.5 py-1 w-fit">
           <Check size={12} />
           <span className="text-xs font-medium">
             Yay! Your submission got approved.
@@ -127,7 +127,7 @@ function RewardWidget() {
 
 export default function ProductDemo() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
@@ -139,10 +139,10 @@ export default function ProductDemo() {
 
         {/* Top: heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-snug">
             Run reward programs right inside your product
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[30px]">
+          <p className="lg:w-2/5 lg:ml-auto text-[15px] text-muted leading-relaxed lg:leading-[30px]">
             Add RewardBase directly inside your app or website, customize to match your brand, and auto-identify users. No logins, no redirects, no friction.
           </p>
         </div>
@@ -151,7 +151,7 @@ export default function ProductDemo() {
         <div className="relative rounded-2xl bg-[#f5f3f1] p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window */}
-            <div className="rounded-2xl bg-white border border-border shadow-lg overflow-hidden">
+            <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">
               {/* Chat header */}
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
                 <div className="flex items-center gap-3">

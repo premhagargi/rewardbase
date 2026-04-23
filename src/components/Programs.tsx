@@ -78,7 +78,7 @@ export default function Programs() {
     setOpenStates((prev) => prev.map((v, idx) => (idx === i ? !v : v)));
 
   return (
-    <section id="programs" className="py-20 bg-white">
+    <section id="programs" className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
@@ -90,10 +90,10 @@ export default function Programs() {
 
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
-          <h2 className="lg:w-1/2 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
+          <h2 className="lg:w-3/5 text-3xl sm:text-4xl font-semibold tracking-tight text-foreground leading-tight">
             Turn key user actions into reward programs that drive growth
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-1/3 lg:ml-auto text-[15px] text-muted leading-relaxed lg:leading-[25px]">
             RewardBase helps you create reward programs for every stage of the user lifecycle. Incentivize actions that matter and turn user behavior into a consistent, scalable growth engine.
           </p>
         </div>
@@ -114,7 +114,7 @@ export default function Programs() {
                 return (
                   <div
                     key={method.name}
-                    className="rounded-xl border border-border p-4 bg-white"
+                    className="rounded-xl border border-border p-4 bg-background"
                   >
                     <button
                       type="button"
@@ -161,7 +161,7 @@ export default function Programs() {
                 className="relative rounded-3xl border border-border px-5 py-3.5 bg-[#f5f3f1] transition-shadow hover:shadow-md"
               >
                 {program.live && (
-                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-blue-600 border border-border rounded-full px-2 py-0.5">
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
                     <span className="h-1 w-1 rounded-full bg-blue-500" />
                     Live
                   </span>

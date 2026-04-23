@@ -70,7 +70,7 @@ export default function FAQ() {
   }, []);
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-start">
           {/* Left */}

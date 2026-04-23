@@ -2,7 +2,7 @@
 @import "lenis/dist/lenis.css";
 
 @theme inline {
-  --color-background: #ffffff;
+  --color-background: #fdfcfc;
   --color-foreground: #171717;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
@@ -38,7 +38,7 @@ body {
 
 /* Section-label blue gradient text */
 .text-gradient-blue {
-  color: #2596be;
+  color: #003364;
 }
 
 /* Pill toggle pop */

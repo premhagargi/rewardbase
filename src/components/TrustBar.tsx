@@ -11,7 +11,7 @@ const logos = [
 
 export default function TrustBar() {
   return (
-    <section className="py-14 bg-white">
+    <section className="py-14 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         <p className="text-center text-base text-muted mb-8 font-medium">
           Trusted by businesses around the world
@@ -20,8 +20,8 @@ export default function TrustBar() {
         {/* Marquee wrapper — constrained to max-width */}
         <div className="relative overflow-hidden">
           {/* Fade edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
 
           <div className="flex animate-marquee w-max">
             {/* Render the list twice for seamless loop */}

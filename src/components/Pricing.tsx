@@ -46,7 +46,7 @@ export default function Pricing() {
   const trackBackground = `linear-gradient(to right, #dbeafe 0%, ${fillEnd} ${percent}%, #e5e7eb ${percent}%, #e5e7eb 100%)`;
 
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
@@ -86,7 +86,7 @@ export default function Pricing() {
           </div>
 
           {/* Middle — Pro card */}
-          <div className="rounded-3xl border-2 border-blue-500 bg-white p-6 flex flex-col">
+          <div className="rounded-3xl border-2 border-blue-500 bg-background p-6 flex flex-col">
             <h3 className="text-lg font-bold text-foreground mb-1.5">Pro</h3>
             <p className="text-sm text-muted mb-5 leading-relaxed">
               For teams ready to drive consistent growth through user-driven actions.
@@ -146,7 +146,7 @@ export default function Pricing() {
           </div>
 
           {/* Right — Lifetime Deal card */}
-          <div className="rounded-3xl border border-border bg-white p-6 flex flex-col">
+          <div className="rounded-3xl border border-border bg-background p-6 flex flex-col">
             <div className="flex items-center gap-2 mb-1.5">
               <h3 className="text-lg font-bold text-foreground">
                 Life Time Deal
