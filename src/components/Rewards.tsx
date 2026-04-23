@@ -82,7 +82,7 @@ export default function Rewards() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-gradient-blue">
+          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
             Rewards
           </span>

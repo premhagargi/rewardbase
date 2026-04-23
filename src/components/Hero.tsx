@@ -15,7 +15,7 @@ const stageDescriptions: Record<string, string> = {
   Acquire:
     "Get more qualified customers by incentivizing referrals, shoutouts and user-generated content.",
   Activate:
-    "Improve time-to-value and adoption by incentivizing key onboarding steps and value-driving actions.",
+    "Improve time-to-value by rewarding key onboarding steps and actions.",
   Engage:
     "Drive deeper engagement by incentivizing feedback and participation beyond core usage.",
   Advocate:
@@ -36,8 +36,8 @@ function RewardRow({
 }) {
   return (
     <div className="flex items-center gap-3 rounded-xl border border-border bg-white px-3 py-2 hover:shadow-sm transition-shadow">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
           <circle cx="12" cy="12" r="10" stroke="#E8503A" strokeWidth="2" />
           <path
             d="M8 12 C8 8, 16 8, 16 12 C16 16, 8 16, 8 12Z"
@@ -57,9 +57,9 @@ function RewardRow({
 
 function StageCard({ stage }: { stage: string }) {
   return (
-    <div className="w-[300px] shrink-0 rounded-3xl border border-border bg-white p-5 shadow-sm">
+    <div className="w-[285px] shrink-0 rounded-3xl border border-border bg-white p-[18px] shadow-sm">
       <h3 className="text-[18px] font-bold text-foreground mb-1">{stage}</h3>
-      <p className="text-[15px] text-muted mb-4 leading-relaxed">
+      <p className="text-[15px] text-muted mb-3.5 leading-relaxed">
         {stageDescriptions[stage]}
       </p>
       <div className="space-y-1.5">
@@ -146,9 +146,9 @@ export default function Hero() {
         {/* Stage Cards Carousel */}
         <div className="relative overflow-hidden">
           <div
-            className="flex gap-5 transition-transform duration-500 ease-out pb-4"
+            className="flex gap-4 transition-transform duration-500 ease-out pb-4"
             style={{
-              transform: `translateX(-${scrollPos * 320}px)`,
+              transform: `translateX(-${scrollPos * 301}px)`,
             }}
           >
             {stages.map((stage) => (
