@@ -45,11 +45,11 @@ function RewardRow({
           />
         </svg>
       </div>
-      <div className="min-w-0">
-        <p className="text-sm font-semibold text-foreground">
+      <div className="min-w-0 flex-1">
+        <p className="text-[15px] font-semibold text-foreground leading-tight">
           Get {reward.reward}
         </p>
-        <p className="text-xs text-muted truncate">{reward.action}</p>
+        <p className="text-[12px] text-muted leading-tight mt-0.5">{reward.action}</p>
       </div>
     </div>
   );
@@ -57,9 +57,9 @@ function RewardRow({
 
 function StageCard({ stage }: { stage: string }) {
   return (
-    <div className="min-w-[240px] max-w-[260px] shrink-0 rounded-3xl border border-border bg-white p-5 shadow-sm">
-      <h3 className="text-lg font-bold text-foreground mb-1">{stage}</h3>
-      <p className="text-sm text-muted mb-4 leading-relaxed">
+    <div className="w-[300px] shrink-0 rounded-3xl border border-border bg-white p-5 shadow-sm">
+      <h3 className="text-[18px] font-bold text-foreground mb-1">{stage}</h3>
+      <p className="text-[15px] text-muted mb-4 leading-relaxed">
         {stageDescriptions[stage]}
       </p>
       <div className="space-y-1.5">
@@ -108,15 +108,15 @@ export default function Hero() {
 
         {/* Category Tabs + Carousel Arrows */}
         <div className="flex items-center justify-between mb-3">
-          <div className="inline-flex items-center rounded-full bg-card border border-border/40">
+          <div className="inline-flex items-center gap-1">
             {categories.map((cat, i) => (
               <button
                 key={cat.name}
                 onClick={() => setActiveCategory(i)}
-                className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border border-transparent ${
+                className={`rounded-full px-3.5 py-1.5 text-[15px] font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
                   activeCategory === i
                     ? "bg-gradient-to-b from-white to-blue-50/60 text-foreground border-border/60 animate-pill-pop"
-                    : "text-muted hover:text-foreground"
+                    : "text-muted hover:text-foreground border-transparent"
                 }`}
               >
                 {cat.name}
@@ -144,26 +144,23 @@ export default function Hero() {
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative">
-
-          <div className="overflow-hidden -mx-8 px-8 sm:-mx-10 sm:px-10 lg:-mx-12 lg:px-12">
-            <div
-              className="flex gap-5 transition-transform duration-500 ease-out pb-4"
-              style={{
-                transform: `translateX(-${scrollPos * 260}px)`,
-              }}
-            >
-              {stages.map((stage) => (
-                <StageCard key={stage} stage={stage} />
-              ))}
-            </div>
+        <div className="relative overflow-hidden">
+          <div
+            className="flex gap-5 transition-transform duration-500 ease-out pb-4"
+            style={{
+              transform: `translateX(-${scrollPos * 320}px)`,
+            }}
+          >
+            {stages.map((stage) => (
+              <StageCard key={stage} stage={stage} />
+            ))}
           </div>
 
           {scrollPos > 0 && (
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-64 sm:w-72 lg:w-80 bg-gradient-to-r from-white from-70% to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
           )}
           {scrollPos < 1 && (
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-64 sm:w-72 lg:w-80 bg-gradient-to-l from-white from-70% to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
           )}
         </div>
       </div>
