@@ -184,7 +184,7 @@ export default function Rewards() {
               return (
                 <div
                   key={reward.title}
-                  className="relative rounded-2xl border border-border px-5 py-3.5 bg-[#f3f4f6]"
+                  className="relative rounded-2xl border border-border px-5 py-3.5 bg-[#F1F1F1]"
                 >
                   {reward.live && (
                     <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">

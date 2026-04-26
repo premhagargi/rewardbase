@@ -57,7 +57,7 @@ function RewardRow({
 
 function StageCard({ stage }: { stage: string }) {
   return (
-    <div className="snap-start w-[220px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-[#f3f4f6] p-3.5 sm:p-[18px]">
+    <div className="snap-start w-[220px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-[#F1F1F1] p-3.5 sm:p-[18px]">
       <h3 className="text-[18px] font-bold text-foreground mb-1">{stage}</h3>
       <p className="text-[15px] text-muted mb-3.5 leading-relaxed">
         {stageDescriptions[stage]}

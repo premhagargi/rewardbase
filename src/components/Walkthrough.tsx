@@ -20,7 +20,7 @@ export default function Walkthrough() {
         </div>
 
         {/* Demo mockup container */}
-        <div className="relative overflow-hidden rounded-xl bg-[#f3f4f6] p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-xl bg-[#F1F1F1] p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window mockup */}
             <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">
