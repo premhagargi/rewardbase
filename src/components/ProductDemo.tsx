@@ -151,7 +151,7 @@ export default function ProductDemo() {
         </div>
 
         {/* Mockup container */}
-        <div className="relative overflow-hidden rounded-xl bg-[#f4f4f4] p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-xl bg-card-surface p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window */}
             <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">

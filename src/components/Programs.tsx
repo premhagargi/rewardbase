@@ -184,7 +184,7 @@ export default function Programs() {
               return (
               <div
                 key={program.title}
-                className="relative rounded-2xl border border-border px-5 py-3.5 bg-[#f4f4f4]"
+                className="relative rounded-2xl border border-border px-5 py-3.5 bg-card-surface"
               >
                 {program.live && (
                   <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
