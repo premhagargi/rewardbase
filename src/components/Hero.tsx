@@ -57,7 +57,7 @@ function RewardRow({
 
 function StageCard({ stage }: { stage: string }) {
   return (
-    <div className="snap-start w-[220px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-background p-3.5 sm:p-[18px]">
+    <div className="snap-start w-[220px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-[#f3f4f6] p-3.5 sm:p-[18px]">
       <h3 className="text-[18px] font-bold text-foreground mb-1">{stage}</h3>
       <p className="text-[15px] text-muted mb-3.5 leading-relaxed">
         {stageDescriptions[stage]}
@@ -80,7 +80,7 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="text-[18px] font-semibold text-gradient-blue mb-3">
+          <p className="text-[18px] font-medium text-gradient-blue mb-3">
             User-led Growth Platform
           </p>
           <h1
@@ -89,20 +89,20 @@ export default function Hero() {
           >
             Turn your users into your growth engine
           </h1>
-          <p className="text-lg text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
+          <p className="text-lg font-medium text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
             Unlock user-driven growth with reward programs for referrals, testimonials, feedback
             and more - built into your product and managed in one place.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-lg bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-lg border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
+              className="inline-flex items-center justify-center rounded-xl border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
               Book Demo
             </a>

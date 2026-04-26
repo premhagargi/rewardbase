@@ -1,44 +1,65 @@
 "use client";
 
 import { useState } from "react";
-import { Gift, Plus, Minus } from "lucide-react";
+import {
+  Plus,
+  Minus,
+  Coins,
+  Unlock,
+  Ticket,
+  Wallet,
+  Gift,
+  Banknote,
+  type LucideIcon,
+} from "lucide-react";
 
-const rewards = [
+const rewards: {
+  title: string;
+  description: string;
+  live: boolean;
+  icon: LucideIcon;
+}[] = [
   {
     title: "Credits",
     description:
       "Give users AI / usage credits they can spend directly inside your product.",
     live: true,
+    icon: Coins,
   },
   {
     title: "Access Unlocks",
     description:
       "Give users access to premium features, gated content or exclusive perks.",
     live: true,
+    icon: Unlock,
   },
   {
     title: "Discount Codes",
     description:
       "Offer percentage or fixed discounts, one-time or recurring, on any purchase.",
     live: false,
+    icon: Ticket,
   },
   {
     title: "Wallet",
     description:
       "Let users accumulate RewardBase points and redeem rewards they choose.",
     live: false,
+    icon: Wallet,
   },
   {
     title: "Giftcards",
     description:
       "Let users redeem rewards as gift cards from popular global brands easily.",
     live: false,
+    icon: Gift,
   },
   {
     title: "Payout",
     description:
       "Send real cash rewards directly to users' bank account though managed payouts.",
     live: false,
+    icon: Banknote,
   },
 ];
 
@@ -83,7 +104,7 @@ export default function Rewards() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Rewards
           </span>
         </div>
@@ -158,28 +179,31 @@ export default function Rewards() {
 
           {/* Right — Reward cards */}
           <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
-            {rewards.map((reward) => (
-              <div
-                key={reward.title}
-                className="relative rounded-2xl border border-border px-5 py-3.5 bg-[#fdfcfb]"
-              >
-                {reward.live && (
-                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
-                    <span className="h-1 w-1 rounded-full bg-blue-500" />
-                    Live
-                  </span>
-                )}
-                <div className="h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center mb-3">
-                  <Gift size={20} className="text-muted" />
+            {rewards.map((reward) => {
+              const Icon = reward.icon;
+              return (
+                <div
+                  key={reward.title}
+                  className="relative rounded-2xl border border-border px-5 py-3.5 bg-[#f3f4f6]"
+                >
+                  {reward.live && (
+                    <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                      <span className="h-1 w-1 rounded-full bg-blue-500" />
+                      Live
+                    </span>
+                  )}
+                  <div className="h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center mb-3">
+                    <Icon size={20} className="text-muted" />
+                  </div>
+                  <h4 className="text-base font-bold text-foreground mb-1.5">
+                    {reward.title}
+                  </h4>
+                  <p className="text-sm text-muted leading-relaxed">
+                    {reward.description}
+                  </p>
                 </div>
-                <h4 className="text-base font-bold text-foreground mb-1.5">
-                  {reward.title}
-                </h4>
-                <p className="text-sm text-muted leading-relaxed">
-                  {reward.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

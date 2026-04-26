@@ -1,8 +1,8 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  CheckListIcon,
+  UserGroupIcon,
   GiftIcon,
-  ChartUpIcon,
+  Rocket02Icon,
 } from "@hugeicons/core-free-icons";
 
 const previewRewards = [
@@ -10,7 +10,7 @@ const previewRewards = [
     title: "Turn users into growth drivers",
     description:
       "Tap into your user base to unlock a powerful new engine for growth.",
-    icon: CheckListIcon,
+    icon: UserGroupIcon,
   },
   {
     title: "Reward actions that drive growth",
@@ -22,7 +22,7 @@ const previewRewards = [
     title: "Build a repeatable growth system",
     description:
       "Build a system that continuously drives growth and scales with your business.",
-    icon: ChartUpIcon,
+    icon: Rocket02Icon,
   },
 ];
 
@@ -33,7 +33,7 @@ export default function ProblemSolution() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Why RewardBase
           </span>
         </div>
