@@ -33,7 +33,7 @@ const lifetimeFeatures = [
 ];
 
 export default function Pricing() {
-  const [tierIndex, setTierIndex] = useState(1);
+  const [tierIndex, setTierIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
 
   const tier = PRICING_TIERS[tierIndex];
@@ -51,7 +51,7 @@ export default function Pricing() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-blue-400"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Pricing
           </span>
         </div>
@@ -73,7 +73,7 @@ export default function Pricing() {
 
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {/* Left — free trial info (no card) */}
-          <div className="flex flex-col">
+          <div className="flex flex-col pt-6 pr-6">
             <h3 className="text-lg font-bold text-foreground mb-1.5">
               15-day Free Trial
             </h3>

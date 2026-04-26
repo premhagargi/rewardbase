@@ -77,7 +77,7 @@ export default function FAQ() {
           <div>
             <div className="mb-4">
               <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-                <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
+                <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
                 FAQ
               </span>
             </div>

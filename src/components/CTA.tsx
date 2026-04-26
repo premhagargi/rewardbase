@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <section className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
-        <div className="relative overflow-hidden rounded-xl py-8 px-6 text-center bg-[#f3f4f6]">
+        <div className="relative overflow-hidden rounded-xl py-8 px-6 text-center bg-card-surface">
           <div className="relative">
           {/* Icon */}
           <img
@@ -24,13 +24,13 @@ export default function CTA() {
           <div className="flex items-center justify-center gap-3">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center rounded-lg bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
             >
               Start for Free
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center rounded-lg border border-border bg-background text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
+              className="inline-flex items-center justify-center rounded-xl border border-border bg-background text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
               Book Demo
             </a>

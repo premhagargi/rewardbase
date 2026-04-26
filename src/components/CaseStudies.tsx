@@ -42,7 +42,7 @@ export default function CaseStudies() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Case Studies
           </span>
         </div>
@@ -70,7 +70,7 @@ export default function CaseStudies() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(80,80,255,0.3),transparent_50%)]" />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(100,60,255,0.25),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_45%,rgba(0,0,0,0.85)_65%,#000_80%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_38%,rgba(0,0,0,0.85)_60%,#000_78%)]" />
 
               {/* Top section — image with gradient overlay */}
               <div className="relative z-10 flex-1 overflow-hidden">
@@ -85,10 +85,12 @@ export default function CaseStudies() {
 
               {/* Bottom section — description + brand */}
               <div className="relative z-10 bg-black px-6 pb-4 pt-5">
-                <p className="text-sm text-white leading-relaxed font-semibold mb-5">
+                <h3 className="text-lg text-white leading-relaxed font-semibold mb-5">
                   {item.bottomText}
-                </p>
-                <BrandLogo brand={item.brand} color={item.brandColor} />
+                </h3>
+                <div className="h-8 flex items-center">
+                  <BrandLogo brand={item.brand} color={item.brandColor} />
+                </div>
               </div>
             </div>
           ))}

@@ -1,44 +1,65 @@
 "use client";
 
 import { useState } from "react";
-import { Gift, Plus, Minus } from "lucide-react";
+import {
+  Plus,
+  Minus,
+  UserPlus,
+  Rocket,
+  Heart,
+  Star,
+  Share2,
+  MessageSquare,
+  type LucideIcon,
+} from "lucide-react";
 
-const programs = [
+const programs: {
+  title: string;
+  description: string;
+  live: boolean;
+  icon: LucideIcon;
+}[] = [
   {
     title: "Referrals",
     description:
       "Reward users for bringing in new signups or paying customers.",
     live: false,
+    icon: UserPlus,
   },
   {
     title: "Onboarding & Activation",
     description:
       "Incentivize onboarding steps to cut drop-offs and reach the 'wow' moment faster.",
     live: false,
+    icon: Rocket,
   },
   {
     title: "Engagement & Retention",
     description:
       "Reward consistency, milestones, and key actions to build habit and loyalty.",
     live: false,
+    icon: Heart,
   },
   {
     title: "Reviews & Testimonials",
     description:
       "Encourage users to share honest reviews across platforms to boost credibility.",
     live: true,
+    icon: Star,
   },
   {
     title: "UGC & Social Sharing",
     description:
       "Incentivize content creation and mentions across channels to drive awareness.",
     live: true,
+    icon: Share2,
   },
   {
     title: "Feedback & Survey",
     description:
       "Reward users for feedback, surveys, and contributions that shape your product.",
     live: true,
+    icon: MessageSquare,
   },
 ];
 
@@ -83,7 +104,7 @@ export default function Programs() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Programs
           </span>
         </div>
@@ -158,10 +179,12 @@ export default function Programs() {
 
           {/* Right — Program cards */}
           <div className="grid sm:grid-cols-2 gap-6 lg:col-span-2">
-            {programs.map((program) => (
+            {programs.map((program) => {
+              const Icon = program.icon;
+              return (
               <div
                 key={program.title}
-                className="relative rounded-2xl border border-border px-5 py-3.5 bg-[#fdfcfb]"
+                className="relative rounded-2xl border border-border px-5 py-3.5 bg-card-surface"
               >
                 {program.live && (
                   <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
@@ -170,7 +193,7 @@ export default function Programs() {
                   </span>
                 )}
                 <div className="h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center mb-3">
-                  <Gift size={20} className="text-muted" />
+                  <Icon size={20} className="text-muted" />
                 </div>
                 <h4 className="text-base font-bold text-foreground mb-1.5">
                   {program.title}
@@ -179,7 +202,8 @@ export default function Programs() {
                   {program.description}
                 </p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

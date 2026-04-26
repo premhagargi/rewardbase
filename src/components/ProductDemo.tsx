@@ -132,7 +132,7 @@ export default function ProductDemo() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0088ff]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             RewardBase Widget
           </span>
         </div>
@@ -151,7 +151,7 @@ export default function ProductDemo() {
         </div>
 
         {/* Mockup container */}
-        <div className="relative overflow-hidden rounded-xl bg-[#f3f4f6] p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-xl bg-card-surface p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window */}
             <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">
