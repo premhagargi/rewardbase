@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = [
@@ -74,6 +74,25 @@ function StageCard({ stage }: { stage: string }) {
 export default function Hero() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [scrollPos, setScrollPos] = useState(0);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [showLeftFade, setShowLeftFade] = useState(false);
+  const [showRightFade, setShowRightFade] = useState(true);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const update = () => {
+      setShowLeftFade(el.scrollLeft > 4);
+      setShowRightFade(el.scrollLeft + el.clientWidth < el.scrollWidth - 4);
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      el.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   return (
     <section className="pt-14 pb-12 bg-background">
@@ -147,22 +166,27 @@ export default function Hero() {
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="relative">
           <div
-            className="flex gap-4 transition-transform duration-500 ease-out pb-4"
-            style={{
-              transform: `translateX(-${scrollPos * 321}px)`,
-            }}
+            ref={scrollerRef}
+            className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            {stages.map((stage) => (
-              <StageCard key={stage} stage={stage} />
-            ))}
+            <div
+              className="flex gap-4 transition-transform duration-500 ease-out pb-4"
+              style={{
+                transform: `translateX(-${scrollPos * 321}px)`,
+              }}
+            >
+              {stages.map((stage) => (
+                <StageCard key={stage} stage={stage} />
+              ))}
+            </div>
           </div>
 
-          {scrollPos > 0 && (
+          {(scrollPos > 0 || showLeftFade) && (
             <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10" />
           )}
-          {scrollPos < 1 && (
+          {(scrollPos < 1 && showRightFade) && (
             <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent z-10" />
           )}
         </div>
