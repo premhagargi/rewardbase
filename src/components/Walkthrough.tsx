@@ -20,10 +20,10 @@ export default function Walkthrough() {
         </div>
 
         {/* Demo mockup container */}
-        <div className="relative overflow-hidden rounded-xl bg-card-surface p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-2xl bg-card-surface p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window mockup */}
-            <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">
+            <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">
               {/* Header */}
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
                 <div className="flex items-center gap-3">

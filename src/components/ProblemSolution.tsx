@@ -32,7 +32,7 @@ export default function ProblemSolution() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Why RewardBase
           </span>
@@ -65,16 +65,16 @@ export default function ProblemSolution() {
             {previewRewards.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-background hover:shadow-sm transition-shadow"
+                className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-card-surface hover:shadow-sm transition-shadow"
               >
                 <div className="h-12 w-12 shrink-0 rounded-lg bg-card border border-border flex items-center justify-center">
                   <HugeiconsIcon icon={item.icon} size={22} className="text-muted" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-foreground mb-0.5">
+                  <h4 className="text-[15px] font-medium text-foreground mb-0.5">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-muted leading-relaxed">
+                  <p className="text-[15px] font-normal text-muted leading-relaxed">
                     {item.description}
                   </p>
                 </div>

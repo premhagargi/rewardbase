@@ -25,7 +25,7 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             How it works
           </span>
@@ -49,7 +49,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="rounded-2xl border border-border px-5 py-4 bg-[#fdfcfb]"
+              className="rounded-2xl border border-border px-5 py-4 bg-card-surface"
             >
               <div className="h-9 w-9 rounded-md bg-blue-500 flex items-center justify-center text-white text-sm font-bold mb-4">
                 {step.number}
@@ -57,7 +57,7 @@ export default function HowItWorks() {
               <h3 className="text-lg font-bold text-foreground mb-2">
                 {step.title}
               </h3>
-              <p className="text-sm text-muted leading-relaxed mb-4">
+              <p className="text-[15px] font-medium text-muted leading-relaxed mb-4">
                 {step.description}
               </p>
               <div className="h-48 rounded-lg bg-card border border-border overflow-hidden flex items-center justify-center">

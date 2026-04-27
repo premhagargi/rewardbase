@@ -9,7 +9,7 @@ const cases = [
   {
     brand: "NOTION",
     brandColor: "#000000",
-    image: "/notion.png",
+    image: "/image 8.png",
     bottomText:
       "Rewards can be fulfilled through various methods Rewards can be fulfilled",
   },
@@ -41,7 +41,7 @@ export default function CaseStudies() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Case Studies
           </span>
@@ -77,10 +77,10 @@ export default function CaseStudies() {
                 <img
                   src={item.image}
                   alt={`${item.brand} case study`}
-                  className="absolute inset-0 h-full w-full object-cover brightness-95"
+                  className="absolute inset-0 h-full w-full object-cover object-[center_5%] brightness-95"
                 />
                 {/* Gradient rising from bottom, dulling the image up to the top */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10" />
               </div>
 
               {/* Bottom section — description + brand */}

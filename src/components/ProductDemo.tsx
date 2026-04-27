@@ -61,7 +61,7 @@ function RewardWidget() {
   ];
 
   return (
-    <div className="w-[260px] rounded-xl bg-background shadow-2xl border border-border/60 overflow-hidden">
+    <div className="w-[260px] rounded-2xl bg-background shadow-2xl border border-border/60 overflow-hidden">
       <div className="bg-violet-600 px-4 pt-4 pb-3.5 text-white relative">
         <button className="absolute top-2.5 right-2.5">
           <X size={14} className="text-white/60" />
@@ -131,7 +131,7 @@ export default function ProductDemo() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             RewardBase Widget
           </span>
@@ -151,10 +151,10 @@ export default function ProductDemo() {
         </div>
 
         {/* Mockup container */}
-        <div className="relative overflow-hidden rounded-xl bg-card-surface p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-2xl bg-card-surface p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window */}
-            <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">
+            <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">
               {/* Chat header */}
               <div className="flex items-center justify-between border-b border-border px-5 py-3">
                 <div className="flex items-center gap-3">

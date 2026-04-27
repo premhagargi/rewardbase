@@ -103,7 +103,7 @@ export default function Rewards() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Rewards
           </span>
@@ -138,7 +138,7 @@ export default function Rewards() {
                 return (
                   <div
                     key={method.name}
-                    className="rounded-lg border border-border p-4 bg-background"
+                    className="rounded-2xl border border-border p-4 bg-background"
                   >
                     <button
                       type="button"

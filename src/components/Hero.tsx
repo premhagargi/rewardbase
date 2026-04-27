@@ -35,7 +35,7 @@ function RewardRow({
   reward: { platform: string; action: string; reward: string };
 }) {
   return (
-    <div className="flex items-center gap-3 rounded-lg border border-border bg-background px-3 py-2 hover:shadow-sm transition-shadow">
+    <div className="flex items-center gap-3 rounded-2xl border border-border bg-background px-3 py-2 hover:shadow-sm transition-shadow">
       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
           <circle cx="12" cy="12" r="10" stroke="#E8503A" strokeWidth="2" />
@@ -80,8 +80,8 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="text-[18px] font-medium text-gradient-blue mb-3">
-            User-led Growth Platform
+          <p className="text-[18px] font-semibold text-gradient-blue mb-3">
+            USER-LED GROWTH PLATFORM
           </p>
           <h1
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight text-foreground leading-[1.1] mb-3 lg:whitespace-nowrap"
@@ -89,7 +89,7 @@ export default function Hero() {
           >
             Turn your users into your growth engine
           </h1>
-          <p className="text-lg font-medium text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
+          <p className="text-[15px] font-medium text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
             Unlock user-driven growth with reward programs for referrals, testimonials, feedback
             and more - built into your product and managed in one place.
           </p>

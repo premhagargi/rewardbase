@@ -3,6 +3,19 @@
 import { useEffect, useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
+declare global {
+  interface Window {
+    HEYO?: {
+      open: (opts?: { force?: boolean }) => void;
+      close: () => void;
+      toggle: () => void;
+      show: (opts?: { force?: boolean }) => void;
+      hide: () => void;
+      isOpen: () => boolean;
+    };
+  }
+}
+
 const faqs = [
   {
     question: "What is a participant and how is billing calculated?",
@@ -62,11 +75,42 @@ export default function FAQ() {
   useEffect(() => {
     const SRC =
       "https://heyo.so/embed/script?projectId=69e7723bfc7fb07ef5d276a4";
-    if (document.querySelector(`script[src="${SRC}"]`)) return;
-    const script = document.createElement("script");
-    script.src = SRC;
-    script.async = true;
-    document.body.appendChild(script);
+    if (!document.querySelector(`script[src="${SRC}"]`)) {
+      const script = document.createElement("script");
+      script.src = SRC;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+
+    const STYLE_ID = "heyo-launcher-hide";
+    if (!document.getElementById(STYLE_ID)) {
+      const style = document.createElement("style");
+      style.id = STYLE_ID;
+      style.textContent = `
+        body[data-heyo-chat="closed"] iframe[src*="heyo.so"],
+        body[data-heyo-chat="closed"] [id*="heyo" i]:not(script):not(style),
+        body[data-heyo-chat="closed"] [class*="heyo" i]:not(script):not(style) {
+          display: none !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    document.body.dataset.heyoChat = "closed";
+
+    let cancelled = false;
+    const tick = () => {
+      if (cancelled) return;
+      const heyo = window.HEYO;
+      if (heyo) {
+        document.body.dataset.heyoChat = heyo.isOpen() ? "open" : "closed";
+      }
+      requestAnimationFrame(tick);
+    };
+    tick();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (
@@ -76,7 +120,7 @@ export default function FAQ() {
           {/* Left */}
           <div>
             <div className="mb-4">
-              <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+              <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
                 <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
                 FAQ
               </span>
@@ -93,7 +137,21 @@ export default function FAQ() {
             <p className="text-base font-semibold text-foreground mb-4">
               We would like to chat with you
             </p>
-
+            <button
+              type="button"
+              onClick={() => {
+                document.body.dataset.heyoChat = "open";
+                window.HEYO?.show({ force: true });
+                window.HEYO?.open({ force: true });
+              }}
+              className="inline-block rounded-2xl overflow-hidden hover:opacity-90 transition-opacity cursor-pointer"
+            >
+              <img
+                src="/FAQ%20Widget.png"
+                alt="Chat with us"
+                className="block w-full h-auto"
+              />
+            </button>
           </div>
 
           {/* Right — Accordion */}

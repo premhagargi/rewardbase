@@ -103,7 +103,7 @@ export default function Programs() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-medium text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
             Programs
           </span>
@@ -112,12 +112,12 @@ export default function Programs() {
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
           <h2
-            className="lg:w-3/5 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
+            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
             style={{ fontWeight: 650 }}
           >
             Turn key user actions into reward programs that drive growth
           </h2>
-          <p className="lg:w-1/3 lg:ml-auto text-[15px] text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto text-[15px] text-muted leading-relaxed lg:leading-[25px]">
             RewardBase helps you create reward programs for every stage of the user lifecycle. Incentivize actions that matter and turn user behavior into a consistent, scalable growth engine.
           </p>
         </div>
@@ -138,7 +138,7 @@ export default function Programs() {
                 return (
                   <div
                     key={method.name}
-                    className="rounded-lg border border-border p-4 bg-background"
+                    className="rounded-2xl border border-border p-4 bg-background"
                   >
                     <button
                       type="button"
