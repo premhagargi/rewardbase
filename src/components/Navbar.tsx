@@ -3,18 +3,27 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+const navLinks = [
+  { label: "Widget", href: "#widget" },
+  { label: "Programs", href: "#programs" },
+  { label: "Rewards", href: "#rewards" },
+  { label: "How it works", href: "#how-it-works" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "FAQ", href: "#faq" },
+];
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-background/40 backdrop-blur-md border-b border-border/50">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14 flex items-center justify-between h-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14 flex items-center justify-between h-14">
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
             src="/assets/RewardBase%20Logo%20(Gradient%20-%20Blacktext).svg"
             alt="RewardBase"
-            className="h-10 w-auto"
+            className="h-8 md:h-10 w-auto"
           />
         </a>
 
@@ -46,23 +55,19 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — overlays below header without pushing content */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background px-6 py-4 space-y-3">
-          <a
-            href="#how-it-works"
-            className="block text-sm font-medium text-muted hover:text-foreground"
-            onClick={() => setMobileOpen(false)}
-          >
-            Docs
-          </a>
-          <a
-            href="#pricing"
-            className="block text-sm font-medium text-muted hover:text-foreground"
-            onClick={() => setMobileOpen(false)}
-          >
-            Pricing
-          </a>
+        <div className="md:hidden absolute top-14 inset-x-0 border-t border-border bg-background px-6 py-4 space-y-3 shadow-lg">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="block text-sm font-medium text-muted hover:text-foreground"
+              onClick={() => setMobileOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
           <a
             href="#pricing"
             className="block text-center rounded-xl bg-foreground text-white text-sm font-medium px-4 py-2"
