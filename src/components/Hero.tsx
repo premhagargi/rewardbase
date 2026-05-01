@@ -2,6 +2,40 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { HugeiconsIcon } from "@hugeicons/react";
+import {
+  UserMultiple02Icon,
+  Share07Icon,
+  CheckListIcon,
+  ConnectIcon,
+  FlowConnectionIcon,
+  AddTeamIcon,
+  Comment01Icon,
+  ComputerVideoCallIcon,
+  StarSquareIcon,
+  UserListIcon,
+  CheckmarkCircle02Icon,
+  CalendarFoldIcon,
+  NotificationSquareIcon,
+  Diamond02Icon,
+  Task01Icon,
+  UserGroup03Icon,
+  DashboardSpeed01Icon,
+  Video02Icon,
+  SpotlightIcon,
+  Upload03Icon,
+  RepeatIcon,
+  AiIdeaIcon,
+  Linkedin01Icon,
+  ZoomIcon,
+  SlackIcon,
+  RedditIcon,
+  AppStoreIcon,
+  TiktokIcon,
+  WhatsappIcon,
+  InstagramIcon,
+  NewTwitterIcon,
+} from "@hugeicons/core-free-icons";
 
 const categories = [
   { name: "B2B", dot: "bg-orange-500" },
@@ -9,9 +43,12 @@ const categories = [
   { name: "Creators", dot: "bg-violet-500" },
 ] as const;
 
-const stages = ["Acquire", "Activate", "Engage", "Advocate"] as const;
+type Category = (typeof categories)[number]["name"];
 
-const stageDescriptions: Record<string, string> = {
+const stages = ["Acquire", "Activate", "Engage", "Advocate"] as const;
+type Stage = (typeof stages)[number];
+
+const stageDescriptions: Record<Stage, string> = {
   Acquire:
     "Get more qualified customers by incentivizing referrals, shoutouts and user-generated content.",
   Activate:
@@ -22,32 +59,129 @@ const stageDescriptions: Record<string, string> = {
     "Build trust and social proof by incentivizing testimonials, reviews, and endorsements.",
 };
 
-const rewards = [
-  { platform: "G2", action: "Post a review on G2", reward: "$25" },
-  { platform: "Capterra", action: "Write a Capterra review", reward: "$25" },
-  { platform: "Trustpilot", action: "Leave a Trustpilot review", reward: "$20" },
-  { platform: "ProductHunt", action: "Upvote on Product Hunt", reward: "$15" },
-];
+type IconRef = Parameters<typeof HugeiconsIcon>[0]["icon"];
+type Reward = {
+  icon?: IconRef;
+  brand?: "g2" | "ph";
+  action: string;
+  reward: string;
+};
 
-function RewardRow({
-  reward,
-}: {
-  reward: { platform: string; action: string; reward: string };
-}) {
+const data: Record<Category, Record<Stage, Reward[]>> = {
+  B2B: {
+    Acquire: [
+      { icon: UserMultiple02Icon, action: "Refer a Business", reward: "Gift 1 Month Free · Get 30% Off (3 Months)" },
+      { icon: Linkedin01Icon, action: "Share Results on LinkedIn", reward: "500 AI Credits" },
+      { icon: ZoomIcon, action: "Co-host a Webinar", reward: "3 Months Free Pro Plan" },
+      { icon: Share07Icon, action: "Join Partner Program", reward: "30% Recurring Commission" },
+    ],
+    Activate: [
+      { icon: CheckListIcon, action: "Complete Onboarding Checklist", reward: "100 AI Credits" },
+      { icon: ConnectIcon, action: "Connect Your CRM", reward: "Unlock Automation Suite" },
+      { icon: FlowConnectionIcon, action: "Set-up Your First Workflow", reward: "100 AI Credits" },
+      { icon: AddTeamIcon, action: "Invite 3 Team Members", reward: "20% off on Next Renewal" },
+    ],
+    Engage: [
+      { icon: Comment01Icon, action: "Submit a Feature Request", reward: "100 AI Credits" },
+      { icon: ComputerVideoCallIcon, action: "Join a 15-min UX Interview", reward: "$50 Amazon Giftcard" },
+      { icon: SlackIcon, action: "Join Customer Slack", reward: "300 Reward Points" },
+      { icon: ZoomIcon, action: "Attend Product Webinar", reward: "Unlock Insider Access" },
+    ],
+    Advocate: [
+      { brand: "g2", action: "Review us on G2", reward: "$25 Starbucks Giftcard" },
+      { icon: RedditIcon, action: "Recommend on Reddit", reward: "250 Reward Points" },
+      { brand: "ph", action: "Upvote on Product Hunt", reward: "50 AI Credits" },
+      { icon: StarSquareIcon, action: "Write a Testimonial", reward: "$100 off Invoice" },
+    ],
+  },
+  B2C: {
+    Acquire: [
+      { icon: UserMultiple02Icon, action: "Invite 3 Friends", reward: "Gift 1 Month Free · Get 1 Month Free" },
+      { icon: TiktokIcon, action: "Share Your Win on TikTok", reward: "500 AI Credits" },
+      { icon: WhatsappIcon, action: "Gift Trial in WhatsApp Group", reward: "3 Months Free Pro Plan" },
+      { icon: InstagramIcon, action: "Repost as Instagram Story", reward: "100 Reward Points" },
+    ],
+    Activate: [
+      { icon: UserListIcon, action: "Complete User Profile", reward: "50 Welcome Credits" },
+      { icon: CheckmarkCircle02Icon, action: "Complete First Task", reward: "7-Day Premium Unlock" },
+      { icon: CalendarFoldIcon, action: "Reach 7-Day Streak", reward: "Get a Paid Add-on" },
+      { icon: NotificationSquareIcon, action: "Enable Notifications", reward: "100 AI Credits" },
+    ],
+    Engage: [
+      { icon: Diamond02Icon, action: "Try Premium Trial", reward: "50% Off Upgrade for 3 Months" },
+      { icon: Task01Icon, action: "Complete Feedback Survey", reward: "100 Reward Points" },
+      { icon: UserGroup03Icon, action: "Join Community Challenge", reward: "Unlock Exclusive Perks" },
+      { icon: DashboardSpeed01Icon, action: "Achieve Usage Milestone", reward: "Earn \"Champion\" Badge" },
+    ],
+    Advocate: [
+      { icon: AppStoreIcon, action: "Review on App Store", reward: "100 AI Credits" },
+      { icon: RedditIcon, action: "Recommend on Reddit", reward: "250 Reward Points" },
+      { icon: Video02Icon, action: "Record Video Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: SpotlightIcon, action: "Get Featured in Spotlight", reward: "25% Discount — Forever" },
+    ],
+  },
+  Creators: {
+    Acquire: [
+      { icon: UserMultiple02Icon, action: "Refer 3 Colleagues", reward: "Gift 1 Month Free · Get 1 Month Free" },
+      { icon: Share07Icon, action: "Share Resource With Your Team", reward: "50% Off Next Workshop" },
+      { icon: Linkedin01Icon, action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
+      { icon: NewTwitterIcon, action: "Repost with Caption", reward: "Unlock Swipe File Library" },
+    ],
+    Activate: [
+      { icon: UserListIcon, action: "Complete Your Profile", reward: "Unlock Starter Resource Pack" },
+      { icon: Upload03Icon, action: "Follow Our Socials", reward: "Access to Partner Perks" },
+      { icon: RepeatIcon, action: "Maintain 3-Day Streak", reward: "30% Off Annual Upgrade" },
+      { icon: SlackIcon, action: "Introduce Yourself in Community", reward: "Unlock Member Directory Access" },
+    ],
+    Engage: [
+      { icon: AiIdeaIcon, action: "Submit a Topic Idea", reward: "Co-create Content With Us" },
+      { icon: Task01Icon, action: "Complete a Survey", reward: "$10 Amazon Gift Card" },
+      { icon: SlackIcon, action: "Become Top Supporter in Forum", reward: "Free Seat at Live Cohort" },
+      { icon: ZoomIcon, action: "Attend Live AMA", reward: "50% Off Mentor Session" },
+    ],
+    Advocate: [
+      { icon: StarSquareIcon, action: "Write Public Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: RedditIcon, action: "Recommend on Reddit", reward: "200 Wallet Points" },
+      { icon: NewTwitterIcon, action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
+      { icon: SpotlightIcon, action: "Get Featured in Member Spotlight", reward: "Free Merchandise" },
+    ],
+  },
+};
+
+function RewardIcon({ reward }: { reward: Reward }) {
+  if (reward.brand === "g2") {
+    return (
+      <span className="text-[10px] font-bold tracking-tight text-[#E8503A]">G2</span>
+    );
+  }
+  if (reward.brand === "ph") {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10" stroke="#E8503A" strokeWidth="2" />
+        <path
+          d="M10 7h4a3 3 0 0 1 0 6h-2v4h-2V7Zm2 2v2h2a1 1 0 0 0 0-2h-2Z"
+          fill="#E8503A"
+        />
+      </svg>
+    );
+  }
+  if (reward.icon) {
+    return (
+      <HugeiconsIcon icon={reward.icon} size={18} color="#E8503A" strokeWidth={2} />
+    );
+  }
+  return null;
+}
+
+function RewardRow({ reward }: { reward: Reward }) {
   return (
     <div className="flex items-center gap-3 rounded-2xl border border-border bg-background px-3 py-2 hover:shadow-sm transition-shadow">
       <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="10" stroke="#E8503A" strokeWidth="2" />
-          <path
-            d="M8 12 C8 8, 16 8, 16 12 C16 16, 8 16, 8 12Z"
-            fill="#E8503A"
-          />
-        </svg>
+        <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
         <p className="text-[15px] font-semibold text-foreground leading-tight">
-          Get {reward.reward}
+          {reward.reward}
         </p>
         <p className="text-[12px] text-muted leading-tight mt-0.5">{reward.action}</p>
       </div>
@@ -55,7 +189,7 @@ function RewardRow({
   );
 }
 
-function StageCard({ stage }: { stage: string }) {
+function StageCard({ stage, rewards }: { stage: Stage; rewards: Reward[] }) {
   return (
     <div className="snap-start w-[220px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-card-surface p-3.5 sm:p-[18px]">
       <h3 className="text-[18px] font-bold text-foreground mb-1">{stage}</h3>
@@ -77,6 +211,9 @@ export default function Hero() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [showLeftFade, setShowLeftFade] = useState(false);
   const [showRightFade, setShowRightFade] = useState(true);
+
+  const activeName = categories[activeCategory].name;
+  const stageRewards = data[activeName];
 
   useEffect(() => {
     const el = scrollerRef.current;
@@ -109,8 +246,7 @@ export default function Hero() {
             Turn your users into your growth engine
           </h1>
           <p className="text-[15px] font-medium text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
-            Unlock user-driven growth with reward programs for referrals, testimonials, feedback
-            and more - built into your product and managed in one place.
+            Incentivize every user action that helps you grow — referrals, reviews, feedback, and more — with reward programs built into your product and managed from one place.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
@@ -134,7 +270,10 @@ export default function Hero() {
             {categories.map((cat, i) => (
               <button
                 key={cat.name}
-                onClick={() => setActiveCategory(i)}
+                onClick={() => {
+                  setActiveCategory(i);
+                  setScrollPos(0);
+                }}
                 className={`rounded-full px-3.5 py-1.5 text-[15px] font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
                   activeCategory === i
                     ? "bg-transparent text-foreground border-black"
@@ -178,7 +317,7 @@ export default function Hero() {
               }}
             >
               {stages.map((stage) => (
-                <StageCard key={stage} stage={stage} />
+                <StageCard key={stage} stage={stage} rewards={stageRewards[stage]} />
               ))}
             </div>
           </div>

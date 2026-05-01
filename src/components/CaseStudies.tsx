@@ -4,21 +4,21 @@ const cases = [
     brandColor: "#E53935",
     image: "/surfer.png",
     bottomText:
-      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
-  },
-  {
-    brand: "NOTION",
-    brandColor: "#000000",
-    image: "/image 8.png",
-    bottomText:
-      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
+      "SurferSEO rewards users for reviewing on G2 and for sharing results on socials",
   },
   {
     brand: "BASE44",
-    brandColor: "#625DF5",
+    brandColor: "#000000",
     image: "/base44.png",
     bottomText:
-      "Rewards can be fulfilled through various methods Rewards can be fulfilled",
+      "Base44 offers free credits for referrals and sharing projects on LinkedIn or X.",
+  },
+  {
+    brand: "NOTION",
+    brandColor: "#625DF5",
+    image: "/image 8.png",
+    bottomText:
+      "Notion offered credits for  migrating from competitor and downloading app",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function CaseStudies() {
             Proven playbook used by the best growth teams
           </h2>
           <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
-            Top growth teams already incentivize users for referrals, reviews, onboarding and sharing. Now you can grow using the same playbook effortlessly with RewardBase.
+            RewardBase brings proven user-driven growth playbooks top teams rely on — and turns them into systems you can use to drive growth.
           </p>
         </div>
 

@@ -15,13 +15,13 @@ const previewRewards = [
   {
     title: "Reward actions that drive growth",
     description:
-      "Incentivize users to take meaningful actions that directly contribute to your growth",
+      "Incentivize users to take meaningful actions that contribute to your growth",
     icon: GiftIcon,
   },
   {
     title: "Build a repeatable growth system",
     description:
-      "Build a system that continuously drives growth and scales with your business.",
+      "Build a system that consistently drives growth and scales with your business.",
     icon: Rocket02Icon,
   },
 ];
@@ -49,14 +49,10 @@ export default function ProblemSolution() {
             </h2>
             <div className="space-y-4 text-base text-muted leading-relaxed">
               <p>
-                Growth is getting harder - every channel is crowded, expensive, and ineffective.
+                Growth is getting harder - every channel is crowded, expensive, and ineffective. Meanwhile, your existing users already influence your growth through word-of-mouth, social proof, advocacy and more. 
               </p>
               <p>
-                Meanwhile, your existing users already influence discovery, trust, and adoption - through referrals, reviews and sharing. But you don&apos;t have a system to activate and scale that behavior.
-              </p>
-              <p>
-                RewardBase turns this untapped potential into a structured, repeatable growth engine.
-              </p>
+But you don't have a system to activate and scale that behavior. RewardBase turns this untapped potential into a structured, repetable growth engine.              </p>
             </div>
           </div>
 

@@ -81,7 +81,7 @@ export default function Pricing() {
               No Credit Card required.
             </p>
             <p className="text-sm text-muted leading-relaxed mb-3">
-              Set up and launch your reward programs - see your users drive measurable growth through their actions
+              Launch your reward programs and see your users drive real growth before you're ready to upgrade.
             </p>
             <button className="rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors">
               Get Started

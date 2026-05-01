@@ -3,7 +3,7 @@ const steps = [
     number: 1,
     title: "Create programs",
     description:
-      "Use pre-built templates to create programs aligned with business goals.",
+      "Use pre-built templates to create programs aligned with your business goals and user actions.",
   },
   {
     number: 2,
@@ -40,7 +40,7 @@ export default function HowItWorks() {
             Launch your reward program in 3 simple steps
           </h2>
           <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
-            Get started quickly with a simple setup, then gradually build a more sophisticated reward program as your growth strategy evolves.
+            Get started with a simple setup and go live in minutes, then optimize and scale your reward programs into a reliable growth engine.
           </p>
         </div>
 

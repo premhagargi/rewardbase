@@ -50,6 +50,26 @@ export default function Footer() {
               <h4 className="text-sm font-bold text-foreground mb-4">Product</h4>
               <ul className="space-y-2.5">
                 <li>
+                  <a href="#widget" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Widget
+                  </a>
+                </li>
+                <li>
+                  <a href="#programs" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Programs
+                  </a>
+                </li>
+                <li>
+                  <a href="#rewards" className="text-sm text-muted hover:text-foreground transition-colors">
+                    Rewards
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-it-works" className="text-sm text-muted hover:text-foreground transition-colors">
+                    How it works
+                  </a>
+                </li>
+                <li>
                   <a href="#pricing" className="text-sm text-muted hover:text-foreground transition-colors">
                     Pricing
                   </a>
@@ -66,16 +86,6 @@ export default function Footer() {
             <div>
               <h4 className="text-sm font-bold text-foreground mb-4">Support</h4>
               <ul className="space-y-2.5">
-                <li>
-                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
-                    Feature Request
-                  </a>
-                </li>
                 <li>
                   <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
                     Roadmap
