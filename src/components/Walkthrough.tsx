@@ -3,7 +3,7 @@ import { Play, MessageCircle } from "lucide-react";
 export default function Walkthrough() {
   return (
     <section className="py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 mb-10">
           <h2

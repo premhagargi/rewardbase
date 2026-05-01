@@ -61,7 +61,7 @@ const rewards: {
 export default function Rewards() {
   return (
     <section id="rewards" className="py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
@@ -78,7 +78,7 @@ export default function Rewards() {
           >
             Drive action with tailored rewards your users care about
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 text-base text-muted leading-relaxed lg:leading-[25px]">
             Rewardbase gives you a flexible reward layer that adapts to any program. Configure rewards and automatically deliver them when users complete actions.
           </p>
         </div>

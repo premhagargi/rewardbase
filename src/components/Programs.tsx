@@ -45,7 +45,7 @@ const programs: {
 export default function Programs() {
   return (
     <section id="programs" className="py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
@@ -62,7 +62,7 @@ export default function Programs() {
           >
             Turn meaningful user actions into reward programs
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto text-[15px] text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 text-[15px] text-muted leading-relaxed lg:leading-[25px]">
             Rewardbase gives you the building blocks to run reward programs for every stage of the user lifecycle — and turn user behavior into a scalable growth engine.
           </p>
         </div>

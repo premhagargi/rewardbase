@@ -47,7 +47,7 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">

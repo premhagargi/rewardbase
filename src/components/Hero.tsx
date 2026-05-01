@@ -233,7 +233,7 @@ export default function Hero() {
 
   return (
     <section className="pt-14 pb-12 bg-background">
-      <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
         <div className="text-center mb-6">
           <p className="text-[15px] font-semibold text-gradient-blue tracking-wider mb-3">
