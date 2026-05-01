@@ -311,9 +311,9 @@ export default function Hero() {
             className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <div
-              className="flex gap-4 transition-transform duration-500 ease-out pb-4"
+              className="flex gap-5 transition-transform duration-500 ease-out pb-4"
               style={{
-                transform: `translateX(-${scrollPos * 321}px)`,
+                transform: `translateX(-${scrollPos * 325}px)`,
               }}
             >
               {stages.map((stage) => (
