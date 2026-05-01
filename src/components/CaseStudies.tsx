@@ -2,21 +2,21 @@ const cases = [
   {
     brand: "SURFER",
     brandColor: "#E53935",
-    image: "/surfer.png",
+    image: "/Surfer (1).png",
     bottomText:
       "SurferSEO rewards users for reviewing on G2 and for sharing results on socials",
   },
   {
     brand: "BASE44",
     brandColor: "#000000",
-    image: "/base44.png",
+    image: "/Base44 (1).png",
     bottomText:
       "Base44 offers free credits for referrals and sharing projects on LinkedIn or X.",
   },
   {
     brand: "NOTION",
     brandColor: "#625DF5",
-    image: "/image 8.png",
+    image: "/Notion (1).png",
     bottomText:
       "Notion offered credits for  migrating from competitor and downloading app",
   },
@@ -66,25 +66,19 @@ export default function CaseStudies() {
               key={item.brand}
               className="group relative rounded-2xl overflow-hidden text-white min-h-[460px] flex flex-col"
             >
-              {/* Background layers */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(80,80,255,0.3),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(100,60,255,0.25),transparent_50%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_38%,rgba(0,0,0,0.85)_60%,#000_78%)]" />
+              {/* Full-card background image */}
+              <img
+                src={item.image}
+                alt={`${item.brand} case study`}
+                className="absolute inset-0 h-full w-full object-cover object-[center_5%] brightness-95"
+              />
 
-              {/* Top section — image with gradient overlay */}
-              <div className="relative z-10 flex-1 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={`${item.brand} case study`}
-                  className="absolute inset-0 h-full w-full object-cover object-[center_5%] brightness-95"
-                />
-                {/* Gradient rising from bottom, dulling the image up to the top */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/10" />
-              </div>
+              {/* Dark base + gradient overlays for text contrast */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e]/30 via-[#16213e]/20 to-[#0f0f1a]/40" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_35%,rgba(0,0,0,0.7)_60%,rgba(0,0,0,0.95)_85%)]" />
 
               {/* Bottom section — description + brand */}
-              <div className="relative z-10 bg-black px-6 pb-4 pt-5">
+              <div className="relative z-10 mt-auto px-6 pb-4 pt-5">
                 <h3 className="text-lg text-white leading-relaxed font-semibold mb-5">
                   {item.bottomText}
                 </h3>
