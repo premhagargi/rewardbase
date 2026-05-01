@@ -82,9 +82,15 @@ export default function Programs() {
                     Live
                   </span>
                 )}
-                <div className="h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center mb-3">
-                  <Icon size={20} className="text-muted" />
-                </div>
+                <Icon
+                  size={28}
+                  strokeWidth={1.5}
+                  className="mb-3"
+                  style={{ color: "#004C7D" }}
+                  fill="#004C7D"
+                  fillOpacity={0.1}
+                />
+
                 <h4 className="text-base font-semibold text-foreground mb-1.5">
                   {program.title}
                 </h4>

@@ -1,28 +1,27 @@
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  UserGroupIcon,
-  GiftIcon,
-  Rocket02Icon,
-} from "@hugeicons/core-free-icons";
+import { Users, Gift, Rocket, type LucideIcon } from "lucide-react";
 
-const previewRewards = [
+const previewRewards: {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}[] = [
   {
     title: "Turn users into growth drivers",
     description:
       "Tap into your user base to unlock a powerful new engine for growth.",
-    icon: UserGroupIcon,
+    icon: Users,
   },
   {
     title: "Reward actions that drive growth",
     description:
       "Incentivize users to take meaningful actions that contribute to your growth",
-    icon: GiftIcon,
+    icon: Gift,
   },
   {
     title: "Build a repeatable growth system",
     description:
       "Build a system that consistently drives growth and scales with your business.",
-    icon: Rocket02Icon,
+    icon: Rocket,
   },
 ];
 
@@ -58,13 +57,21 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
 
           {/* Right — stacked preview cards */}
           <div className="space-y-4">
-            {previewRewards.map((item, i) => (
+            {previewRewards.map((item, i) => {
+              const Icon = item.icon;
+              return (
               <div
                 key={i}
                 className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-card-surface hover:shadow-sm transition-shadow"
               >
-                <div className="h-12 w-12 shrink-0 rounded-lg bg-card border border-border flex items-center justify-center">
-                  <HugeiconsIcon icon={item.icon} size={22} className="text-muted" />
+                <div className="shrink-0 p-1.5">
+                  <Icon
+                    size={28}
+                    strokeWidth={1.5}
+                    style={{ color: "#004C7D" }}
+                    fill="#004C7D"
+                    fillOpacity={0.1}
+                  />
                 </div>
                 <div>
                   <h4 className="text-[15px] font-semibold text-foreground mb-0.5">
@@ -75,7 +82,8 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
                   </p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
