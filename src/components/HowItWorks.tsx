@@ -26,7 +26,7 @@ export default function HowItWorks() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             How it works
           </span>
         </div>
@@ -37,7 +37,7 @@ export default function HowItWorks() {
             className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
             style={{ fontWeight: 650 }}
           >
-            Launch your reward program in 3 simple steps
+            Launch your reward program <br />in 3 simple steps
           </h2>
           <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
             Get started with a simple setup and go live in minutes, then optimize and scale your reward programs into a reliable growth engine.
@@ -45,22 +45,22 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div
               key={step.number}
-              className="rounded-2xl border border-border px-5 py-4 bg-card-surface"
+              className="rounded-2xl border border-border px-5 py-4 bg-card-surface flex flex-col"
             >
-              <div className="h-9 w-9 rounded-md bg-blue-500 flex items-center justify-center text-white text-sm font-bold mb-4">
+              <div className="h-[42px] w-[42px] rounded-xl bg-blue-500 flex items-center justify-center text-white text-base font-bold mb-4">
                 {step.number}
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-2">
+              <h3 className="text-lg font-semibold text-foreground mb-2">
                 {step.title}
               </h3>
               <p className="text-[15px] font-medium text-muted leading-relaxed mb-4">
                 {step.description}
               </p>
-              <div className="h-48 rounded-lg bg-card border border-border overflow-hidden flex items-center justify-center">
+              <div className="h-48 mt-auto rounded-lg bg-card border border-border overflow-hidden flex items-center justify-center">
                 <svg
                   viewBox="0 0 200 120"
                   preserveAspectRatio="none"

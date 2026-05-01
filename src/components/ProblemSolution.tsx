@@ -33,7 +33,7 @@ export default function ProblemSolution() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Why RewardBase
           </span>
         </div>
@@ -67,7 +67,7 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
                   <HugeiconsIcon icon={item.icon} size={22} className="text-muted" />
                 </div>
                 <div>
-                  <h4 className="text-[15px] font-medium text-foreground mb-0.5">
+                  <h4 className="text-[15px] font-semibold text-foreground mb-0.5">
                     {item.title}
                   </h4>
                   <p className="text-[15px] font-normal text-muted leading-relaxed">

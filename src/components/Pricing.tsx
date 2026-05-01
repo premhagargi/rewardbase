@@ -51,7 +51,7 @@ export default function Pricing() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Pricing
           </span>
         </div>
@@ -74,7 +74,7 @@ export default function Pricing() {
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {/* Left — free trial info (no card) */}
           <div className="flex flex-col pt-6 pr-6">
-            <h3 className="text-lg font-bold text-foreground mb-1.5">
+            <h3 className="text-lg font-semibold text-foreground mb-1.5">
               15-day Free Trial
             </h3>
             <p className="text-sm text-muted mb-5 leading-relaxed">
@@ -90,7 +90,7 @@ export default function Pricing() {
 
           {/* Middle — Pro card */}
           <div className="rounded-2xl border-2 border-blue-500 bg-background p-6 flex flex-col">
-            <h3 className="text-lg font-bold text-foreground mb-1.5">Pro</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-1.5">Pro</h3>
             <p className="text-sm text-muted mb-5 leading-relaxed">
               For teams ready to drive consistent growth through user-driven actions.
             </p>
@@ -134,11 +134,11 @@ export default function Pricing() {
               </div>
             </div>
 
-            <button className="w-full rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mb-6">
+            <button className="w-full rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mt-2 mb-6">
               Get Started
             </button>
 
-            <ul className="space-y-3 mt-auto">
+            <ul className="space-y-3">
               {proFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-2.5">
                   <Check size={16} className="text-foreground shrink-0" />
@@ -151,7 +151,7 @@ export default function Pricing() {
           {/* Right — Lifetime Deal card */}
           <div className="rounded-2xl border border-border bg-background p-6 flex flex-col">
             <div className="flex items-center gap-2 mb-1.5">
-              <h3 className="text-lg font-bold text-foreground">
+              <h3 className="text-lg font-semibold text-foreground">
                 Life Time Deal
               </h3>
               <span className="text-[11px] font-bold bg-foreground text-white rounded-full px-2.5 py-1">

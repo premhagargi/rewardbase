@@ -14,8 +14,8 @@ export default function PrivacyPolicy() {
       <Navbar />
       <main className="py-16 bg-background">
         <div className="mx-auto max-w-3xl px-8 sm:px-10 lg:px-12">
-          <span className="inline-flex items-center gap-3 text-base font-medium text-pink-500 mb-4">
-            <span className="w-[3px] h-5 rounded-full bg-pink-200"></span>
+          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider mb-4">
+            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Legal
           </span>
           <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">

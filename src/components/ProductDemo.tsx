@@ -132,7 +132,7 @@ export default function ProductDemo() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             RewardBase Widget
           </span>
         </div>

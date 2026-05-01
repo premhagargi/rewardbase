@@ -65,7 +65,7 @@ export default function Rewards() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#0276A8]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Rewards
           </span>
         </div>
@@ -101,7 +101,7 @@ export default function Rewards() {
                 <div className="h-10 w-10 rounded-lg bg-card border border-border flex items-center justify-center mb-3">
                   <Icon size={20} className="text-muted" />
                 </div>
-                <h4 className="text-base font-bold text-foreground mb-1.5">
+                <h4 className="text-base font-semibold text-foreground mb-1.5">
                   {reward.title}
                 </h4>
                 <p className="text-sm text-muted leading-relaxed">

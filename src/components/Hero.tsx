@@ -180,7 +180,7 @@ function RewardRow({ reward }: { reward: Reward }) {
         <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-[15px] font-semibold text-foreground leading-tight">
+        <p className="text-[15px] font-medium text-foreground leading-tight">
           {reward.reward}
         </p>
         <p className="text-[12px] text-muted leading-tight mt-0.5">{reward.action}</p>
@@ -192,7 +192,7 @@ function RewardRow({ reward }: { reward: Reward }) {
 function StageCard({ stage, rewards }: { stage: Stage; rewards: Reward[] }) {
   return (
     <div className="snap-start w-[220px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-card-surface p-3.5 sm:p-[18px]">
-      <h3 className="text-[18px] font-bold text-foreground mb-1">{stage}</h3>
+      <h3 className="text-[18px] font-semibold text-foreground mb-1">{stage}</h3>
       <p className="text-[15px] text-muted mb-3.5 leading-relaxed">
         {stageDescriptions[stage]}
       </p>
@@ -236,7 +236,7 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-8 sm:px-10 lg:px-12">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="text-[18px] font-semibold text-gradient-blue mb-3">
+          <p className="text-[15px] font-semibold text-gradient-blue tracking-wider mb-3">
             USER-LED GROWTH PLATFORM
           </p>
           <h1
@@ -245,8 +245,8 @@ export default function Hero() {
           >
             Turn your users into your growth engine
           </h1>
-          <p className="text-[15px] font-medium text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
-            Incentivize every user action that helps you grow — referrals, reviews, feedback, and more — with reward programs built into your product and managed from one place.
+          <p className="text-[18px] font-medium text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
+            Incentivize every user action that helps you grow — referrals, reviews, feedback, and <br />more — with reward programs built into your product and managed from one place.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
