@@ -9,8 +9,8 @@ export default function Walkthrough() {
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
-            From setup to live programs
-            <br />
+            From setup to live programs{" "}
+            <br className="hidden sm:inline" />
             in minutes
           </h2>
           <p className="lg:w-2/5 lg:ml-auto component-subtext text-muted leading-relaxed">

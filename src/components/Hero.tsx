@@ -180,10 +180,10 @@ function RewardRow({ reward }: { reward: Reward }) {
         <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-[13px] sm:text-[13px] font-medium text-foreground leading-tight">
+        <p className="reward-row-text font-medium text-foreground">
           {reward.action}
         </p>
-        <p className="text-[11px] sm:text-[13px] text-muted leading-tight mt-0.5">{reward.reward}</p>
+        <p className="reward-row-text text-muted mt-0.5">{reward.reward}</p>
       </div>
     </div>
   );
@@ -191,9 +191,9 @@ function RewardRow({ reward }: { reward: Reward }) {
 
 function StageCard({ stage, rewards }: { stage: Stage; rewards: Reward[] }) {
   return (
-    <div className="snap-start w-[270px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-card-surface p-3.5 sm:p-[18px]">
-      <h3 className="h3 font-semibold text-foreground mb-1">{stage}</h3>
-      <p className="card-subtext mb-3.5 leading-relaxed whitespace-pre-line">
+    <div className="snap-start w-[305px] shrink-0 rounded-2xl border border-border bg-card-surface p-[18px]">
+      <h3 className="text-[17.5px] font-semibold text-foreground mb-1">{stage}</h3>
+      <p className="text-[14.5px] text-muted font-normal mb-3.5 leading-relaxed whitespace-pre-line">
         {stageDescriptions[stage]}
       </p>
       <div className="space-y-1.5">
@@ -281,18 +281,28 @@ export default function Hero() {
               </button>
             ))}
           </div>
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <button
-              onClick={() => setScrollPos(Math.max(0, scrollPos - 1))}
+              onClick={() => {
+                if (typeof window !== "undefined" && window.innerWidth < 640) {
+                  scrollerRef.current?.scrollBy({ left: -(scrollerRef.current.clientWidth + 20), behavior: "smooth" });
+                } else {
+                  setScrollPos(Math.max(0, scrollPos - 1));
+                }
+              }}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-card transition-colors"
               aria-label="Previous"
             >
               <ChevronLeft size={18} />
             </button>
             <button
-              onClick={() =>
-                setScrollPos(Math.min(1, scrollPos + 1))
-              }
+              onClick={() => {
+                if (typeof window !== "undefined" && window.innerWidth < 640) {
+                  scrollerRef.current?.scrollBy({ left: scrollerRef.current.clientWidth + 20, behavior: "smooth" });
+                } else {
+                  setScrollPos(Math.min(1, scrollPos + 1));
+                }
+              }}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-card transition-colors"
               aria-label="Next"
             >
