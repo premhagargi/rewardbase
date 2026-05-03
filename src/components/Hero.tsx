@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { getCalApi } from "@calcom/embed-react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   UserMultiple02Icon,
@@ -216,6 +217,13 @@ export default function Hero() {
   const stageRewards = data[activeName];
 
   useEffect(() => {
+    (async () => {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { theme: "dark", hideEventTypeDetails: true, layout: "column_view" });
+    })();
+  }, []);
+
+  useEffect(() => {
     const el = scrollerRef.current;
     if (!el) return;
     const update = () => {
@@ -302,14 +310,15 @@ export default function Hero() {
             >
               Start for Free
             </a>
-            <a
-              href="https://app.rewardbase.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              data-cal-namespace="30min"
+              data-cal-link="cebe-fyi/30min"
+              data-cal-config='{"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
               className="inline-flex items-center justify-center rounded-xl border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
               Book Demo
-            </a>
+            </button>
           </div>
         </div>
 

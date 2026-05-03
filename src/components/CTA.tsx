@@ -1,4 +1,16 @@
+"use client";
+
+import { useEffect } from "react";
+import { getCalApi } from "@calcom/embed-react";
+
 export default function CTA() {
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { theme: "dark", hideEventTypeDetails: true, layout: "column_view" });
+    })();
+  }, []);
+
   return (
     <section className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
@@ -29,12 +41,15 @@ export default function CTA() {
             >
               Start for Free
             </a>
-            <a
-              href="#how-it-works"
+            <button
+              type="button"
+              data-cal-namespace="30min"
+              data-cal-link="cebe-fyi/30min"
+              data-cal-config='{"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
               className="inline-flex items-center justify-center rounded-xl border border-border bg-background text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
               Book Demo
-            </a>
+            </button>
           </div>
           </div>
         </div>

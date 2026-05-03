@@ -59,7 +59,7 @@ export default function Navbar() {
         <div className="md:hidden absolute top-14 inset-x-0 border-t border-border bg-background px-6 py-4 space-y-3 shadow-lg">
           <a
             href="#pricing"
-            className="block text-sm font-medium text-muted hover:text-foreground"
+            className="block text-center text-sm font-medium text-muted hover:text-foreground"
             onClick={() => setMobileOpen(false)}
           >
             Pricing
