@@ -183,7 +183,7 @@ function RewardRow({ reward }: { reward: Reward }) {
         <p className="text-[13px] sm:text-[13px] font-medium text-foreground leading-tight">
           {reward.action}
         </p>
-        <p className="text-[11px] sm:text-[13px] text-muted font-medium leading-tight mt-0.5">{reward.reward}</p>
+        <p className="text-[11px] sm:text-[13px] text-muted leading-tight mt-0.5">{reward.reward}</p>
       </div>
     </div>
   );
