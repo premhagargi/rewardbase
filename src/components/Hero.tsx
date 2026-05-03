@@ -292,7 +292,7 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="component-subtext font-semibold text-gradient-blue tracking-wider mb-3">
+          <p className="label font-semibold text-gradient-blue tracking-wider mb-3">
             USER-LED GROWTH PLATFORM
           </p>
           <h1 className="h1 tracking-tight text-foreground mb-3 lg:whitespace-nowrap">
@@ -334,7 +334,7 @@ export default function Hero() {
                 }}
                 className={`rounded-full px-3.5 py-1.5 component-subtext font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
                   activeCategory === i
-                    ? "bg-transparent text-foreground border-black"
+                    ? "bg-foreground text-white! border-foreground"
                     : "text-muted hover:text-foreground border-transparent"
                 }`}
               >
@@ -376,6 +376,7 @@ export default function Hero() {
         <div className="relative">
           <div
             ref={scrollerRef}
+            data-lenis-prevent
             className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <div
