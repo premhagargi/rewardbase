@@ -2,10 +2,10 @@ import { Play, MessageCircle } from "lucide-react";
 
 export default function Walkthrough() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 sm:py-20 bg-background">
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Heading row */}
-        <div className="flex flex-col lg:flex-row lg:items-center gap-10 mb-10">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-4 sm:gap-10 mb-6 sm:mb-10">
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >

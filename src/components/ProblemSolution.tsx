@@ -27,7 +27,7 @@ const previewRewards: {
 
 export default function ProblemSolution() {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-10 sm:py-20 bg-background">
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">

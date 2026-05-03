@@ -37,7 +37,7 @@ function BrandLogo({ brand }: { brand: string; color: string }) {
 
 export default function CaseStudies() {
   return (
-    <section className="py-20 bg-card/50">
+    <section className="py-10 sm:py-20 bg-card/50">
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
@@ -48,7 +48,7 @@ export default function CaseStudies() {
         </div>
 
         {/* Heading row */}
-        <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-4 sm:gap-10 mb-6 sm:mb-14">
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
