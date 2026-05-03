@@ -50,13 +50,13 @@ type Stage = (typeof stages)[number];
 
 const stageDescriptions: Record<Stage, string> = {
   Acquire:
-    "Get more qualified customers by incentivizing referrals, shoutouts and user-generated content.",
+    "Build awareness and get more users by incentivizing referrals, shoutouts and user-generated content.",
   Activate:
-    "Improve time-to-value by rewarding key onboarding steps and actions.",
+    "Cut drop-offs and accelerate time-to-value by incentivizing onboarding steps and value-driving actions.",
   Engage:
     "Drive deeper engagement by incentivizing feedback and participation beyond core usage.",
   Advocate:
-    "Build trust and social proof by incentivizing testimonials, reviews, and endorsements.",
+    "Build trust and social proof by incentivizing testimonials, reviews,\nand endorsements.",
 };
 
 type IconRef = Parameters<typeof HugeiconsIcon>[0]["icon"];
@@ -180,10 +180,10 @@ function RewardRow({ reward }: { reward: Reward }) {
         <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-[13px] sm:text-[15px] font-medium text-foreground leading-tight">
-          {reward.reward}
+        <p className="text-[13px] sm:text-[13px] font-medium text-foreground leading-tight">
+          {reward.action}
         </p>
-        <p className="text-[11px] sm:text-[12px] text-muted leading-tight mt-0.5">{reward.action}</p>
+        <p className="text-[11px] sm:text-[13px] text-muted font-medium leading-tight mt-0.5">{reward.reward}</p>
       </div>
     </div>
   );
@@ -192,8 +192,8 @@ function RewardRow({ reward }: { reward: Reward }) {
 function StageCard({ stage, rewards }: { stage: Stage; rewards: Reward[] }) {
   return (
     <div className="snap-start w-[270px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-card-surface p-3.5 sm:p-[18px]">
-      <h3 className="text-[18px] font-semibold text-foreground mb-1">{stage}</h3>
-      <p className="text-[15px] text-muted mb-3.5 leading-relaxed">
+      <h3 className="text-[17.5px] font-semibold text-foreground mb-1">{stage}</h3>
+      <p className="card-subtext mb-3.5 leading-relaxed whitespace-pre-line">
         {stageDescriptions[stage]}
       </p>
       <div className="space-y-1.5">
@@ -236,16 +236,16 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="text-[12px] sm:text-[15px] font-semibold text-gradient-blue tracking-wider mb-3">
+          <p className="text-[15px] sm:text-[15px] font-semibold text-gradient-blue tracking-wider mb-3">
             USER-LED GROWTH PLATFORM
           </p>
           <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight text-foreground leading-[1.1] mb-3 lg:whitespace-nowrap"
-            style={{ fontWeight: 650 }}
+            className="text-2xl sm:text-3xl font-semibold md:text-4xl lg:text-5xl tracking-tight text-foreground leading-[1.1] mb-3 lg:whitespace-nowrap"
+            
           >
             Turn your users into your growth engine
           </h1>
-          <p className="text-base sm:text-[18px] font-medium text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
+          <p className="text-base sm:text-[18px] font-normal text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
             Incentivize every user action that helps you grow — referrals, reviews, feedback, and <br className="hidden lg:inline" />more — with reward programs built into your product and managed from one place.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -274,7 +274,7 @@ export default function Hero() {
                   setActiveCategory(i);
                   setScrollPos(0);
                 }}
-                className={`rounded-full px-3.5 py-1.5 text-[15px] font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
+                className={`rounded-full px-3.5 py-1.5 text-[14.5px] font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
                   activeCategory === i
                     ? "bg-transparent text-foreground border-black"
                     : "text-muted hover:text-foreground border-transparent"

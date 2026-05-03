@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <section className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
-        <div className="relative overflow-hidden rounded-2xl py-8 px-6 text-center bg-card-surface">
+        <div className="relative overflow-hidden rounded-2xl border border-border py-8 px-6 text-center bg-card-surface">
           <div className="relative">
           {/* Icon */}
           <img
@@ -12,12 +12,11 @@ export default function CTA() {
           />
 
           <h2
-            className="text-2xl sm:text-3xl tracking-tight text-foreground leading-tight mb-2"
-            style={{ fontWeight: 650 }}
+            className="component-title tracking-tight text-foreground leading-tight mb-2"
           >
             Turn your users into your growth engine
           </h2>
-          <p className="text-base text-muted leading-relaxed max-w-md mx-auto mb-5">
+          <p className="component-subtext text-muted leading-relaxed max-w-md mx-auto mb-5">
             Launch your reward program in minutes.
           </p>
 

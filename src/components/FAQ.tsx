@@ -16,56 +16,77 @@ declare global {
   }
 }
 
-const faqs = [
+const faqs: { question: string; answer: string[] }[] = [
   {
     question: "What is a participant and how is billing calculated?",
-    answer:
-      "A participant is any unique user who submits a proof of action for one of your reward program. Each user is counted once per month, regardless of how many programs they participate in or how many times they submit.\n\nEach participant is counted once per month, regardless of how many programs they join or how many times they submit. Billing is calculated on the 1st of each month based on your previous month's participant count, and you're automatically charged based on whichever pricing tier that count falls into.",
+    answer: [
+      "A participant is any unique user who submits a proof of action for one of your reward program. Each user is counted once per month, regardless of how many programs they participate in or how many times they submit.",
+      "Each participant is counted once per month, regardless of how many programs they join or how many times they submit. Billing is calculated on the 1st of each month based on your previous month's participant count, and you're automatically charged based on whichever pricing tier that count falls into.",
+    ],
   },
   {
     question: "Do I need engineering support to set up RewardBase?",
-    answer:
-      "Yes. Initial setup requires engineering support to install the widget on your site or app and configure the rewards.\nWe're happy to work with your team through this process and offer continued support along the way.\nWe're also actively building no-code features to reduce engineering dependency.",
+    answer: [
+      "Yes. Initial setup requires engineering support to install the widget on your site or app and configure the rewards.",
+      "We're happy to work with your team through this process and offer continued support along the way.",
+      "We're also actively building no-code features to reduce engineering dependency.",
+    ],
   },
   {
     question: "How do I integrate RewardBase into my app or website?",
-    answer:
+    answer: [
       "Add a single JavaScript snippet to the <head> of your website or at your app's bootstrap entry point (e.g. _app in Next.js or your React root). From there, you can trigger the widget from any button or link, and optionally pass user details when opening the widget.",
+    ],
   },
   {
     question: "Do users need to log in or create an account to participate?",
-    answer:
-      "No separate login is required. If user details are passed during widget initialization, users are identified automatically.\nIf not set up, users can be identified through email and OTP sign-in as a fallback.",
+    answer: [
+      "No separate login is required. If user details are passed during widget initialization, users are identified automatically.",
+      "If not set up, users can be identified through email and OTP sign-in as a fallback.",
+    ],
   },
   {
     question: "What programs can I create with RewardBase?",
-    answer:
-      "Currently, you can create programs that accept manual submissions - users submit screenshots, URLs, or text for review and approval.\nWe're actively building more program types, including in-app event tracking, referrals, and more.",
+    answer: [
+      "Currently, you can create programs that accept manual submissions - users submit screenshots, URLs, or text for review and approval.",
+      "We're actively building more program types, including in-app event tracking, referrals, and more.",
+    ],
   },
   {
     question: "I already have a referral or affiliate program",
-    answer:
-      "Yes. You can add external programs to RewardBase using the placeholder program template. This makes the external programs visible alongside RewardBase's programs in one unified interface.\n\nParticipants in these programs are handled by the respective external systems and are not counted toward your billing.",
+    answer: [
+      "Yes. You can add external programs to RewardBase using the placeholder program template. This makes the external programs visible alongside RewardBase's programs in one unified interface.",
+      "Participants in these programs are handled by the respective external systems and are not counted toward your billing.",
+    ],
   },
   {
     question: "How does I verify that an action actually happened?",
-    answer:
-      "Users submit proof as screenshot, URL, or text directly through the RewardBase widget. Submissions land in the dashboard, where you can review and approve or reject them with comments.\n\nYou'll receive email reminders for any pending reviews. Users are notified by email on the status of their submission.",
+    answer: [
+      "Users submit proof as screenshot, URL, or text directly through the RewardBase widget. Submissions land in the dashboard, where you can review and approve or reject them with comments.",
+      "You'll receive email reminders for any pending reviews. Users are notified by email on the status of their submission.",
+    ],
   },
   {
     question: "How are rewards issued",
-    answer:
-      "Currently, Rewards can be issued via webhook or manually.\n\nWith webhooks - once you approve a submission, RewardBase automatically triggers a webhook to your system where you handle fulfillment - credits, perks, etc.\n\nWith manual method - you fulfill the reward directly and update the status in your dashboard.",
+    answer: [
+      "Currently, Rewards can be issued via webhook or manually.",
+      "With webhooks - once you approve a submission, RewardBase automatically triggers a webhook to your system where you handle fulfillment - credits, perks, etc.",
+      "With manual method - you fulfill the reward directly and update the status in your dashboard.",
+    ],
   },
   {
     question: "How does RewardBase handle user data?",
-    answer:
-      "You own all your user and reward data. We process data securely using industry-standard practices on secure cloud infrastructure.\nIf you prefer stricter control, you can share only user_id with RewardBase - we'll use it to track participation and process rewards.",
+    answer: [
+      "You own all your user and reward data. We process data securely using industry-standard practices on secure cloud infrastructure.",
+      "If you prefer stricter control, you can share only user_id with RewardBase - we'll use it to track participation and process rewards.",
+    ],
   },
   {
     question: "What support do you offer?",
-    answer:
-      "We offer hands-on support for setup and are here to support whenever you need us as you grow. We help design programs that align with your business and users, and work directly with your engineering team to get everything running quickly.\n\nAt any point, you can refer to our documentation for guidance - we continuously improve it to cover the most common questions and use cases.",
+    answer: [
+      "We offer hands-on support for setup and are here to support whenever you need us as you grow. We help design programs that align with your business and users, and work directly with your engineering team to get everything running quickly.",
+      "At any point, you can refer to our documentation for guidance - we continuously improve it to cover the most common questions and use cases.",
+    ],
   },
 ];
 
@@ -120,24 +141,23 @@ export default function FAQ() {
           {/* Left */}
           <div>
             <div className="mb-4">
-              <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
+              <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
                 <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
                 FAQ
               </span>
             </div>
             <h2
-              className="text-3xl sm:text-4xl tracking-tight text-foreground leading-tight mb-5"
-              style={{ fontWeight: 650 }}
+              className="component-title tracking-tight text-foreground leading-tight mb-5"
             >
               Frequently Asked Questions
             </h2>
-            <p className="text-base text-muted leading-relaxed mb-1">
+            <p className="component-subtext text-muted leading-relaxed mb-1">
               Can&apos;t find what you are looking for?
             </p>
             <p className="text-base font-semibold text-foreground mb-4">
               We would like to chat with you
             </p>
-            <button
+            {/* <button
               type="button"
               onClick={() => {
                 document.body.dataset.heyoChat = "open";
@@ -151,7 +171,7 @@ export default function FAQ() {
                 alt="Chat with us"
                 className="block w-full h-auto"
               />
-            </button>
+            </button> */}
           </div>
 
           {/* Right — Accordion */}
@@ -178,11 +198,11 @@ export default function FAQ() {
                   </span>
                 </button>
                 {openIndex === i && (
-                  <div className="mt-3 pr-8 space-y-3">
-                    {faq.answer.split("\n\n").map((para, idx) => (
+                  <div className="mt-3 pr-8 space-y-2">
+                    {faq.answer.map((para, idx) => (
                       <p
                         key={idx}
-                        className="text-sm text-muted leading-relaxed whitespace-pre-line"
+                        className="text-sm text-muted leading-relaxed"
                       >
                         {para}
                       </p>

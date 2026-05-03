@@ -7,20 +7,19 @@ export default function Walkthrough() {
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 mb-10">
           <h2
-            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
-            style={{ fontWeight: 650 }}
+            className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
             From setup to live programs
             <br />
             in minutes
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed">
+          <p className="lg:w-2/5 lg:ml-auto component-subtext text-muted leading-relaxed">
             Watch how it all comes together - from creating your first program to rewarding your first user, in minutes.
           </p>
         </div>
 
         {/* Demo mockup container */}
-        <div className="relative overflow-hidden rounded-2xl bg-card-surface p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-card-surface p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window mockup */}
             <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">

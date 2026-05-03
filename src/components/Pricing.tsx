@@ -50,7 +50,7 @@ export default function Pricing() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Pricing
           </span>
@@ -59,14 +59,13 @@ export default function Pricing() {
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-14">
           <h2
-            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
-            style={{ fontWeight: 650 }}
+            className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
             Start for free
             <br />
             Pay when you grow
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto component-subtext text-muted leading-relaxed lg:leading-[25px]">
             Start with a 15-day free trial. Then pay monthly based on active participants-per-month with first 25 participants free every month.
           </p>
         </div>

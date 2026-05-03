@@ -131,7 +131,7 @@ export default function ProductDemo() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             RewardBase Widget
           </span>
@@ -140,17 +140,16 @@ export default function ProductDemo() {
         {/* Top: heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
           <h2
-            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
-            style={{ fontWeight: 650 }}
+            className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
             Run reward programs right inside your product
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 text-[15px] text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
 Add RewardBase to your app or website — customize to your brand, auto-identify users. No redirects, no logins — just a seamless in-product experience          </p>
         </div>
 
         {/* Mockup container */}
-        <div className="relative overflow-hidden rounded-2xl bg-card-surface p-6 sm:p-10 lg:p-12">
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-card-surface p-6 sm:p-10 lg:p-12">
           <div className="relative max-w-4xl mx-auto">
             {/* Chat window */}
             <div className="rounded-2xl bg-background border border-border shadow-lg overflow-hidden">

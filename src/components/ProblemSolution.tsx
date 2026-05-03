@@ -31,7 +31,7 @@ export default function ProblemSolution() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Why RewardBase
           </span>
@@ -41,12 +41,11 @@ export default function ProblemSolution() {
           {/* Left */}
           <div>
             <h2
-              className="text-3xl sm:text-4xl tracking-tight text-foreground leading-tight mb-5"
-              style={{ fontWeight: 650 }}
+              className="component-title tracking-tight text-foreground leading-tight mb-5"
             >
               Your users are the most powerful growth lever - yet the most underutilized
             </h2>
-            <div className="space-y-4 text-base text-muted leading-relaxed">
+            <div className="space-y-4 component-subtext text-muted leading-relaxed">
               <p>
                 Growth is getting harder - every channel is crowded, expensive, and ineffective. Meanwhile, your existing users already influence your growth through word-of-mouth, social proof, advocacy and more. 
               </p>
@@ -74,10 +73,10 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
                   />
                 </div>
                 <div>
-                  <h4 className="text-[15px] font-semibold text-foreground mb-0.5">
+                  <h4 className="card-title mb-0.5">
                     {item.title}
                   </h4>
-                  <p className="text-[15px] font-normal text-muted leading-relaxed">
+                  <p className="card-subtext leading-relaxed">
                     {item.description}
                   </p>
                 </div>

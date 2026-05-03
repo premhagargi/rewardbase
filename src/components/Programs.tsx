@@ -48,7 +48,7 @@ export default function Programs() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Programs
           </span>
@@ -57,12 +57,11 @@ export default function Programs() {
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
           <h2
-            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
-            style={{ fontWeight: 650 }}
+            className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
             Turn meaningful user actions into reward programs
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 text-[15px] text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
             Rewardbase gives you the building blocks to run reward programs for every stage of the user lifecycle — and turn user behavior into a scalable growth engine.
           </p>
         </div>
@@ -91,10 +90,10 @@ export default function Programs() {
                   fillOpacity={0.1}
                 />
 
-                <h4 className="text-base font-semibold text-foreground mb-1.5">
+                <h4 className="card-title mb-1.5">
                   {program.title}
                 </h4>
-                <p className="text-sm text-muted leading-relaxed">
+                <p className="card-subtext leading-relaxed">
                   {program.description}
                 </p>
               </div>

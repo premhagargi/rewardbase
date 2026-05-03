@@ -64,7 +64,7 @@ export default function Rewards() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
-          <span className="inline-flex items-center gap-3 text-[15px] font-semibold text-gradient-blue uppercase tracking-wider">
+          <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
             <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
             Rewards
           </span>
@@ -73,12 +73,11 @@ export default function Rewards() {
         {/* Heading row */}
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 mb-12">
           <h2
-            className="lg:w-1/2 text-3xl sm:text-4xl tracking-tight text-foreground leading-tight"
-            style={{ fontWeight: 650 }}
+            className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
             Drive action with tailored rewards your users care about
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 text-base text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
             Rewardbase gives you a flexible reward layer that adapts to any program. Configure rewards and automatically deliver them when users complete actions.
           </p>
         </div>
@@ -107,10 +106,10 @@ export default function Rewards() {
                   fillOpacity={0.1}
                 />
 
-                <h4 className="text-base font-semibold text-foreground mb-1.5">
+                <h4 className="card-title mb-1.5">
                   {reward.title}
                 </h4>
-                <p className="text-sm text-muted leading-relaxed">
+                <p className="card-subtext leading-relaxed">
                   {reward.description}
                 </p>
               </div>
