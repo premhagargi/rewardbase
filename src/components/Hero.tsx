@@ -247,8 +247,12 @@ export default function Hero() {
     if (!isMobile()) return;
 
     let interval: ReturnType<typeof setInterval> | null = null;
+    let isVisible = false;
+    let isTouching = false;
+
     const start = () => {
       if (interval) return;
+      if (!isVisible || isTouching) return;
       interval = setInterval(() => {
         if (!isMobile()) return;
         const step = el.clientWidth + 20;
@@ -267,12 +271,26 @@ export default function Hero() {
       }
     };
 
+    const onTouchStart = () => {
+      isTouching = true;
+      stop();
+    };
+    const onTouchEnd = () => {
+      isTouching = false;
+      start();
+    };
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchend", onTouchEnd, { passive: true });
+    el.addEventListener("touchcancel", onTouchEnd, { passive: true });
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
+            isVisible = true;
             start();
           } else {
+            isVisible = false;
             stop();
           }
         }
@@ -284,6 +302,9 @@ export default function Hero() {
     return () => {
       stop();
       observer.disconnect();
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchend", onTouchEnd);
+      el.removeEventListener("touchcancel", onTouchEnd);
     };
   }, [activeCategory]);
 
@@ -376,8 +397,7 @@ export default function Hero() {
         <div className="relative">
           <div
             ref={scrollerRef}
-            data-lenis-prevent-touch
-            className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-y [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <div
               className="flex gap-5 transition-transform duration-500 ease-out pb-4"
