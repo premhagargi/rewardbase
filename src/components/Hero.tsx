@@ -303,7 +303,9 @@ export default function Hero() {
               Start for Free
             </a>
             <a
-              href="#how-it-works"
+              href="https://app.rewardbase.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
               Book Demo
