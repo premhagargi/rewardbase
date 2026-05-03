@@ -330,10 +330,10 @@ export default function Hero() {
           </div>
 
           {(scrollPos > 0 || showLeftFade) && (
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10" />
           )}
           {(scrollPos < 1 && showRightFade) && (
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background to-transparent z-10" />
           )}
         </div>
       </div>

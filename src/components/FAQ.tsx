@@ -154,7 +154,7 @@ export default function FAQ() {
             <p className="component-subtext text-muted leading-relaxed mb-1">
               Can&apos;t find what you are looking for?
             </p>
-            <p className="text-base font-semibold text-foreground mb-4">
+            <p className="h5 font-semibold text-foreground mb-4">
               We would like to chat with you
             </p>
             {/* <button

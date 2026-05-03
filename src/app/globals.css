@@ -57,6 +57,10 @@ body {
   font-size: 13.5px;
 }
 
+.h5{
+  font-size: 14.5px;
+}
+
 .component-title{
   font-size: 26px;
   font-weight: 650;
@@ -70,7 +74,7 @@ body {
 }
 
 .card-title{
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 650;
   color: var(--color-foreground);
 }
@@ -116,6 +120,9 @@ body {
   }
   .h4{
     font-size: 14.5px;
+  }
+  .h5{
+    font-size: 15px;
   }
   .component-title{
     font-size: 36px;
