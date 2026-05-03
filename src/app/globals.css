@@ -37,54 +37,86 @@ body {
   font-size: 15px;
 }
 
+/* Mobile-first type scale. Desktop overrides at min-width: 640px below. */
 .h1{
-  font-size: 50px;
+  font-size: 36px;
+  font-weight: 650;
+  line-height: 1.1;
 }
 
 .h3{
-  font-size: 17.5px;
+  font-size: 16px;
 }
 
 .h4{
-  font-size: 14.5px;
+  font-size: 13.5px;
+}
+
+.component-title{
+  font-size: 26px;
+  font-weight: 650;
 }
 
 .component-subtext{
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-muted);
 }
 
 .card-title{
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 650;
   color: var(--color-foreground);
 }
 
 .card-subtext{
-  font-size: 14.5px;
+  font-size: 13.5px;
   font-weight: 400;
   color: var(--color-muted);
 }
 
-.component-title{
-  font-size: 30px;
-  font-weight: 650;
+.label{
+  font-size: 13px;
 }
 
-@media (min-width: 640px) {
-  .component-title{
-    font-size: 36px;
-  }
+.case-card-text{
+  font-size: 18px;
 }
 
 .superscript{
   font-size: 12px;
 }
 
-.label{
-  font-size: 14.5px;
+/* Desktop overrides — keep these matching the previous fixed values. */
+@media (min-width: 640px) {
+  .h1{
+    font-size: 50px;
+  }
+  .h3{
+    font-size: 17.5px;
+  }
+  .h4{
+    font-size: 14.5px;
+  }
+  .component-title{
+    font-size: 36px;
+  }
+  .component-subtext{
+    font-size: 15px;
+  }
+  .card-title{
+    font-size: 15px;
+  }
+  .card-subtext{
+    font-size: 14.5px;
+  }
+  .label{
+    font-size: 14.5px;
+  }
+  .case-card-text{
+    font-size: 17.5px;
+  }
 }
 
 /* Section-label blue gradient text */

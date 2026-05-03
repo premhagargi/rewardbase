@@ -78,7 +78,7 @@ export default function CaseStudies() {
 
               {/* Bottom section — description + brand */}
               <div className="relative z-10 mt-auto px-6 pb-4 pt-5">
-                <h3 className="text-lg text-white leading-relaxed font-semibold mb-5">
+                <h3 className="case-card-text text-white leading-relaxed font-semibold mb-5">
                   {item.bottomText}
                 </h3>
                 <div className="h-8 flex items-center">

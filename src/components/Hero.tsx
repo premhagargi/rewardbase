@@ -192,7 +192,7 @@ function RewardRow({ reward }: { reward: Reward }) {
 function StageCard({ stage, rewards }: { stage: Stage; rewards: Reward[] }) {
   return (
     <div className="snap-start w-[270px] sm:w-[305px] shrink-0 rounded-2xl border border-border bg-card-surface p-3.5 sm:p-[18px]">
-      <h3 className="text-[17.5px] font-semibold text-foreground mb-1">{stage}</h3>
+      <h3 className="h3 font-semibold text-foreground mb-1">{stage}</h3>
       <p className="card-subtext mb-3.5 leading-relaxed whitespace-pre-line">
         {stageDescriptions[stage]}
       </p>
@@ -236,13 +236,10 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="text-[15px] sm:text-[15px] font-semibold text-gradient-blue tracking-wider mb-3">
+          <p className="label font-semibold text-gradient-blue tracking-wider mb-3">
             USER-LED GROWTH PLATFORM
           </p>
-          <h1
-            className="text-2xl sm:text-3xl font-semibold md:text-4xl lg:text-5xl tracking-tight text-foreground leading-[1.1] mb-3 lg:whitespace-nowrap"
-            
-          >
+          <h1 className="h1 tracking-tight text-foreground mb-3 lg:whitespace-nowrap">
             Turn your users into your growth engine
           </h1>
           <p className="text-base sm:text-[18px] font-normal text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
