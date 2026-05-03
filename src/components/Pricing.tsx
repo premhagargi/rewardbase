@@ -82,9 +82,14 @@ export default function Pricing() {
             <p className="component-subtext leading-relaxed mb-3">
               Launch your reward programs and see your users drive real growth before you're ready to upgrade.
             </p>
-            <button className="rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors">
+            <a
+              href="https://app.rewardbase.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors"
+            >
               Get Started
-            </button>
+            </a>
           </div>
 
           {/* Middle — Pro card */}
@@ -133,9 +138,14 @@ export default function Pricing() {
               </div>
             </div>
 
-            <button className="w-full rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mt-2 mb-6">
+            <a
+              href="https://app.rewardbase.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center w-full rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors mt-2 mb-6"
+            >
               Get Started
-            </button>
+            </a>
 
             <ul className="space-y-3">
               {proFeatures.map((feature) => (

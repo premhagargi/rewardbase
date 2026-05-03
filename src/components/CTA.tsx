@@ -22,7 +22,9 @@ export default function CTA() {
 
           <div className="flex items-center justify-center gap-3">
             <a
-              href="#pricing"
+              href="https://app.rewardbase.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
             >
               Start for Free

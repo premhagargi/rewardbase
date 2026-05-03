@@ -87,12 +87,12 @@ export default function Footer() {
               <h4 className="footer-col-title font-bold text-foreground mb-4">Support</h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="#" className="footer-link text-muted hover:text-foreground transition-colors">
+                  <a href="https://rewardbase.userjot.com/roadmap" target="_blank" rel="noopener noreferrer" className="footer-link text-muted hover:text-foreground transition-colors">
                     Roadmap
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="footer-link text-muted hover:text-foreground transition-colors">
+                  <a href="https://rewardbase.userjot.com/updates?cursor=1&limit=10" target="_blank" rel="noopener noreferrer" className="footer-link text-muted hover:text-foreground transition-colors">
                     Changelog
                   </a>
                 </li>

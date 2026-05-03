@@ -231,6 +231,54 @@ export default function Hero() {
     };
   }, []);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const el = scrollerRef.current;
+    if (!el) return;
+    const isMobile = () => window.innerWidth < 640;
+    if (!isMobile()) return;
+
+    let interval: ReturnType<typeof setInterval> | null = null;
+    const start = () => {
+      if (interval) return;
+      interval = setInterval(() => {
+        if (!isMobile()) return;
+        const step = el.clientWidth + 20;
+        const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+        if (atEnd) {
+          el.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+          el.scrollBy({ left: step, behavior: "smooth" });
+        }
+      }, 1800);
+    };
+    const stop = () => {
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
+            start();
+          } else {
+            stop();
+          }
+        }
+      },
+      { threshold: [0, 0.95, 1] }
+    );
+    observer.observe(el);
+
+    return () => {
+      stop();
+      observer.disconnect();
+    };
+  }, [activeCategory]);
+
   return (
     <section className="pt-10 sm:pt-14 pb-12 bg-background">
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
@@ -247,7 +295,9 @@ export default function Hero() {
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
-              href="#pricing"
+              href="https://app.rewardbase.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
             >
               Start for Free

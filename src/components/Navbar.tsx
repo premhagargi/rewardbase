@@ -35,7 +35,9 @@ export default function Navbar() {
             </a>
           </nav>
           <a
-            href="#pricing"
+            href="https://app.rewardbase.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-sm font-medium px-3 py-1.5 hover:bg-foreground/90 transition-colors"
           >
             Start for Free
@@ -63,7 +65,9 @@ export default function Navbar() {
             Pricing
           </a>
           <a
-            href="#pricing"
+            href="https://app.rewardbase.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block text-center rounded-xl bg-foreground text-white text-sm font-medium px-4 py-2"
             onClick={() => setMobileOpen(false)}
           >
