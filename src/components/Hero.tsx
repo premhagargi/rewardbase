@@ -376,8 +376,8 @@ export default function Hero() {
         <div className="relative">
           <div
             ref={scrollerRef}
-            data-lenis-prevent
-            className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-x [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            data-lenis-prevent-touch
+            className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <div
               className="flex gap-5 transition-transform duration-500 ease-out pb-4"
