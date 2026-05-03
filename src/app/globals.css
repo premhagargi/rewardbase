@@ -33,8 +33,13 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
-  /* Base body size — matches the 15px "default" row in the type scale. */
-  font-size: 15px;
+  font-size: 14px;
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 15px;
+  }
 }
 
 /* Mobile-first type scale. Desktop overrides at min-width: 640px below. */
@@ -58,14 +63,14 @@ body {
 }
 
 .component-subtext{
-  font-size: 14.5px;
+  font-size: 13.5px;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-muted);
 }
 
 .card-title{
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 650;
   color: var(--color-foreground);
 }
@@ -77,7 +82,7 @@ body {
 }
 
 .label{
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .case-card-text{
@@ -90,11 +95,11 @@ body {
 }
 
 .footer-col-title{
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .footer-link{
-  font-size: 14.5px;
+  font-size: 13.5px;
 }
 
 .superscript{
@@ -118,6 +123,9 @@ body {
   .component-subtext{
     font-size: 14.5px;
   }
+  .footer-link{
+    font-size: 14.5px;
+  }
   .card-title{
     font-size: 15px;
   }
@@ -126,6 +134,9 @@ body {
   }
   .label{
     font-size: 14.5px;
+  }
+  .footer-col-title{
+    font-size: 15px;
   }
   .case-card-text{
     font-size: 17.5px;

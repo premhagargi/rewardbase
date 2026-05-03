@@ -12,7 +12,7 @@ export default function Footer() {
                 className="h-9 w-auto"
               />
             </a>
-            <p className="text-sm text-muted leading-relaxed mb-5 max-w-xs">
+            <p className="component-subtext leading-relaxed mb-5 max-w-xs">
               Turn your users into your growth engine. Start free. Pay as you
               scale.
             </p>

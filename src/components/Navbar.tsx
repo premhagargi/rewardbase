@@ -29,7 +29,7 @@ export default function Navbar() {
 
         {/* Right side: nav links + CTA */}
         <div className="hidden md:flex items-center gap-8">
-          <nav className="flex items-center gap-8 text-sm text-muted font-medium">
+          <nav className="flex items-center gap-8 footer-link text-muted">
             <a href="#how-it-works" className="hover:text-foreground transition-colors">
               Docs
             </a>

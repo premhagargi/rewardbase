@@ -192,8 +192,8 @@ function RewardRow({ reward }: { reward: Reward }) {
 function StageCard({ stage, rewards }: { stage: Stage; rewards: Reward[] }) {
   return (
     <div className="snap-start w-[305px] shrink-0 rounded-2xl border border-border bg-card-surface p-[18px]">
-      <h3 className="text-[17.5px] font-semibold text-foreground mb-1">{stage}</h3>
-      <p className="text-[14.5px] text-muted font-normal mb-3.5 leading-relaxed whitespace-pre-line">
+      <h3 className="h3 font-semibold text-foreground mb-1">{stage}</h3>
+      <p className="component-subtext mb-3.5 leading-relaxed whitespace-pre-line">
         {stageDescriptions[stage]}
       </p>
       <div className="space-y-1.5">
@@ -236,7 +236,7 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="label text-[14.5px] font-semibold text-gradient-blue tracking-wider mb-3">
+          <p className="component-subtext font-semibold text-gradient-blue tracking-wider mb-3">
             USER-LED GROWTH PLATFORM
           </p>
           <h1 className="h1 tracking-tight text-foreground mb-3 lg:whitespace-nowrap">
@@ -271,7 +271,7 @@ export default function Hero() {
                   setActiveCategory(i);
                   setScrollPos(0);
                 }}
-                className={`rounded-full px-3.5 py-1.5 text-[14.5px] font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
+                className={`rounded-full px-3.5 py-1.5 component-subtext font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
                   activeCategory === i
                     ? "bg-transparent text-foreground border-black"
                     : "text-muted hover:text-foreground border-transparent"
