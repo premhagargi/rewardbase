@@ -30,9 +30,6 @@ export default function Navbar() {
         {/* Right side: nav links + CTA */}
         <div className="hidden md:flex items-center gap-8">
           <nav className="flex items-center gap-8 footer-link text-muted">
-            <a href="#how-it-works" className="hover:text-foreground transition-colors">
-              Docs
-            </a>
             <a href="#pricing" className="hover:text-foreground transition-colors">
               Pricing
             </a>
@@ -58,16 +55,13 @@ export default function Navbar() {
       {/* Mobile menu — overlays below header without pushing content */}
       {mobileOpen && (
         <div className="md:hidden absolute top-14 inset-x-0 border-t border-border bg-background px-6 py-4 space-y-3 shadow-lg">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="block text-sm font-medium text-muted hover:text-foreground"
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          <a
+            href="#pricing"
+            className="block text-sm font-medium text-muted hover:text-foreground"
+            onClick={() => setMobileOpen(false)}
+          >
+            Pricing
+          </a>
           <a
             href="#pricing"
             className="block text-center rounded-xl bg-foreground text-white text-sm font-medium px-4 py-2"
