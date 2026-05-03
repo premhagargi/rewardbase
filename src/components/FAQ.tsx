@@ -182,11 +182,7 @@ export default function FAQ() {
                   onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
                   className="flex items-start justify-between gap-4 w-full text-left"
                 >
-                  <span
-                    className={`text-base font-semibold transition-colors ${
-                      "text-foreground"
-                    }`}
-                  >
+                  <span className="footer-col-title font-semibold text-foreground transition-colors">
                     {faq.question}
                   </span>
                   <span className="shrink-0 mt-0.5">
@@ -202,7 +198,7 @@ export default function FAQ() {
                     {faq.answer.map((para, idx) => (
                       <p
                         key={idx}
-                        className="text-sm text-muted leading-relaxed"
+                        className="component-subtext leading-relaxed"
                       >
                         {para}
                       </p>

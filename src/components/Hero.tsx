@@ -236,13 +236,13 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
         <div className="text-center mb-6">
-          <p className="label font-semibold text-gradient-blue tracking-wider mb-3">
+          <p className="label text-[14.5px] font-semibold text-gradient-blue tracking-wider mb-3">
             USER-LED GROWTH PLATFORM
           </p>
           <h1 className="h1 tracking-tight text-foreground mb-3 lg:whitespace-nowrap">
             Turn your users into your growth engine
           </h1>
-          <p className="text-base sm:text-[18px] font-normal text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
+          <p className="h3 font-normal text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
             Incentivize every user action that helps you grow — referrals, reviews, feedback, and <br className="hidden lg:inline" />more — with reward programs built into your product and managed from one place.
           </p>
           <div className="flex items-center justify-center gap-4">

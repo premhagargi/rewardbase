@@ -47,35 +47,35 @@ export default function Footer() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 lg:gap-16">
             {/* Product */}
             <div>
-              <h4 className="text-sm font-bold text-foreground mb-4">Product</h4>
+              <h4 className="footer-col-title font-bold text-foreground mb-4">Product</h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="#widget" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#widget" className="footer-link text-muted hover:text-foreground transition-colors">
                     Widget
                   </a>
                 </li>
                 <li>
-                  <a href="#programs" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#programs" className="footer-link text-muted hover:text-foreground transition-colors">
                     Programs
                   </a>
                 </li>
                 <li>
-                  <a href="#rewards" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#rewards" className="footer-link text-muted hover:text-foreground transition-colors">
                     Rewards
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#how-it-works" className="footer-link text-muted hover:text-foreground transition-colors">
                     How it works
                   </a>
                 </li>
                 <li>
-                  <a href="#pricing" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#pricing" className="footer-link text-muted hover:text-foreground transition-colors">
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#faq" className="footer-link text-muted hover:text-foreground transition-colors">
                     FAQ
                   </a>
                 </li>
@@ -84,20 +84,20 @@ export default function Footer() {
 
             {/* Support */}
             <div>
-              <h4 className="text-sm font-bold text-foreground mb-4">Support</h4>
+              <h4 className="footer-col-title font-bold text-foreground mb-4">Support</h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#" className="footer-link text-muted hover:text-foreground transition-colors">
                     Roadmap
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="#" className="footer-link text-muted hover:text-foreground transition-colors">
                     Changelog
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:team@rewardbase.app" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="mailto:team@rewardbase.app" className="footer-link text-muted hover:text-foreground transition-colors">
                     Contact
                   </a>
                 </li>
@@ -106,15 +106,15 @@ export default function Footer() {
 
             {/* Legal */}
             <div>
-              <h4 className="text-sm font-bold text-foreground mb-4">Legal</h4>
+              <h4 className="footer-col-title font-bold text-foreground mb-4">Legal</h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a href="/terms" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="/terms" className="footer-link text-muted hover:text-foreground transition-colors">
                     Terms of Service
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy" className="text-sm text-muted hover:text-foreground transition-colors">
+                  <a href="/privacy" className="footer-link text-muted hover:text-foreground transition-colors">
                     Privacy Policy
                   </a>
                 </li>
