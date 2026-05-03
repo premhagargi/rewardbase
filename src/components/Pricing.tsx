@@ -73,13 +73,13 @@ export default function Pricing() {
         <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {/* Left — free trial info (no card) */}
           <div className="flex flex-col pt-6 pr-6">
-            <h3 className="text-lg font-semibold text-foreground mb-1.5">
+            <h3 className="h3 font-semibold text-foreground mb-1.5">
               15-day Free Trial
             </h3>
-            <p className="text-sm text-muted mb-5 leading-relaxed">
+            <p className="component-subtext mb-5 leading-relaxed">
               No Credit Card required.
             </p>
-            <p className="text-sm text-muted leading-relaxed mb-3">
+            <p className="component-subtext leading-relaxed mb-3">
               Launch your reward programs and see your users drive real growth before you're ready to upgrade.
             </p>
             <button className="rounded-lg bg-foreground text-white text-sm font-medium py-3 px-6 hover:bg-foreground/90 transition-colors">
@@ -89,8 +89,8 @@ export default function Pricing() {
 
           {/* Middle — Pro card */}
           <div className="rounded-2xl border-2 border-blue-500 bg-background p-6 flex flex-col">
-            <h3 className="text-lg font-semibold text-foreground mb-1.5">Pro</h3>
-            <p className="text-sm text-muted mb-5 leading-relaxed">
+            <h3 className="h3 font-semibold text-foreground mb-1.5">Pro</h3>
+            <p className="component-subtext mb-5 leading-relaxed">
               For teams ready to drive consistent growth through user-driven actions.
             </p>
 
@@ -141,7 +141,7 @@ export default function Pricing() {
               {proFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-2.5">
                   <Check size={16} className="text-foreground shrink-0" />
-                  <span className="text-sm text-muted">{feature}</span>
+                  <span className="component-subtext">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -150,14 +150,14 @@ export default function Pricing() {
           {/* Right — Lifetime Deal card */}
           <div className="rounded-2xl border border-border bg-background p-6 flex flex-col">
             <div className="flex items-center gap-2 mb-1.5">
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="h3 font-semibold text-foreground">
                 Life Time Deal
               </h3>
               <span className="text-[11px] font-bold bg-foreground text-white rounded-full px-2.5 py-1">
                 Only 10 left
               </span>
             </div>
-            <p className="text-sm text-muted mb-5 leading-relaxed">
+            <p className="component-subtext mb-5 leading-relaxed">
               Pay once. Get full access with all future updates - forever.
             </p>
 
@@ -174,7 +174,7 @@ export default function Pricing() {
               {lifetimeFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-2.5">
                   <Check size={16} className="text-foreground shrink-0" />
-                  <span className="text-sm text-muted">{feature}</span>
+                  <span className="component-subtext">{feature}</span>
                 </li>
               ))}
             </ul>

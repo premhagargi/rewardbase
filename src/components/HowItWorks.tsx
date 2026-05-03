@@ -53,10 +53,10 @@ export default function HowItWorks() {
               <div className="h-[42px] w-[42px] rounded-xl bg-blue-500 flex items-center justify-center text-white text-base font-bold mb-4">
                 {step.number}
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
+              <h3 className="h3 font-semibold text-foreground mb-2">
                 {step.title}
               </h3>
-              <p className="text-[15px] font-medium text-muted leading-relaxed mb-4">
+              <p className="component-subtext leading-relaxed mb-4">
                 {step.description}
               </p>
               <div className="h-48 mt-auto rounded-lg bg-card border border-border overflow-hidden flex items-center justify-center">
