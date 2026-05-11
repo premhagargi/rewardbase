@@ -12,6 +12,7 @@ const rewards: {
   title: string;
   description: string;
   live: boolean;
+  comingSoon?: boolean;
   icon: LucideIcon;
 }[] = [
   {
@@ -21,18 +22,13 @@ const rewards: {
     live: true,
     icon: Coins,
   },
-  {
-    title: "Access Unlocks",
-    description:
-      "Give users access to premium features, gated content or exclusive perks.",
-    live: true,
-    icon: Unlock,
-  },
+
   {
     title: "Discount Codes",
     description:
       "Offer percentage or fixed discounts, one-time or recurring, on any purchase.",
     live: false,
+    comingSoon: true,
     icon: Ticket,
   },
   {
@@ -40,7 +36,15 @@ const rewards: {
     description:
       "Let users accumulate RewardBase points and redeem rewards they choose.",
     live: false,
+    comingSoon: true,
     icon: Wallet,
+  },
+   {
+    title: "Access Unlocks",
+    description:
+      "Give users access to premium features, gated content or exclusive perks.",
+    live: true,
+    icon: Unlock,
   },
   {
     title: "Giftcards",
@@ -65,7 +69,7 @@ export default function Rewards() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
             Rewards
           </span>
         </div>
@@ -97,12 +101,18 @@ export default function Rewards() {
                     Live
                   </span>
                 )}
+                {reward.comingSoon && (
+                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                    <span className="h-1 w-1 rounded-full bg-amber-500" />
+                    Coming Soon
+                  </span>
+                )}
                 <Icon
                   size={28}
                   strokeWidth={1.5}
                   className="mb-3"
-                  style={{ color: "#004C7D" }}
-                  fill="#004C7D"
+                  style={{ color: "var(--color-brand-blue)" }}
+                  fill="var(--color-brand-blue)"
                   fillOpacity={0.1}
                 />
 

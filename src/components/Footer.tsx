@@ -125,13 +125,25 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14 py-5">
-          <p className="text-center text-xs text-muted">
-            &copy; {new Date().getFullYear()} Rewardbase. All rights reserved.
-          </p>
-        </div>
-      </div>
+    <div className="border-t border-border">
+  <div className="mx-auto flex max-w-6xl items-center justify-between px-10 py-5 sm:px-12 lg:px-14">
+    <p className="text-xs font-medium text-foreground/80">
+      Made with ❤️ and ☕️ by{" "}
+      <a
+        href="https://x.com/cebe_fyi"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium underline underline-offset-2 transition-colors hover:text-foreground"
+      >
+        Cebe
+      </a>
+    </p>
+
+    <p className="text-xs text-muted text-right">
+      &copy; {new Date().getFullYear()} Rewardbase. All rights reserved.
+    </p>
+  </div>
+</div>
     </footer>
   );
 }

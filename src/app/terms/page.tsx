@@ -15,7 +15,7 @@ export default function TermsOfService() {
       <main className="py-16 bg-background">
         <div className="mx-auto max-w-3xl px-8 sm:px-10 lg:px-12">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider mb-4">
-            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
             Legal
           </span>
           <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
@@ -264,7 +264,7 @@ export default function TermsOfService() {
                 13. Payment Processing
               </h2>
               <p>
-                Our order process is conducted by our online reseller LemonSqueezy.com, which acts as the Merchant of Record for all orders. LemonSqueezy handles customer service inquiries and returns related to payment processing.
+                Our order process is conducted by our online reseller Dodo Payments, which acts as the Merchant of Record for all orders. Dodo Payments handles customer service inquiries and returns related to payment processing.
               </p>
             </section>
 

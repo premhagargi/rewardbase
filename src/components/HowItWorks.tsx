@@ -26,7 +26,7 @@ export default function HowItWorks() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
             How it works
           </span>
         </div>

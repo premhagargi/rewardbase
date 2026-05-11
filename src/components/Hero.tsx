@@ -71,7 +71,7 @@ type Reward = {
 const data: Record<Category, Record<Stage, Reward[]>> = {
   B2B: {
     Acquire: [
-      { icon: UserMultiple02Icon, action: "Refer a Business", reward: "Gift 1 Month Free · Get 30% Off (3 Months)" },
+      { icon: UserMultiple02Icon, action: "Refer a Business", reward: "$100 Credits for each" },
       { icon: Linkedin01Icon, action: "Share Results on LinkedIn", reward: "500 AI Credits" },
       { icon: ZoomIcon, action: "Co-host a Webinar", reward: "3 Months Free Pro Plan" },
       { icon: Share07Icon, action: "Join Partner Program", reward: "30% Recurring Commission" },
@@ -97,7 +97,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
   },
   B2C: {
     Acquire: [
-      { icon: UserMultiple02Icon, action: "Invite 3 Friends", reward: "Gift 1 Month Free · Get 1 Month Free" },
+      { icon: UserMultiple02Icon, action: "Invite 3 Friends", reward: "$10 Credits for each" },
       { icon: TiktokIcon, action: "Share Your Win on TikTok", reward: "500 AI Credits" },
       { icon: WhatsappIcon, action: "Gift Trial in WhatsApp Group", reward: "3 Months Free Pro Plan" },
       { icon: InstagramIcon, action: "Repost as Instagram Story", reward: "100 Reward Points" },
@@ -123,7 +123,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
   },
   Creators: {
     Acquire: [
-      { icon: UserMultiple02Icon, action: "Refer 3 Colleagues", reward: "Gift 1 Month Free · Get 1 Month Free" },
+      { icon: UserMultiple02Icon, action: "Refer 3 Colleagues", reward: "Each Gets 1 Month Free" },
       { icon: Share07Icon, action: "Share Resource With Your Team", reward: "50% Off Next Workshop" },
       { icon: Linkedin01Icon, action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
       { icon: NewTwitterIcon, action: "Repost with Caption", reward: "Unlock Swipe File Library" },
@@ -132,19 +132,19 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { icon: UserListIcon, action: "Complete Your Profile", reward: "Unlock Starter Resource Pack" },
       { icon: Upload03Icon, action: "Follow Our Socials", reward: "Access to Partner Perks" },
       { icon: RepeatIcon, action: "Maintain 3-Day Streak", reward: "30% Off Annual Upgrade" },
-      { icon: SlackIcon, action: "Introduce Yourself in Community", reward: "Unlock Member Directory Access" },
+      { icon: SlackIcon, action: "Introduce Yourself in Community", reward: "Unlock Member Directory" },
     ],
     Engage: [
       { icon: AiIdeaIcon, action: "Submit a Topic Idea", reward: "Co-create Content With Us" },
       { icon: Task01Icon, action: "Complete a Survey", reward: "$10 Amazon Gift Card" },
-      { icon: SlackIcon, action: "Become Top Supporter in Forum", reward: "Free Seat at Live Cohort" },
+      { icon: SlackIcon, action: "Become Top Supporter", reward: "Free Seat at Live Cohort" },
       { icon: ZoomIcon, action: "Attend Live AMA", reward: "50% Off Mentor Session" },
     ],
     Advocate: [
       { icon: StarSquareIcon, action: "Write Public Testimonial", reward: "$50 Amazon Gift Card" },
       { icon: RedditIcon, action: "Recommend on Reddit", reward: "200 Wallet Points" },
       { icon: NewTwitterIcon, action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
-      { icon: SpotlightIcon, action: "Get Featured in Member Spotlight", reward: "Free Merchandise" },
+      { icon: SpotlightIcon, action: "Get Featured in Spotlight", reward: "Free Merchandise" },
     ],
   },
 };
@@ -176,12 +176,12 @@ function RewardIcon({ reward }: { reward: Reward }) {
 
 function RewardRow({ reward }: { reward: Reward }) {
   return (
-    <div className="flex items-center gap-2.5 sm:gap-3 rounded-2xl border border-border bg-background px-3 py-2 hover:shadow-sm transition-shadow">
+    <div className="flex items-center gap-2.5 sm:gap-3 rounded-2xl border border-border bg-background px-3 py-2 h-[68.75px] hover:shadow-sm transition-shadow">
       <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-accent/10">
         <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="reward-row-text font-medium text-foreground">
+        <p className="reward-row-action font-medium text-foreground">
           {reward.action}
         </p>
         <p className="reward-row-text text-muted mt-0.5">{reward.reward}</p>
@@ -320,7 +320,7 @@ export default function Hero() {
             Turn your users into your growth engine
           </h1>
           <p className="h3 font-normal text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
-            Incentivize every user action that helps you grow — referrals, reviews, feedback, and <br className="hidden lg:inline" />more — with reward programs built into your product and managed from one place.
+            Incentivize every user action that helps you grow – referrals, reviews, feedback, and <br className="hidden lg:inline" />more – with reward programs built into your product and managed from one place.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a
@@ -338,7 +338,7 @@ export default function Hero() {
               data-cal-config='{"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
               className="inline-flex items-center justify-center rounded-xl border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
-              Book Demo
+              Book a Demo
             </button>
           </div>
         </div>
@@ -355,7 +355,7 @@ export default function Hero() {
                 }}
                 className={`rounded-full px-3.5 py-1.5 component-subtext font-medium transition-colors outline-none focus:outline-none focus-visible:outline-none border ${
                   activeCategory === i
-                    ? "bg-foreground text-white! border-foreground"
+                    ? "text-foreground border-neutral-400"
                     : "text-muted hover:text-foreground border-transparent"
                 }`}
               >

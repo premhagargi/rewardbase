@@ -12,6 +12,7 @@
   --color-card-hover: #f3f4f6;
   --color-card-surface: #f5f3f1;
   --color-brand: #1a7a8a;
+  --color-brand-blue: #004C7D;
   --font-sans: var(--font-inter);
 
   /* Type scale — only these sizes are permitted in the UI.
@@ -93,6 +94,11 @@ body {
   font-size: 18px;
 }
 
+.reward-row-action{
+  font-size: 13.5px;
+  line-height: 1.25;
+}
+
 .reward-row-text{
   font-size: 13px;
   line-height: 1.25;
@@ -152,7 +158,7 @@ body {
 
 /* Section-label blue gradient text */
 .text-gradient-blue {
-  color: #004C7D !important;
+  color: var(--color-brand-blue) !important;
 }
 
 /* Pill toggle pop */

@@ -48,7 +48,7 @@ export default function CTA() {
               data-cal-config='{"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
               className="inline-flex items-center justify-center rounded-xl border border-border bg-background text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
             >
-              Book Demo
+              Book a Demo
             </button>
           </div>
           </div>

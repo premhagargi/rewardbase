@@ -15,21 +15,21 @@ const programs: {
   {
     title: "Submissions",
     description:
-      "Let users submit URLs, images, or text for actions like reviews, testimonials, feedback, and more — that you can review and approve before a reward is issued.",
+      "Let users submit URLs, images, or text for actions like reviews, testimonials, feedback, and more – that you can review and approve before a reward is issued.",
     live: true,
     icon: Inbox,
   },
   {
     title: "In-App Events",
     description:
-      "Track in-app user actions via API or SDK — onboarding steps, feature adoption, milestones, and more — and automatically reward users as they happen.",
+      "Track in-app user actions via API or SDK – onboarding steps, feature adoption, milestones, and more – and automatically reward users as they happen.",
     live: false,
     icon: Zap,
   },
   {
     title: "Referrals",
     description:
-      "Reward users for bringing in new leads, signups, or paying customers — tracked through a unique link or code with double-sided incentives.",
+      "Reward users for bringing in new leads, signups, or paying customers – tracked through a unique link or code with double-sided incentives.",
     live: false,
     icon: UserPlus,
   },
@@ -49,7 +49,7 @@ export default function Programs() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
             Programs
           </span>
         </div>
@@ -62,7 +62,7 @@ export default function Programs() {
             Turn meaningful user actions into reward programs
           </h2>
           <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
-            Rewardbase gives you the building blocks to run reward programs for every stage of the user lifecycle — and turn user behavior into a scalable growth engine.
+            Rewardbase gives you the building blocks to run reward programs for every stage of the user lifecycle and turn user behavior into a scalable growth engine.
           </p>
         </div>
 
@@ -85,8 +85,8 @@ export default function Programs() {
                   size={28}
                   strokeWidth={1.5}
                   className="mb-3"
-                  style={{ color: "#004C7D" }}
-                  fill="#004C7D"
+                  style={{ color: "var(--color-brand-blue)" }}
+                  fill="var(--color-brand-blue)"
                   fillOpacity={0.1}
                 />
 

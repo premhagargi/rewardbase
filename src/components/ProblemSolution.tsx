@@ -32,7 +32,7 @@ export default function ProblemSolution() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
             Why RewardBase
           </span>
         </div>
@@ -67,8 +67,8 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
                   <Icon
                     size={28}
                     strokeWidth={1.5}
-                    style={{ color: "#004C7D" }}
-                    fill="#004C7D"
+                    style={{ color: "var(--color-brand-blue)" }}
+                    fill="var(--color-brand-blue)"
                     fillOpacity={0.1}
                   />
                 </div>

@@ -42,7 +42,7 @@ export default function CaseStudies() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-[#004C7D]"></span>
+            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
             Case Studies
           </span>
         </div>
@@ -55,7 +55,7 @@ export default function CaseStudies() {
             Proven playbook used by the best growth teams
           </h2>
           <p className="lg:w-2/5 lg:ml-auto component-subtext text-muted leading-relaxed lg:leading-[25px]">
-            RewardBase brings proven user-driven growth playbooks top teams rely on — and turns them into systems you can use to drive growth.
+            RewardBase brings proven user-driven growth playbooks top teams rely on and turns them into systems you can use to drive growth.
           </p>
         </div>
 
