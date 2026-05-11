@@ -177,7 +177,7 @@ function RewardIcon({ reward }: { reward: Reward }) {
 function RewardRow({ reward }: { reward: Reward }) {
   return (
     <div className="flex items-center gap-2.5 sm:gap-3 rounded-2xl border border-border bg-background px-3 py-2 h-[68.75px] hover:shadow-sm transition-shadow">
-      <div className="flex h-8 w-8 sm:h-9 sm:w-9 shrink-0 items-center justify-center rounded-full bg-accent/10">
+      <div className="flex h-10 w-10 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10">
         <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
