@@ -1,27 +1,27 @@
-import { Users, Gift, Rocket, type LucideIcon } from "lucide-react";
+import Image from "next/image";
 
 const previewRewards: {
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: string;
 }[] = [
   {
     title: "Turn users into growth drivers",
     description:
       "Tap into your user base to unlock a powerful new engine for growth.",
-    icon: Users,
+    icon: "UserGroup03Icon",
   },
   {
     title: "Reward actions that drive growth",
     description:
       "Incentivize users to take meaningful actions that contribute to your growth",
-    icon: Gift,
+    icon: "GiftCardIcon",
   },
   {
     title: "Build a repeatable growth system",
     description:
-      "Build a system that consistently drives growth and scales with your business.",
-    icon: Rocket,
+      "Build a system that drives growth and easily scales with your business.",
+    icon: "ChartUpIcon",
   },
 ];
 
@@ -56,20 +56,17 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
 
           {/* Right — stacked preview cards */}
           <div className="space-y-4">
-            {previewRewards.map((item, i) => {
-              const Icon = item.icon;
-              return (
+            {previewRewards.map((item, i) => (
               <div
                 key={i}
                 className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-card-surface hover:shadow-sm transition-shadow"
               >
-                <div className="shrink-0 p-1.5">
-                  <Icon
-                    size={28}
-                    strokeWidth={1.5}
-                    style={{ color: "var(--color-brand-blue)" }}
-                    fill="var(--color-brand-blue)"
-                    fillOpacity={0.1}
+                <div className="flex h-14 w-14 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-[#0093D2]/10">
+                  <Image
+                    src={`/svg icons/${item.icon}.svg`}
+                    alt=""
+                    width={28}
+                    height={28}
                   />
                 </div>
                 <div>
@@ -81,8 +78,7 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
                   </p>
                 </div>
               </div>
-              );
-            })}
+            ))}
           </div>
         </div>
 

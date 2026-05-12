@@ -1,26 +1,18 @@
-import {
-  Coins,
-  Unlock,
-  Ticket,
-  Wallet,
-  Gift,
-  Banknote,
-  type LucideIcon,
-} from "lucide-react";
+import Image from "next/image";
 
 const rewards: {
   title: string;
   description: string;
   live: boolean;
   comingSoon?: boolean;
-  icon: LucideIcon;
+  icon: string;
 }[] = [
   {
     title: "Credits",
     description:
       "Give users AI / usage credits they can spend directly inside your product.",
     live: true,
-    icon: Coins,
+    icon: "Coins02IconDual",
   },
 
   {
@@ -28,35 +20,35 @@ const rewards: {
     description:
       "Offer percentage or fixed discounts, one-time or recurring, on any purchase.",
     live: true,
-    icon: Ticket,
+    icon: "PercentSquareIconDual",
   },
   {
     title: "Wallet",
     description:
       "Let users accumulate RewardBase points and redeem rewards they choose.",
     live: true,
-    icon: Wallet,
+    icon: "Wallet03IconDual",
   },
    {
     title: "Access Unlocks",
     description:
       "Give users access to premium features, gated content or exclusive perks.",
     live: false,
-    icon: Unlock,
+    icon: "SquareUnlock02IconDual",
   },
   {
     title: "Giftcards",
     description:
       "Let users redeem rewards as gift cards from popular global brands easily.",
     live: false,
-    icon: Gift,
+    icon: "GiftCard02IconDual",
   },
   {
     title: "Payout",
     description:
       "Send real cash rewards directly to users' bank account though managed payouts.",
     live: false,
-    icon: Banknote,
+    icon: "Money02IconDual",
   },
 ];
 
@@ -86,43 +78,39 @@ export default function Rewards() {
 
         {/* Reward cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {rewards.map((reward) => {
-            const Icon = reward.icon;
-            return (
-              <div
-                key={reward.title}
-                className="relative rounded-2xl border border-border px-5 py-3.5 bg-card-surface"
-              >
-                {reward.live && (
-                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
-                    <span className="h-1 w-1 rounded-full bg-blue-500" />
-                    Live
-                  </span>
-                )}
-                {reward.comingSoon && (
-                  <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
-                    <span className="h-1 w-1 rounded-full bg-amber-500" />
-                    Coming Soon
-                  </span>
-                )}
-                <Icon
-                  size={28}
-                  strokeWidth={1.5}
-                  className="mb-3"
-                  style={{ color: "var(--color-brand-blue)" }}
-                  fill="var(--color-brand-blue)"
-                  fillOpacity={0.1}
-                />
+          {rewards.map((reward) => (
+            <div
+              key={reward.title}
+              className="relative rounded-2xl border border-border px-5 py-3.5 bg-card-surface"
+            >
+              {reward.live && (
+                <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                  <span className="h-1 w-1 rounded-full bg-blue-500" />
+                  Live
+                </span>
+              )}
+              {reward.comingSoon && (
+                <span className="absolute top-4 right-4 inline-flex items-center gap-1 text-[12px] font-medium text-muted border border-border rounded-full px-2 py-0.5">
+                  <span className="h-1 w-1 rounded-full bg-amber-500" />
+                  Coming Soon
+                </span>
+              )}
+              <Image
+                src={`/svg icons/${reward.icon}.svg`}
+                alt=""
+                width={36}
+                height={36}
+                className="mb-3"
+              />
 
-                <h4 className="card-title mb-1.5">
-                  {reward.title}
-                </h4>
-                <p className="card-subtext leading-relaxed">
-                  {reward.description}
-                </p>
-              </div>
-            );
-          })}
+              <h4 className="card-title mb-1.5">
+                {reward.title}
+              </h4>
+              <p className="card-subtext leading-relaxed">
+                {reward.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

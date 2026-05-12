@@ -1,42 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getCalApi } from "@calcom/embed-react";
-import { HugeiconsIcon } from "@hugeicons/react";
-import {
-  UserMultiple02Icon,
-  Share07Icon,
-  CheckListIcon,
-  ConnectIcon,
-  FlowConnectionIcon,
-  AddTeamIcon,
-  Comment01Icon,
-  ComputerVideoCallIcon,
-  StarSquareIcon,
-  UserListIcon,
-  CheckmarkCircle02Icon,
-  CalendarFoldIcon,
-  NotificationSquareIcon,
-  Diamond02Icon,
-  Task01Icon,
-  UserGroup03Icon,
-  DashboardSpeed01Icon,
-  Video02Icon,
-  SpotlightIcon,
-  Upload03Icon,
-  RepeatIcon,
-  AiIdeaIcon,
-  Linkedin01Icon,
-  ZoomIcon,
-  SlackIcon,
-  RedditIcon,
-  AppStoreIcon,
-  TiktokIcon,
-  WhatsappIcon,
-  InstagramIcon,
-  NewTwitterIcon,
-} from "@hugeicons/core-free-icons";
 
 const categories = [
   { name: "B2B", dot: "bg-orange-500" },
@@ -60,9 +27,8 @@ const stageDescriptions: Record<Stage, string> = {
     "Build trust and social proof by incentivizing testimonials, reviews,\nand endorsements.",
 };
 
-type IconRef = Parameters<typeof HugeiconsIcon>[0]["icon"];
 type Reward = {
-  icon?: IconRef;
+  icon?: string;
   brand?: "g2" | "ph";
   action: string;
   reward: string;
@@ -71,80 +37,80 @@ type Reward = {
 const data: Record<Category, Record<Stage, Reward[]>> = {
   B2B: {
     Acquire: [
-      { icon: UserMultiple02Icon, action: "Refer a Business", reward: "$100 Credits for each" },
-      { icon: Linkedin01Icon, action: "Share Results on LinkedIn", reward: "500 AI Credits" },
-      { icon: ZoomIcon, action: "Co-host a Webinar", reward: "3 Months Free Pro Plan" },
-      { icon: Share07Icon, action: "Join Partner Program", reward: "30% Recurring Commission" },
+      { icon: "UserMultiple02Icon", action: "Refer a Business", reward: "$100 Credits for each" },
+      { icon: "Linkedin01Icon", action: "Share Results on LinkedIn", reward: "500 AI Credits" },
+      { icon: "ZoomIcon", action: "Co-host a Webinar", reward: "3 Months Free Pro Plan" },
+      { icon: "Share07Icon", action: "Join Partner Program", reward: "30% Recurring Commission" },
     ],
     Activate: [
-      { icon: CheckListIcon, action: "Complete Onboarding Checklist", reward: "100 AI Credits" },
-      { icon: ConnectIcon, action: "Connect Your CRM", reward: "Unlock Automation Suite" },
-      { icon: FlowConnectionIcon, action: "Set-up Your First Workflow", reward: "100 AI Credits" },
-      { icon: AddTeamIcon, action: "Invite 3 Team Members", reward: "20% off on Next Renewal" },
+      { icon: "CheckListIcon", action: "Complete Onboarding Checklist", reward: "100 AI Credits" },
+      { icon: "ConnectIcon", action: "Connect Your CRM", reward: "Unlock Automation Suite" },
+      { icon: "FlowConnectionIcon", action: "Set-up Your First Workflow", reward: "100 AI Credits" },
+      { icon: "AddTeamIcon", action: "Invite 3 Team Members", reward: "20% off on Next Renewal" },
     ],
     Engage: [
-      { icon: Comment01Icon, action: "Submit a Feature Request", reward: "100 AI Credits" },
-      { icon: ComputerVideoCallIcon, action: "Join a 15-min UX Interview", reward: "$50 Amazon Giftcard" },
-      { icon: SlackIcon, action: "Join Customer Slack", reward: "300 Reward Points" },
-      { icon: ZoomIcon, action: "Attend Product Webinar", reward: "Unlock Insider Access" },
+      { icon: "Comment01Icon", action: "Submit a Feature Request", reward: "100 AI Credits" },
+      { icon: "ComputerVideoCallIcon", action: "Join a 15-min UX Interview", reward: "$50 Amazon Giftcard" },
+      { icon: "SlackIcon", action: "Join Customer Slack", reward: "300 Reward Points" },
+      { icon: "ZoomIcon", action: "Attend Product Webinar", reward: "Unlock Insider Access" },
     ],
     Advocate: [
       { brand: "g2", action: "Review us on G2", reward: "$25 Starbucks Giftcard" },
-      { icon: RedditIcon, action: "Recommend on Reddit", reward: "250 Reward Points" },
+      { icon: "RedditIcon", action: "Recommend on Reddit", reward: "250 Reward Points" },
       { brand: "ph", action: "Upvote on Product Hunt", reward: "50 AI Credits" },
-      { icon: StarSquareIcon, action: "Write a Testimonial", reward: "$100 off Invoice" },
+      { icon: "StarSquareIcon", action: "Write a Testimonial", reward: "$100 off Invoice" },
     ],
   },
   B2C: {
     Acquire: [
-      { icon: UserMultiple02Icon, action: "Invite 3 Friends", reward: "$10 Credits for each" },
-      { icon: TiktokIcon, action: "Share Your Win on TikTok", reward: "500 AI Credits" },
-      { icon: WhatsappIcon, action: "Gift Trial in WhatsApp Group", reward: "3 Months Free Pro Plan" },
-      { icon: InstagramIcon, action: "Repost as Instagram Story", reward: "100 Reward Points" },
+      { icon: "UserMultiple02Icon", action: "Invite 3 Friends", reward: "$10 Credits for each" },
+      { icon: "TiktokIcon", action: "Share Your Win on TikTok", reward: "500 AI Credits" },
+      { icon: "WhatsappIcon", action: "Gift Trial in WhatsApp Group", reward: "3 Months Free Pro Plan" },
+      { icon: "InstagramIcon", action: "Repost as Instagram Story", reward: "100 Reward Points" },
     ],
     Activate: [
-      { icon: UserListIcon, action: "Complete User Profile", reward: "50 Welcome Credits" },
-      { icon: CheckmarkCircle02Icon, action: "Complete First Task", reward: "7-Day Premium Unlock" },
-      { icon: CalendarFoldIcon, action: "Reach 7-Day Streak", reward: "Get a Paid Add-on" },
-      { icon: NotificationSquareIcon, action: "Enable Notifications", reward: "100 AI Credits" },
+      { icon: "UserListIcon", action: "Complete User Profile", reward: "50 Welcome Credits" },
+      { icon: "CheckmarkCircle02Icon", action: "Complete First Task", reward: "7-Day Premium Unlock" },
+      { icon: "CalendarFoldIcon", action: "Reach 7-Day Streak", reward: "Get a Paid Add-on" },
+      { icon: "NotificationSquareIcon", action: "Enable Notifications", reward: "100 AI Credits" },
     ],
     Engage: [
-      { icon: Diamond02Icon, action: "Try Premium Trial", reward: "50% Off Upgrade for 3 Months" },
-      { icon: Task01Icon, action: "Complete Feedback Survey", reward: "100 Reward Points" },
-      { icon: UserGroup03Icon, action: "Join Community Challenge", reward: "Unlock Exclusive Perks" },
-      { icon: DashboardSpeed01Icon, action: "Achieve Usage Milestone", reward: "Earn \"Champion\" Badge" },
+      { icon: "Diamond02Icon", action: "Try Premium Trial", reward: "50% Off Upgrade for 3 Months" },
+      { icon: "Task01Icon", action: "Complete Feedback Survey", reward: "100 Reward Points" },
+      { icon: "UserGroup03Icon", action: "Join Community Challenge", reward: "Unlock Exclusive Perks" },
+      { icon: "DashboardSpeed01Icon", action: "Achieve Usage Milestone", reward: "Earn \"Champion\" Badge" },
     ],
     Advocate: [
-      { icon: AppStoreIcon, action: "Review on App Store", reward: "100 AI Credits" },
-      { icon: RedditIcon, action: "Recommend on Reddit", reward: "250 Reward Points" },
-      { icon: Video02Icon, action: "Record Video Testimonial", reward: "$50 Amazon Gift Card" },
-      { icon: SpotlightIcon, action: "Get Featured in Spotlight", reward: "25% Discount — Forever" },
+      { icon: "AppStoreIcon", action: "Review on App Store", reward: "100 AI Credits" },
+      { icon: "RedditIcon", action: "Recommend on Reddit", reward: "250 Reward Points" },
+      { icon: "Video02Icon", action: "Record Video Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: "SpotlightIcon", action: "Get Featured in Spotlight", reward: "25% Discount — Forever" },
     ],
   },
   Creators: {
     Acquire: [
-      { icon: UserMultiple02Icon, action: "Refer 3 Colleagues", reward: "Each Gets 1 Month Free" },
-      { icon: Share07Icon, action: "Share Resource With Your Team", reward: "50% Off Next Workshop" },
-      { icon: Linkedin01Icon, action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
-      { icon: NewTwitterIcon, action: "Repost with Caption", reward: "Unlock Swipe File Library" },
+      { icon: "UserMultiple02Icon", action: "Refer 3 Colleagues", reward: "Each Gets 1 Month Free" },
+      { icon: "Share07Icon", action: "Share Resource With Your Team", reward: "50% Off Next Workshop" },
+      { icon: "Linkedin01Icon", action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
+      { icon: "NewTwitterIcon", action: "Repost with Caption", reward: "Unlock Swipe File Library" },
     ],
     Activate: [
-      { icon: UserListIcon, action: "Complete Your Profile", reward: "Unlock Starter Resource Pack" },
-      { icon: Upload03Icon, action: "Follow Our Socials", reward: "Access to Partner Perks" },
-      { icon: RepeatIcon, action: "Maintain 3-Day Streak", reward: "30% Off Annual Upgrade" },
-      { icon: SlackIcon, action: "Introduce Yourself in Community", reward: "Unlock Member Directory" },
+      { icon: "UserListIcon", action: "Complete Your Profile", reward: "Unlock Starter Resource Pack" },
+      { icon: "Upload03Icon", action: "Follow Our Socials", reward: "Access to Partner Perks" },
+      { icon: "RepeatIcon", action: "Maintain 3-Day Streak", reward: "30% Off Annual Upgrade" },
+      { icon: "SlackIcon", action: "Introduce Yourself in Community", reward: "Unlock Member Directory" },
     ],
     Engage: [
-      { icon: AiIdeaIcon, action: "Submit a Topic Idea", reward: "Co-create Content With Us" },
-      { icon: Task01Icon, action: "Complete a Survey", reward: "$10 Amazon Gift Card" },
-      { icon: SlackIcon, action: "Become Top Supporter", reward: "Free Seat at Live Cohort" },
-      { icon: ZoomIcon, action: "Attend Live AMA", reward: "50% Off Mentor Session" },
+      { icon: "AiIdeaIcon", action: "Submit a Topic Idea", reward: "Co-create Content With Us" },
+      { icon: "Task01Icon", action: "Complete a Survey", reward: "$10 Amazon Gift Card" },
+      { icon: "SlackIcon", action: "Become Top Supporter", reward: "Free Seat at Live Cohort" },
+      { icon: "ZoomIcon", action: "Attend Live AMA", reward: "50% Off Mentor Session" },
     ],
     Advocate: [
-      { icon: StarSquareIcon, action: "Write Public Testimonial", reward: "$50 Amazon Gift Card" },
-      { icon: RedditIcon, action: "Recommend on Reddit", reward: "200 Wallet Points" },
-      { icon: NewTwitterIcon, action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
-      { icon: SpotlightIcon, action: "Get Featured in Spotlight", reward: "Free Merchandise" },
+      { icon: "StarSquareIcon", action: "Write Public Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: "RedditIcon", action: "Recommend on Reddit", reward: "200 Wallet Points" },
+      { icon: "NewTwitterIcon", action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
+      { icon: "SpotlightIcon", action: "Get Featured in Spotlight", reward: "Free Merchandise" },
     ],
   },
 };
@@ -152,23 +118,28 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
 function RewardIcon({ reward }: { reward: Reward }) {
   if (reward.brand === "g2") {
     return (
-      <span className="text-[10px] font-bold tracking-tight text-[#E8503A]">G2</span>
+      <span className="text-[10px] font-bold tracking-tight text-[#0093D2]">G2</span>
     );
   }
   if (reward.brand === "ph") {
     return (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="#E8503A" strokeWidth="2" />
+        <circle cx="12" cy="12" r="10" stroke="#0093D2" strokeWidth="2" />
         <path
           d="M10 7h4a3 3 0 0 1 0 6h-2v4h-2V7Zm2 2v2h2a1 1 0 0 0 0-2h-2Z"
-          fill="#E8503A"
+          fill="#0093D2"
         />
       </svg>
     );
   }
   if (reward.icon) {
     return (
-      <HugeiconsIcon icon={reward.icon} size={18} color="#E8503A" strokeWidth={2} />
+      <Image
+        src={`/svg icons/${reward.icon}.svg`}
+        alt=""
+        width={25}
+        height={25}
+      />
     );
   }
   return null;
@@ -177,7 +148,7 @@ function RewardIcon({ reward }: { reward: Reward }) {
 function RewardRow({ reward }: { reward: Reward }) {
   return (
     <div className="flex items-center gap-2.5 sm:gap-3 rounded-2xl border border-border bg-background px-3 py-2 h-[68.75px] hover:shadow-sm transition-shadow">
-      <div className="flex h-10 w-10 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10">
+      <div className="flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-xl bg-[#0093D2]/10">
         <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
