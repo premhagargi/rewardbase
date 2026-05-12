@@ -13,8 +13,7 @@ export default function Footer() {
               />
             </a>
             <p className="component-subtext leading-relaxed mb-5 max-w-xs">
-              Turn your users into your growth engine. Start free. Pay as you
-              scale.
+              Turn your users into your growth engine <br /> with reward programs that drive action.
             </p>
             {/* Social */}
             <div className="flex items-center gap-3">
@@ -126,23 +125,23 @@ export default function Footer() {
 
       {/* Bottom bar */}
     <div className="border-t border-border">
-  <div className="mx-auto flex max-w-6xl items-center justify-between px-10 py-5 sm:px-12 lg:px-14">
-    <p className="text-xs font-medium text-foreground/80">
-      Made with ❤️ and ☕️ by{" "}
-      <a
-        href="https://x.com/cebe_fyi"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium underline underline-offset-2 transition-colors hover:text-foreground"
-      >
-        Cebe
-      </a>
-    </p>
+<div className="mx-auto flex max-w-6xl items-center justify-between px-10 py-5 sm:px-12 lg:px-14">
+  <p className="text-xs text-muted text-right">
+    Made with ❤️ and ☕️ by{" "}
+    <a
+      href="https://x.com/cebe_fyi"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline underline-offset-2 transition-colors hover:text-foreground"
+    >
+      Cebe
+    </a>
+  </p>
 
-    <p className="text-xs text-muted text-right">
-      &copy; {new Date().getFullYear()} Rewardbase. All rights reserved.
-    </p>
-  </div>
+  <p className="text-xs text-muted text-right">
+    &copy; {new Date().getFullYear()} Rewardbase. All rights reserved.
+  </p>
+</div>
 </div>
     </footer>
   );

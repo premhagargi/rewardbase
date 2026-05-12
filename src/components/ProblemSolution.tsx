@@ -32,7 +32,7 @@ export default function ProblemSolution() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
+            <span className="h-5 w-[3px] rounded-full bg-brand-blue/40"></span>
             Why RewardBase
           </span>
         </div>

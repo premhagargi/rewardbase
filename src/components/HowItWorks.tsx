@@ -4,18 +4,21 @@ const steps = [
     title: "Create programs",
     description:
       "Use pre-built templates to create programs aligned with your business goals and user actions.",
+    image: "/How_it_works-1.webp",
   },
   {
     number: 2,
     title: "Set up reward",
     description:
       "Configure reward fulfillment via available methods (webhook or manual).",
+    image: "/How_it_works-2.webp",
   },
   {
     number: 3,
     title: "Add widget",
     description:
       "Add script to your site or app, set up actions, and identify users (optional).",
+    image: "/How_it_works-3.webp",
   },
 ];
 
@@ -26,7 +29,7 @@ export default function HowItWorks() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
+            <span className="h-5 w-[3px] rounded-full bg-brand-blue/40"></span>
             How it works
           </span>
         </div>
@@ -50,7 +53,7 @@ export default function HowItWorks() {
               key={step.number}
               className="rounded-2xl border border-border px-5 py-4 bg-card-surface flex flex-col"
             >
-              <div className="h-[42px] w-[42px] rounded-xl bg-blue-500 flex items-center justify-center text-white text-base font-bold mb-4">
+              <div className="h-[42px] w-[42px] rounded-xl bg-[#0093D2] flex items-center justify-center text-white text-base font-bold mb-4">
                 {step.number}
               </div>
               <h3 className="h3 font-semibold text-foreground mb-2">
@@ -59,16 +62,12 @@ export default function HowItWorks() {
               <p className="component-subtext leading-relaxed mb-4">
                 {step.description}
               </p>
-              <div className="h-48 mt-auto rounded-lg bg-card border border-border overflow-hidden flex items-center justify-center">
-                <svg
-                  viewBox="0 0 200 120"
-                  preserveAspectRatio="none"
-                  className="w-full h-full text-muted/40"
-                  fill="currentColor"
-                >
-                  <path d="M0 80 Q 40 50 80 70 T 160 60 L 200 40 L 200 120 L 0 120 Z" />
-                  <circle cx="60" cy="60" r="5" fill="currentColor" />
-                </svg>
+              <div className="h-48 mt-auto rounded-2xl bg-card border border-border overflow-hidden flex items-center justify-center">
+                <img
+                  src={step.image}
+                  alt={step.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           ))}

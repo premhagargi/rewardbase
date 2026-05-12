@@ -27,23 +27,21 @@ const rewards: {
     title: "Discount Codes",
     description:
       "Offer percentage or fixed discounts, one-time or recurring, on any purchase.",
-    live: false,
-    comingSoon: true,
+    live: true,
     icon: Ticket,
   },
   {
     title: "Wallet",
     description:
       "Let users accumulate RewardBase points and redeem rewards they choose.",
-    live: false,
-    comingSoon: true,
+    live: true,
     icon: Wallet,
   },
    {
     title: "Access Unlocks",
     description:
       "Give users access to premium features, gated content or exclusive perks.",
-    live: true,
+    live: false,
     icon: Unlock,
   },
   {
@@ -69,7 +67,7 @@ export default function Rewards() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
+            <span className="h-5 w-[3px] rounded-full bg-brand-blue/40"></span>
             Rewards
           </span>
         </div>

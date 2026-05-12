@@ -51,7 +51,7 @@ export default function Pricing() {
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
-            <span className="w-[3px] h-5 rounded-full bg-brand-blue"></span>
+            <span className="h-5 w-[3px] rounded-full bg-brand-blue/40"></span>
             Pricing
           </span>
         </div>
@@ -93,7 +93,7 @@ export default function Pricing() {
           </div>
 
           {/* Middle — Pro card */}
-          <div className="rounded-2xl border-2 border-blue-500 bg-background p-6 flex flex-col">
+          <div className="rounded-2xl border-2 border-[#0093D2] bg-background p-6 flex flex-col">
             <h3 className="h3 font-semibold text-foreground mb-1.5">Pro</h3>
             <p className="component-subtext mb-5 leading-relaxed">
               For teams ready to drive consistent growth through user-driven actions.
