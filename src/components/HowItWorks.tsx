@@ -53,7 +53,7 @@ export default function HowItWorks() {
               key={step.number}
               className="rounded-2xl border border-border px-5 py-4 bg-card-surface flex flex-col"
             >
-              <div className="h-[42px] w-[42px] rounded-xl bg-[#0093D2] flex items-center justify-center text-white text-base font-bold mb-4">
+              <div className="h-[42px] w-[42px] rounded-xl bg-[#000000] flex items-center justify-center text-white text-base font-bold mb-4">
                 {step.number}
               </div>
               <h3 className="h3 font-semibold text-foreground mb-2">

@@ -9,19 +9,19 @@ const previewRewards: {
     title: "Turn users into growth drivers",
     description:
       "Tap into your user base to unlock a powerful new engine for growth.",
-    icon: "UserGroup03Icon",
+    icon: "UserGroup03IconDual",
   },
   {
     title: "Reward actions that drive growth",
     description:
       "Incentivize users to take meaningful actions that contribute to your growth",
-    icon: "GiftCardIcon",
+    icon: "GiftCardIconDual",
   },
   {
     title: "Build a repeatable growth system",
     description:
       "Build a system that drives growth and easily scales with your business.",
-    icon: "ChartUpIcon",
+    icon: "ChartUpIconDual",
   },
 ];
 
@@ -61,14 +61,13 @@ But you don't have a system to activate and scale that behavior. RewardBase turn
                 key={i}
                 className="flex items-center gap-4 rounded-2xl border border-border p-4 bg-card-surface hover:shadow-sm transition-shadow"
               >
-                <div className="flex h-14 w-14 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-[#0093D2]/10">
-                  <Image
-                    src={`/svg icons/${item.icon}.svg`}
-                    alt=""
-                    width={28}
-                    height={28}
-                  />
-                </div>
+                <Image
+                  src={`/svg icons/${item.icon}.svg`}
+                  alt=""
+                  width={36}
+                  height={36}
+                  className="shrink-0"
+                />
                 <div>
                   <h4 className="card-title mb-0.5">
                     {item.title}
