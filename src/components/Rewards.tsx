@@ -69,7 +69,7 @@ export default function Rewards() {
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
-            Drive action with rewards your users care about
+            Drive action with rewards <br />your users care about
           </h2>
           <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
             Rewardbase gives you a flexible reward layer that adapts to any program. Configure rewards and automatically deliver them when users complete actions.
