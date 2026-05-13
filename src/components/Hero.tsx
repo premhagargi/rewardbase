@@ -283,9 +283,9 @@ export default function Hero() {
     <section className="pt-20 sm:pt-32 pb-10 sm:pb-20 bg-background">
       <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
-        <div className="mb-20 sm:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 items-start">
+        <div className="mb-20 sm:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 items-start">
           <div className="text-left">
-            <p className="label font-semibold text-gradient-blue tracking-wider mb-4 sm:mb-3">
+            <p className="label font-semibold text-gradient-blue tracking-wider mb-5 sm:mb-3">
               <span className="mr-1">|</span> UNLOCK USER-LED GROWTH
             </p>
             <h1 className="h1 tracking-tight text-foreground">
@@ -293,7 +293,7 @@ export default function Hero() {
             </h1>
           </div>
           <div className="text-left lg:pt-11">
-            <p className="h3 font-normal text-muted leading-relaxed mb-4">
+            <p className="h3 font-normal text-muted leading-relaxed mb-3 sm:mb-4">
               Incentivize every user action that helps you grow – referrals, reviews, feedback, and more – with reward programs built into your product and managed from one place.
             </p>
             <div className="flex items-center gap-4">
