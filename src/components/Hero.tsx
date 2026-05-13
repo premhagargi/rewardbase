@@ -37,10 +37,10 @@ type Reward = {
 const data: Record<Category, Record<Stage, Reward[]>> = {
   B2B: {
     Acquire: [
-      { icon: "UserMultiple02Icon", action: "Refer a Business", reward: "$100 Credits for each" },
-      { icon: "Linkedin01Icon", action: "Share Results on LinkedIn", reward: "500 AI Credits" },
-      { icon: "ZoomIcon", action: "Co-host a Webinar", reward: "3 Months Free Pro Plan" },
-      { icon: "Share07Icon", action: "Join Partner Program", reward: "30% Recurring Commission" },
+      { icon: "UserMultiple02IconDual", action: "Refer a Business", reward: "$100 Credits for each" },
+      { icon: "Linkedin01IconDual", action: "Share Results on LinkedIn", reward: "500 AI Credits" },
+      { icon: "ZoomIconDual", action: "Co-host a Webinar", reward: "3 Months Free Pro Plan" },
+      { icon: "Share07IconDual", action: "Join Partner Program", reward: "30% Recurring Commission" },
     ],
     Activate: [
       { icon: "CheckListIcon", action: "Complete Onboarding", reward: "100 AI Credits" },
