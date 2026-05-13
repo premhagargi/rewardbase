@@ -55,7 +55,7 @@ const rewards: {
 export default function Rewards() {
   return (
     <section id="rewards" className="py-10 sm:py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">

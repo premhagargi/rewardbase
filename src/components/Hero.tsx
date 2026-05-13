@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -281,11 +281,11 @@ export default function Hero() {
 
   return (
     <section className="pt-20 sm:pt-32 pb-10 sm:pb-20 bg-background">
-      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         {/* Headline */}
-        <div className="mb-20 sm:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+        <div className="mb-20 sm:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 items-start">
           <div className="text-left">
-            <p className="label font-semibold text-gradient-blue tracking-wider mb-3">
+            <p className="label font-semibold text-gradient-blue tracking-wider mb-4 sm:mb-3">
               <span className="mr-1">|</span> UNLOCK USER-LED GROWTH
             </p>
             <h1 className="h1 tracking-tight text-foreground">
@@ -369,7 +369,7 @@ export default function Hero() {
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative">
+        <div className="relative -mx-7 sm:mx-0">
           <div
             ref={scrollerRef}
             className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-y [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"

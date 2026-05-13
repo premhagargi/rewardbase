@@ -13,7 +13,7 @@ export default function CTA() {
 
   return (
     <section className="py-10 sm:py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
         <div className="relative overflow-hidden rounded-2xl border border-border py-8 px-6 text-center bg-card-surface">
           <div className="relative">
           {/* Icon */}
