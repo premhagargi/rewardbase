@@ -20,7 +20,7 @@ const previewRewards: {
   {
     title: "Build a repeatable growth system",
     description:
-      "Build a system that drives growth and easily scales with your business.",
+      "Build a system that consistently drives growth and scales with your business.",
     icon: "ChartUpIconDual",
   },
 ];
@@ -43,14 +43,22 @@ export default function ProblemSolution() {
             <h2
               className="component-title tracking-tight text-foreground leading-tight mb-5"
             >
-              Your users are the most powerful growth lever - yet the most underutilized
+              Your users are the most powerful growth drivers - yet the most overlooked
             </h2>
             <div className="space-y-4 component-subtext text-muted leading-relaxed">
               <p>
-                Growth is getting harder - every channel is crowded, expensive, and ineffective. Meanwhile, your existing users already influence your growth through word-of-mouth, social proof, advocacy and more. 
+                People who love your product naturally talk about you, recommend you,<br />
+                and support you in ways no other channel can.
               </p>
               <p>
-But you don't have a system to activate and scale that behavior. RewardBase turns this untapped potential into a structured, repetable growth engine.              </p>
+                But most teams leave this to chance, with no system to nurture and scale<br />
+                these behaviors – leaving valuable growth potential untapped.
+              </p>
+              <p>
+                RewardBase changes that. It helps you create structured programs that<br />
+                activate and nurture these behaviors, turning them into a repeatable<br />
+                growth engine.
+              </p>
             </div>
           </div>
 

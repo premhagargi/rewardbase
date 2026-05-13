@@ -53,10 +53,10 @@ export default function Programs() {
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
-            Turn meaningful user actions into reward programs
+            Turn your goals into programs that guide user actions
           </h2>
           <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
-            Rewardbase gives you the building blocks to run reward programs for every stage of the user lifecycle and turn user behavior into a scalable growth engine.
+            Rewardbase gives you the building blocks to run reward programs for every stage of growth and user lifecycle — and turn user actions into a repeatable growth engine.
           </p>
         </div>
 

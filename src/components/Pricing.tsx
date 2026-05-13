@@ -63,10 +63,10 @@ export default function Pricing() {
           >
             Start for free
             <br />
-            Pay when you grow
+            Pay as you grow
           </h2>
           <p className="lg:w-2/5 lg:ml-auto component-subtext text-muted leading-relaxed lg:leading-[25px]">
-            Start with a 15-day free trial. Then pay monthly based on active participants-per-month with first 25 participants free every month.
+            RewardBase pricing is based on the value it delivers. <br />You pay as more users actively participate in your <br />programs, with 25 participants free every month.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function Pricing() {
               No Credit Card required.
             </p>
             <p className="component-subtext leading-relaxed mb-3">
-              Launch your reward programs and see your users drive real growth before you're ready to upgrade.
+              Launch your reward programs and see your users drive real growth before you're ready to commit.
             </p>
             <a
               href="https://app.rewardbase.app/"

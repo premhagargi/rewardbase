@@ -142,7 +142,7 @@ export default function ProductDemo() {
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
-            Run reward programs right inside your product
+            Run reward programs where your users already are
           </h2>
           <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
 Add RewardBase to your app or website – customize to your brand, auto-identify users. No redirects, no logins – just a seamless in-product experience.</p>

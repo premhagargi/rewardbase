@@ -9,7 +9,7 @@ export default function Walkthrough() {
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
-            From setup to live programs{" "}
+            From setup to first reward{" "}
             <br className="hidden sm:inline" />
             in minutes
           </h2>
