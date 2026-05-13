@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 const previewRewards: {
   title: string;
@@ -14,7 +14,7 @@ const previewRewards: {
   {
     title: "Reward actions that drive growth",
     description:
-      "Incentivize users to take meaningful actions that contribute to your growth",
+      "Incentivize users to take meaningful actions that contribute to your growth.",
     icon: "GiftCardIconDual",
   },
   {
@@ -28,7 +28,7 @@ const previewRewards: {
 export default function ProblemSolution() {
   return (
     <section className="py-10 sm:py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">

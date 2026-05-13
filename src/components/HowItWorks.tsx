@@ -1,4 +1,4 @@
-const steps = [
+﻿const steps = [
   {
     number: 1,
     title: "Create programs",
@@ -25,7 +25,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-10 sm:py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
@@ -53,7 +53,7 @@ export default function HowItWorks() {
               key={step.number}
               className="rounded-2xl border border-border px-5 py-4 bg-card-surface flex flex-col"
             >
-              <div className="h-[42px] w-[42px] rounded-xl bg-[#000000] flex items-center justify-center text-white text-base font-bold mb-4">
+              <div className="h-[42px] w-[42px] rounded-xl bg-brand-blue/70 flex items-center justify-center text-white text-base font-bold mb-4">
                 {step.number}
               </div>
               <h3 className="h3 font-semibold text-foreground mb-2">
@@ -62,7 +62,7 @@ export default function HowItWorks() {
               <p className="component-subtext leading-relaxed mb-4">
                 {step.description}
               </p>
-              <div className="h-48 mt-auto rounded-2xl bg-card border border-border overflow-hidden flex items-center justify-center">
+              <div className="aspect-[3/2] w-full mt-auto rounded-2xl bg-card border border-border overflow-hidden flex items-center justify-center">
                 <img
                   src={step.image}
                   alt={step.title}

@@ -1,4 +1,4 @@
-const logos = [
+﻿const logos = [
   "Yale",
   "Waterloo",
   "Caltech",
@@ -12,7 +12,7 @@ const logos = [
 export default function TrustBar() {
   return (
     <section className="py-14 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
         <p className="text-center text-base text-muted mb-8 font-medium">
           Trusted by businesses around the world
         </p>

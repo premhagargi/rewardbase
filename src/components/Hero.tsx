@@ -43,7 +43,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { icon: "Share07Icon", action: "Join Partner Program", reward: "30% Recurring Commission" },
     ],
     Activate: [
-      { icon: "CheckListIcon", action: "Complete Onboarding Checklist", reward: "100 AI Credits" },
+      { icon: "CheckListIcon", action: "Complete Onboarding", reward: "100 AI Credits" },
       { icon: "ConnectIcon", action: "Connect Your CRM", reward: "Unlock Automation Suite" },
       { icon: "FlowConnectionIcon", action: "Set-up Your First Workflow", reward: "100 AI Credits" },
       { icon: "AddTeamIcon", action: "Invite 3 Team Members", reward: "20% off on Next Renewal" },
@@ -90,7 +90,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
   Creators: {
     Acquire: [
       { icon: "UserMultiple02Icon", action: "Refer 3 Colleagues", reward: "Each Gets 1 Month Free" },
-      { icon: "Share07Icon", action: "Share Resource With Your Team", reward: "50% Off Next Workshop" },
+      { icon: "Share07Icon", action: "Share Resource with Team", reward: "50% Off Next Workshop" },
       { icon: "Linkedin01Icon", action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
       { icon: "NewTwitterIcon", action: "Repost with Caption", reward: "Unlock Swipe File Library" },
     ],
@@ -281,7 +281,7 @@ export default function Hero() {
 
   return (
     <section className="pt-10 sm:pt-14 pb-12 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
         {/* Headline */}
         <div className="text-center mb-6">
           <p className="label font-semibold text-gradient-blue tracking-wider mb-3">

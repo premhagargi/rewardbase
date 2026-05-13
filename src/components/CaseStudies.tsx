@@ -1,10 +1,10 @@
-const cases = [
+﻿const cases = [
   {
     brand: "SURFER",
     brandColor: "#E53935",
     image: "/Surfer (1).png",
     bottomText:
-      "SurferSEO rewards users for reviewing on G2 and for sharing results on socials",
+      "SurferSEO rewards users for reviewing on G2 and for sharing results on socials.",
   },
   {
     brand: "BASE44",
@@ -18,7 +18,7 @@ const cases = [
     brandColor: "#625DF5",
     image: "/Notion (1).png",
     bottomText:
-      "Notion offered credits for  migrating from competitor and downloading app",
+      "Notion offered credits for  migrating from competitor and downloading app.",
   },
 ];
 
@@ -38,7 +38,7 @@ function BrandLogo({ brand }: { brand: string; color: string }) {
 export default function CaseStudies() {
   return (
     <section className="py-10 sm:py-20 bg-card/50">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
@@ -63,7 +63,7 @@ export default function CaseStudies() {
           {cases.map((item) => (
             <div
               key={item.brand}
-              className="group relative rounded-2xl overflow-hidden text-white min-h-[460px] flex flex-col"
+              className="group relative rounded-2xl overflow-hidden text-white aspect-[400/540] md:aspect-auto md:min-h-[460px] flex flex-col"
             >
               {/* Full-card background image */}
               <img

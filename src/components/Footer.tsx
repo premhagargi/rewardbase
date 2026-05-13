@@ -1,7 +1,7 @@
-export default function Footer() {
+﻿export default function Footer() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14 py-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14 py-14">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
           {/* Brand */}
           <div className="lg:max-w-sm">
@@ -125,7 +125,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
     <div className="border-t border-border">
-<div className="mx-auto flex max-w-6xl items-center justify-between px-10 py-5 sm:px-12 lg:px-14">
+<div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-12 lg:px-14">
   <p className="text-xs text-muted text-right">
     Made with ❤️ and ☕️ by{" "}
     <a
