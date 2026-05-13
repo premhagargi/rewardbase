@@ -8,10 +8,33 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteTitle = "RewardBase — Turn your users into your growth engine";
+const siteDescription =
+  "Incentivize users to share, review, and refer with automated reward programs. Start free, live in 3 minutes.";
+const ogImage = "/assets/RewardBase Icon (White).png";
+
 export const metadata: Metadata = {
-  title: "RewardBase — Turn your users into your growth engine",
-  description:
-    "Incentivize users to share, review, and refer with automated reward programs. Start free, live in 3 minutes.",
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    type: "website",
+    images: [
+      {
+        url: ogImage,
+        width: 360,
+        height: 360,
+        alt: "RewardBase",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+    images: [ogImage],
+  },
 };
 
 export default function RootLayout({
