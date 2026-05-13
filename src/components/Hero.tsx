@@ -43,74 +43,74 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { icon: "Share07IconDual", action: "Join Partner Program", reward: "30% Recurring Commission" },
     ],
     Activate: [
-      { icon: "CheckListIcon", action: "Complete Onboarding", reward: "100 AI Credits" },
-      { icon: "ConnectIcon", action: "Connect Your CRM", reward: "Unlock Automation Suite" },
-      { icon: "FlowConnectionIcon", action: "Set-up Your First Workflow", reward: "100 AI Credits" },
-      { icon: "AddTeamIcon", action: "Invite 3 Team Members", reward: "20% off on Next Renewal" },
+      { icon: "CheckListIconDual", action: "Complete Onboarding", reward: "100 AI Credits" },
+      { icon: "ConnectIconDual", action: "Connect Your CRM", reward: "Unlock Automation Suite" },
+      { icon: "FlowConnectionIconDual", action: "Set-up Your First Workflow", reward: "100 AI Credits" },
+      { icon: "AddTeamIconDual", action: "Invite 3 Team Members", reward: "20% off on Next Renewal" },
     ],
     Engage: [
-      { icon: "Comment01Icon", action: "Submit a Feature Request", reward: "100 AI Credits" },
-      { icon: "ComputerVideoCallIcon", action: "Join a 15-min UX Interview", reward: "$50 Amazon Giftcard" },
-      { icon: "SlackIcon", action: "Join Customer Slack", reward: "300 Reward Points" },
-      { icon: "ZoomIcon", action: "Attend Product Webinar", reward: "Unlock Insider Access" },
+      { icon: "Comment01IconDual", action: "Submit a Feature Request", reward: "100 AI Credits" },
+      { icon: "ComputerVideoCallIconDual", action: "Join a 15-min UX Interview", reward: "$50 Amazon Giftcard" },
+      { icon: "SlackIconDual", action: "Join Customer Slack", reward: "300 Reward Points" },
+      { icon: "ZoomIconDual", action: "Attend Product Webinar", reward: "Unlock Insider Access" },
     ],
     Advocate: [
       { brand: "g2", action: "Review us on G2", reward: "$25 Starbucks Giftcard" },
-      { icon: "RedditIcon", action: "Recommend on Reddit", reward: "250 Reward Points" },
+      { icon: "RedditIconDual", action: "Recommend on Reddit", reward: "250 Reward Points" },
       { brand: "ph", action: "Upvote on Product Hunt", reward: "50 AI Credits" },
-      { icon: "StarSquareIcon", action: "Write a Testimonial", reward: "$100 off Invoice" },
+      { icon: "StarSquareIconDual", action: "Write a Testimonial", reward: "$100 off Invoice" },
     ],
   },
   B2C: {
     Acquire: [
-      { icon: "UserMultiple02Icon", action: "Invite 3 Friends", reward: "$10 Credits for each" },
-      { icon: "TiktokIcon", action: "Share Your Win on TikTok", reward: "500 AI Credits" },
-      { icon: "WhatsappIcon", action: "Gift Trial in WhatsApp Group", reward: "3 Months Free Pro Plan" },
-      { icon: "InstagramIcon", action: "Repost as Instagram Story", reward: "100 Reward Points" },
+      { icon: "UserMultiple02IconDual", action: "Invite 3 Friends", reward: "$10 Credits for each" },
+      { icon: "TiktokIconDual", action: "Share Your Win on TikTok", reward: "500 AI Credits" },
+      { icon: "WhatsappIconDual", action: "Gift Trial in WhatsApp Group", reward: "3 Months Free Pro Plan" },
+      { icon: "InstagramIconDual", action: "Repost as Instagram Story", reward: "100 Reward Points" },
     ],
     Activate: [
-      { icon: "UserListIcon", action: "Complete User Profile", reward: "50 Welcome Credits" },
-      { icon: "CheckmarkCircle02Icon", action: "Complete First Task", reward: "7-Day Premium Unlock" },
-      { icon: "CalendarFoldIcon", action: "Reach 7-Day Streak", reward: "Get a Paid Add-on" },
-      { icon: "NotificationSquareIcon", action: "Enable Notifications", reward: "100 AI Credits" },
+      { icon: "UserListIconDual", action: "Complete User Profile", reward: "50 Welcome Credits" },
+      { icon: "CheckmarkCircle02IconDual", action: "Complete First Task", reward: "7-Day Premium Unlock" },
+      { icon: "CalendarFoldIconDual", action: "Reach 7-Day Streak", reward: "Get a Paid Add-on" },
+      { icon: "NotificationSquareIconDual", action: "Enable Notifications", reward: "100 AI Credits" },
     ],
     Engage: [
-      { icon: "Diamond02Icon", action: "Try Premium Trial", reward: "50% Off Upgrade for 3 Months" },
-      { icon: "Task01Icon", action: "Complete Feedback Survey", reward: "100 Reward Points" },
-      { icon: "UserGroup03Icon", action: "Join Community Challenge", reward: "Unlock Exclusive Perks" },
-      { icon: "DashboardSpeed01Icon", action: "Achieve Usage Milestone", reward: "Earn \"Champion\" Badge" },
+      { icon: "Diamond02IconDual", action: "Try Premium Trial", reward: "50% Off Upgrade for 3 Months" },
+      { icon: "Task01IconDual", action: "Complete Feedback Survey", reward: "100 Reward Points" },
+      { icon: "UserGroup03IconDual", action: "Join Community Challenge", reward: "Unlock Exclusive Perks" },
+      { icon: "DashboardSpeed01IconDual", action: "Achieve Usage Milestone", reward: "Earn \"Champion\" Badge" },
     ],
     Advocate: [
-      { icon: "AppStoreIcon", action: "Review on App Store", reward: "100 AI Credits" },
-      { icon: "RedditIcon", action: "Recommend on Reddit", reward: "250 Reward Points" },
-      { icon: "Video02Icon", action: "Record Video Testimonial", reward: "$50 Amazon Gift Card" },
-      { icon: "SpotlightIcon", action: "Get Featured in Spotlight", reward: "25% Discount — Forever" },
+      { icon: "AppStoreIconDual", action: "Review on App Store", reward: "100 AI Credits" },
+      { icon: "RedditIconDual", action: "Recommend on Reddit", reward: "250 Reward Points" },
+      { icon: "Video02IconDual", action: "Record Video Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: "SpotlightIconDual", action: "Get Featured in Spotlight", reward: "25% Discount — Forever" },
     ],
   },
   Creators: {
     Acquire: [
-      { icon: "UserMultiple02Icon", action: "Refer 3 Colleagues", reward: "Each Gets 1 Month Free" },
-      { icon: "Share07Icon", action: "Share Resource with Team", reward: "50% Off Next Workshop" },
-      { icon: "Linkedin01Icon", action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
-      { icon: "NewTwitterIcon", action: "Repost with Caption", reward: "Unlock Swipe File Library" },
+      { icon: "UserMultiple02IconDual", action: "Refer 3 Colleagues", reward: "Each Gets 1 Month Free" },
+      { icon: "Share07IconDual", action: "Share Resource with Team", reward: "50% Off Next Workshop" },
+      { icon: "Linkedin01IconDual", action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
+      { icon: "NewTwitterIconDual", action: "Repost with Caption", reward: "Unlock Swipe File Library" },
     ],
     Activate: [
-      { icon: "UserListIcon", action: "Complete Your Profile", reward: "Unlock Starter Resource Pack" },
-      { icon: "Upload03Icon", action: "Follow Our Socials", reward: "Access to Partner Perks" },
-      { icon: "RepeatIcon", action: "Maintain 3-Day Streak", reward: "30% Off Annual Upgrade" },
-      { icon: "SlackIcon", action: "Introduce Yourself in Community", reward: "Unlock Member Directory" },
+      { icon: "UserListIconDual", action: "Complete Your Profile", reward: "Unlock Starter Resource Pack" },
+      { icon: "Upload03IconDual", action: "Follow Our Socials", reward: "Access to Partner Perks" },
+      { icon: "RepeatIconDual", action: "Maintain 3-Day Streak", reward: "30% Off Annual Upgrade" },
+      { icon: "SlackIconDual", action: "Introduce Yourself in Community", reward: "Unlock Member Directory" },
     ],
     Engage: [
-      { icon: "AiIdeaIcon", action: "Submit a Topic Idea", reward: "Co-create Content With Us" },
-      { icon: "Task01Icon", action: "Complete a Survey", reward: "$10 Amazon Gift Card" },
-      { icon: "SlackIcon", action: "Become Top Supporter", reward: "Free Seat at Live Cohort" },
-      { icon: "ZoomIcon", action: "Attend Live AMA", reward: "50% Off Mentor Session" },
+      { icon: "AiIdeaIconDual", action: "Submit a Topic Idea", reward: "Co-create Content With Us" },
+      { icon: "Task01IconDual", action: "Complete a Survey", reward: "$10 Amazon Gift Card" },
+      { icon: "SlackIconDual", action: "Become Top Supporter", reward: "Free Seat at Live Cohort" },
+      { icon: "ZoomIconDual", action: "Attend Live AMA", reward: "50% Off Mentor Session" },
     ],
     Advocate: [
-      { icon: "StarSquareIcon", action: "Write Public Testimonial", reward: "$50 Amazon Gift Card" },
-      { icon: "RedditIcon", action: "Recommend on Reddit", reward: "200 Wallet Points" },
-      { icon: "NewTwitterIcon", action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
-      { icon: "SpotlightIcon", action: "Get Featured in Spotlight", reward: "Free Merchandise" },
+      { icon: "StarSquareIconDual", action: "Write Public Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: "RedditIconDual", action: "Recommend on Reddit", reward: "200 Wallet Points" },
+      { icon: "NewTwitterIconDual", action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
+      { icon: "SpotlightIconDual", action: "Get Featured in Spotlight", reward: "Free Merchandise" },
     ],
   },
 };
@@ -280,37 +280,41 @@ export default function Hero() {
   }, [activeCategory]);
 
   return (
-    <section className="pt-10 sm:pt-14 pb-12 bg-background">
+    <section className="pt-20 sm:pt-32 pb-10 sm:pb-20 bg-background">
       <div className="mx-auto max-w-6xl px-5 sm:px-12 lg:px-14">
         {/* Headline */}
-        <div className="text-center mb-6">
-          <p className="label font-semibold text-gradient-blue tracking-wider mb-3">
-            USER-LED GROWTH PLATFORM
-          </p>
-          <h1 className="h1 tracking-tight text-foreground mb-3 lg:whitespace-nowrap">
-            Turn your users into your growth engine
-          </h1>
-          <p className="h3 font-normal text-muted leading-relaxed mb-5 max-w-3xl mx-auto">
-            Incentivize every user action that helps you grow – referrals, reviews, feedback, and <br className="hidden lg:inline" />more – with reward programs built into your product and managed from one place.
-          </p>
-          <div className="flex items-center justify-center gap-4">
-            <a
-              href="https://app.rewardbase.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
-            >
-              Start for Free
-            </a>
-            <button
-              type="button"
-              data-cal-namespace="30min"
-              data-cal-link="cebe-fyi/30min"
-              data-cal-config='{"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
-              className="inline-flex items-center justify-center rounded-xl border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
-            >
-              Book a Demo
-            </button>
+        <div className="mb-20 sm:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-start">
+          <div className="text-left">
+            <p className="label font-semibold text-gradient-blue tracking-wider mb-3">
+              <span className="mr-1">|</span> UNLOCK USER-LED GROWTH
+            </p>
+            <h1 className="h1 tracking-tight text-foreground">
+              Turn your users into your growth engine
+            </h1>
+          </div>
+          <div className="text-left lg:pt-11">
+            <p className="h3 font-normal text-muted leading-relaxed mb-4">
+              Incentivize every user action that helps you grow – referrals, reviews, feedback, and more – with reward programs built into your product and managed from one place.
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://app.rewardbase.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-xl bg-foreground text-white text-[15px] font-medium px-4 py-2 hover:bg-foreground/90 transition-colors"
+              >
+                Start for Free
+              </a>
+              <button
+                type="button"
+                data-cal-namespace="30min"
+                data-cal-link="cebe-fyi/30min"
+                data-cal-config='{"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":"dark"}'
+                className="inline-flex items-center justify-center rounded-xl border border-border text-foreground text-[15px] font-medium px-4 py-2 hover:bg-card transition-colors"
+              >
+                Book a Demo
+              </button>
+            </div>
           </div>
         </div>
 
