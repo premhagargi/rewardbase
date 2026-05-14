@@ -35,7 +35,7 @@ export default function CTA() {
             <h2 className="component-title tracking-tight text-white leading-tight mb-3 whitespace-nowrap">
               Give your users a way to support you
             </h2>
-            <p className="component-subtext !text-white leading-relaxed mb-6" style={{ color: "#ffffff" }}>
+            <p className="component-description !text-white leading-relaxed mb-6" style={{ color: "#ffffff" }}>
               Don&apos;t leave user-led growth to chance. Give users a reason
               
               to <br />support you through Reward Programs &ndash; and turn them
