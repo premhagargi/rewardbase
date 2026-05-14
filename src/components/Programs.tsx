@@ -56,7 +56,7 @@ export default function Programs() {
             Turn your goals into programs that guide user actions
           </h2>
           <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
-            Rewardbase gives you the building blocks to run reward programs for every stage of growth and user lifecycle — and turn user actions into a repeatable growth engine.
+            Rewardbase gives you the building blocks to run reward programs for every stage of growth and user lifecycle and turn user actions into a repeatable growth engine.
           </p>
         </div>
 

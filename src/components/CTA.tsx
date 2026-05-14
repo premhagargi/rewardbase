@@ -37,8 +37,8 @@ export default function CTA() {
             </h2>
             <p className="component-subtext !text-white leading-relaxed mb-6" style={{ color: "#ffffff" }}>
               Don&apos;t leave user-led growth to chance. Give users a reason
-              <br />
-              to support you through Reward Programs &mdash; and turn them
+              
+              to <br />support you through Reward Programs &ndash; and turn them
               <br />
               into your growth engine.
             </p>
