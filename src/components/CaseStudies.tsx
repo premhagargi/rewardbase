@@ -38,7 +38,7 @@ function BrandLogo({ brand }: { brand: string; color: string }) {
 export default function CaseStudies() {
   return (
     <section className="py-10 sm:py-20 bg-card/50">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
@@ -54,7 +54,7 @@ export default function CaseStudies() {
           >
             Proven playbook used by <br/>the best growth teams
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-description text-muted leading-relaxed lg:leading-[25px]">
             RewardBase turns proven user-driven growth playbooks <br />into systems you can use to drive scalable, repeatable growth.
           </p>
         </div>

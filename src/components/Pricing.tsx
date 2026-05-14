@@ -42,7 +42,7 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="py-10 sm:py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
@@ -60,7 +60,7 @@ export default function Pricing() {
             <br />
             Pay as you grow
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto component-subtext text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto component-description text-muted leading-relaxed lg:leading-[25px]">
             RewardBase pricing is based on the value it delivers. <br />You pay as more users actively participate in your <br />programs, with 25 participants free every month.
           </p>
         </div>

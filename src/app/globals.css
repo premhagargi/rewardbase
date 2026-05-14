@@ -74,6 +74,13 @@ body {
   color: var(--color-muted);
 }
 
+.component-description{
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
 .card-title{
   font-size: 14px;
   font-weight: 650;
@@ -135,6 +142,9 @@ body {
   }
   .component-subtext{
     font-size: 14.5px;
+  }
+  .component-description{
+    font-size: 15px;
   }
   .footer-link{
     font-size: 14.5px;

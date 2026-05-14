@@ -128,7 +128,7 @@ function RewardWidget() {
 export default function ProductDemo() {
   return (
     <section id="widget" className="py-10 sm:py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
@@ -144,7 +144,7 @@ export default function ProductDemo() {
           >
             Run reward programs where your users already are
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-description text-muted leading-relaxed lg:leading-[25px]">
 Add RewardBase to your app or website – customize to your brand, auto-identify users. No redirects, no logins – just a seamless in-product experience.</p>
         </div>
 

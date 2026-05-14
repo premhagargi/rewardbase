@@ -229,80 +229,11 @@ export default function Hero() {
     };
   }, []);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const el = scrollerRef.current;
-    if (!el) return;
-    const isMobile = () => window.innerWidth < 640;
-    if (!isMobile()) return;
-
-    let interval: ReturnType<typeof setInterval> | null = null;
-    let isVisible = false;
-    let isTouching = false;
-
-    const start = () => {
-      if (interval) return;
-      if (!isVisible || isTouching) return;
-      interval = setInterval(() => {
-        if (!isMobile()) return;
-        const step = el.clientWidth + 20;
-        const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
-        if (atEnd) {
-          el.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          el.scrollBy({ left: step, behavior: "smooth" });
-        }
-      }, 1800);
-    };
-    const stop = () => {
-      if (interval) {
-        clearInterval(interval);
-        interval = null;
-      }
-    };
-
-    const onTouchStart = () => {
-      isTouching = true;
-      stop();
-    };
-    const onTouchEnd = () => {
-      isTouching = false;
-      start();
-    };
-    el.addEventListener("touchstart", onTouchStart, { passive: true });
-    el.addEventListener("touchend", onTouchEnd, { passive: true });
-    el.addEventListener("touchcancel", onTouchEnd, { passive: true });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.95) {
-            isVisible = true;
-            start();
-          } else {
-            isVisible = false;
-            stop();
-          }
-        }
-      },
-      { threshold: [0, 0.95, 1] }
-    );
-    observer.observe(el);
-
-    return () => {
-      stop();
-      observer.disconnect();
-      el.removeEventListener("touchstart", onTouchStart);
-      el.removeEventListener("touchend", onTouchEnd);
-      el.removeEventListener("touchcancel", onTouchEnd);
-    };
-  }, [activeCategory]);
-
   return (
     <section className="pt-20 sm:pt-32 pb-10 sm:pb-20 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-14">
         {/* Headline */}
-        <div className="mb-20 sm:mb-24 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 items-start">
+        <div className="mb-10 sm:mb-12 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 items-start">
           <div className="text-left">
             <p className="label font-semibold text-gradient-blue tracking-wider mb-5 sm:mb-3">
               <span className="mr-1">|</span> UNLOCK USER-LED GROWTH
@@ -337,7 +268,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
         </div>
 
         {/* Category Tabs + Carousel Arrows */}
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-10 sm:mb-12">
           <div className="inline-flex items-center rounded-full">
             {categories.map((cat, i) => (
               <button
@@ -387,7 +318,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative -mx-7 sm:mx-0">
+        <div className="relative -mx-3 sm:mx-0">
           <div
             ref={scrollerRef}
             className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-y [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"

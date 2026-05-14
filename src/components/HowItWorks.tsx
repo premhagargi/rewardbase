@@ -25,7 +25,7 @@
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-10 sm:py-20 bg-background">
-      <div className="mx-auto max-w-6xl px-10 sm:px-12 lg:px-14">
+      <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-14">
         {/* Section label */}
         <div className="mb-4">
           <span className="inline-flex items-center gap-3 label font-semibold text-gradient-blue uppercase tracking-wider">
@@ -41,7 +41,7 @@ export default function HowItWorks() {
           >
             Launch your reward program <br />in 3 simple steps
           </h2>
-          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
+          <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-description text-muted leading-relaxed lg:leading-[25px]">
             Get started with a simple setup and go live in minutes, then optimize and scale your reward programs into a reliable growth engine.
           </p>
         </div>
