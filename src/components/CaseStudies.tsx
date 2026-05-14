@@ -52,7 +52,7 @@ export default function CaseStudies() {
           <h2
             className="lg:w-1/2 component-title tracking-tight text-foreground leading-tight"
           >
-            Top growth teams don’t leave user-led growth to chance.
+            Proven playbook used by <br/>the best growth teams
           </h2>
           <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-subtext text-muted leading-relaxed lg:leading-[25px]">
             RewardBase turns proven user-driven growth playbooks <br />into systems you can use to drive scalable, repeatable growth.
