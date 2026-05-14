@@ -46,7 +46,7 @@ body {
 /* Mobile-first type scale. Desktop overrides at min-width: 640px below. */
 .h1{
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 650;
   line-height: 1.1;
 }
 
