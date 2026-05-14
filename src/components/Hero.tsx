@@ -294,8 +294,7 @@ export default function Hero() {
           </div>
           <div className="text-left lg:pt-11">
             <p className="h3 sm:text-[16px] font-normal text-muted leading-relaxed mb-3 sm:mb-4">
-              Incentivize every user action that helps you grow – referrals, reviews, feedback, and more – with reward programs built into your product and managed from one place.
-            </p>
+RewardBase helps you run reward programs that incentivize user actions that help you grow — referrals, reviews, feedback, and more. Natively inside your product. Seamlessly managed.            </p>
             <div className="flex items-center gap-4">
               <a
                 href="https://app.rewardbase.app/"
