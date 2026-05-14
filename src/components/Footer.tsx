@@ -125,8 +125,8 @@
 
       {/* Bottom bar */}
     <div className="border-t border-border">
-<div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-12 lg:px-14">
-  <p className="text-xs text-muted text-right">
+<div className="mx-auto flex flex-col items-center gap-2 sm:flex-row sm:items-center sm:justify-between max-w-6xl px-5 py-5 sm:px-12 lg:px-14">
+  <p className="text-xs text-muted text-center sm:text-right">
     Made with ❤️ and ☕️ by{" "}
     <a
       href="https://x.com/cebe_fyi"
@@ -138,7 +138,7 @@
     </a>
   </p>
 
-  <p className="text-xs text-muted text-right">
+  <p className="text-xs text-muted text-center sm:text-right">
     &copy; {new Date().getFullYear()} Rewardbase. All rights reserved.
   </p>
 </div>

@@ -61,7 +61,7 @@ export default function Pricing() {
             Pay as you grow
           </h2>
           <p className="lg:w-2/5 lg:ml-auto component-description text-muted leading-relaxed lg:leading-[25px]">
-            RewardBase pricing is based on the value it delivers. <br />You pay as more users actively participate in your <br />programs, with 25 participants free every month.
+            RewardBase pricing is based on the value it delivers. <br className="hidden lg:inline"/>You pay as more users actively participate in your <br className="hidden lg:inline"/>programs, with 25 participants free every month.
           </p>
         </div>
 
