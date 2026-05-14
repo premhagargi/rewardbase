@@ -178,7 +178,7 @@ function RewardRow({ reward }: { reward: Reward }) {
         <RewardIcon reward={reward} />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="reward-row-action font-medium text-foreground">
+        <p className="reward-row-action font-semibold text-foreground">
           {reward.action}
         </p>
         <p className="reward-row-text text-muted mt-0.5">{reward.reward}</p>
