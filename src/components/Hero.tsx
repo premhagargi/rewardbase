@@ -240,7 +240,7 @@ export default function Hero() {
     <section className="pt-20 sm:pt-32 pb-10 sm:pb-20 bg-background">
       <div className="mx-auto max-w-6xl px-6 sm:px-12 lg:px-14">
         {/* Headline */}
-        <div className="mb-10 sm:mb-12 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10 items-start">
+        <div className="mb-16 sm:mb-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           <div className="text-left">
             <p className="label font-semibold text-gradient-blue tracking-wider mb-5 sm:mb-3">
               <span className="mr-1">|</span> UNLOCK USER-LED GROWTH
@@ -249,7 +249,7 @@ export default function Hero() {
               Turn your users into your growth engine
             </h1>
           </div>
-          <div className="text-left lg:pt-11">
+          <div className="text-left lg:pt-12 lg:pl-8">
             <p className="component-description font-normal text-muted leading-relaxed mb-3 sm:mb-4">
 RewardBase helps you run reward programs that incentivize user actions that help you grow – referrals, reviews, feedback, and more. Natively inside your product. Seamlessly managed.            </p>
             <div className="flex items-center gap-4">
@@ -275,7 +275,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
         </div>
 
         {/* Category Tabs + Carousel Arrows */}
-        <div className="flex items-center justify-between mb-10 sm:mb-12">
+        <div className="flex items-center justify-between mb-3 sm:mb-4">
           <div className="inline-flex items-center rounded-full">
             {categories.map((cat, i) => (
               <button
