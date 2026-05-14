@@ -55,11 +55,11 @@ export default function CaseStudies() {
             Proven playbook used by <br/>the best growth teams
           </h2>
           <p className="lg:w-2/5 lg:ml-auto lg:mt-2 component-description text-muted leading-relaxed lg:leading-[25px]">
-            RewardBase turns proven user-driven growth playbooks <br />into systems you can use to drive scalable, repeatable growth.
+            RewardBase turns proven user-driven growth playbooks <br className="hidden lg:inline"/>into systems you can use to drive scalable, repeatable growth.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cases.map((item) => (
             <div
               key={item.brand}
