@@ -38,12 +38,7 @@ export default function Pricing() {
 
   const tier = PRICING_TIERS[tierIndex];
   const percent = (tierIndex / SLIDER_MAX) * 100;
-  const t = 0.3 + 0.7 * (percent / 100);
-  const r = Math.round(255 + (59 - 255) * t);
-  const g = Math.round(255 + (130 - 255) * t);
-  const b = Math.round(255 + (246 - 255) * t);
-  const fillEnd = `rgb(${r}, ${g}, ${b})`;
-  const trackBackground = `linear-gradient(to right, #dbeafe 0%, ${fillEnd} ${percent}%, #e5e7eb ${percent}%, #e5e7eb 100%)`;
+  const trackBackground = `linear-gradient(to right, #B8DEF0 0%, #0093D2 ${percent}%, #e5e7eb ${percent}%, #e5e7eb 100%)`;
 
   return (
     <section id="pricing" className="py-10 sm:py-20 bg-background">
@@ -93,7 +88,7 @@ export default function Pricing() {
           </div>
 
           {/* Middle — Pro card */}
-          <div className="rounded-2xl border-2 border-[#0093D2] bg-background p-6 flex flex-col">
+          <div className="rounded-2xl border-2 border-[rgba(0,147,210,0.6)] bg-background p-6 flex flex-col">
             <h3 className="h3 font-semibold text-foreground mb-1.5">Pro</h3>
             <p className="component-subtext mb-5 leading-relaxed">
               For teams ready to drive consistent growth through user-driven actions.

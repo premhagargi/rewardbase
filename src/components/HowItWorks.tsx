@@ -3,21 +3,21 @@
     number: 1,
     title: "Create programs",
     description:
-      "Use templates to create programs aligned with your business goals and user actions.",
+      "Use templates to create programs aligned with your business goals and user behavior.",
     image: "/How_it_works-1.webp",
   },
   {
     number: 2,
     title: "Configure Rewards",
     description:
-      "Set up automated reward delivery using webhooks or discount code integrations.",
+      "Set up automated reward delivery using webhooks or discount code integrations or simply deliver rewards manually.",
     image: "/How_it_works-2.webp",
   },
   {
     number: 3,
     title: "Add widget",
     description:
-      "Add script to your site or app, configure widget trigger, and set up user identification.",
+      "Add script to your site or app, configure widget trigger, and set up user identification. And you're live!",
     image: "/How_it_works-3.webp",
   },
 ];

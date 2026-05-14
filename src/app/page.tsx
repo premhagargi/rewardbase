@@ -24,7 +24,6 @@ export default function Home() {
         <Programs />
         <Rewards />
         <HowItWorks />
-        <Walkthrough />
         <CaseStudies />
         <Pricing />
         <FAQ />

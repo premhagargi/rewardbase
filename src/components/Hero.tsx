@@ -293,7 +293,7 @@ export default function Hero() {
             </h1>
           </div>
           <div className="text-left lg:pt-11">
-            <p className="h3 font-normal text-muted leading-relaxed mb-3 sm:mb-4">
+            <p className="h3 sm:text-[16px] font-normal text-muted leading-relaxed mb-3 sm:mb-4">
               Incentivize every user action that helps you grow – referrals, reviews, feedback, and more – with reward programs built into your product and managed from one place.
             </p>
             <div className="flex items-center gap-4">
