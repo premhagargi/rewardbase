@@ -243,7 +243,7 @@ export default function Hero() {
             </h1>
           </div>
           <div className="text-left lg:pt-11">
-            <p className="h3 sm:!text-[16px] font-normal text-muted leading-relaxed mb-3 sm:mb-4">
+            <p className="component-description font-normal text-muted leading-relaxed mb-3 sm:mb-4">
 RewardBase helps you run reward programs that incentivize user actions that help you grow – referrals, reviews, feedback, and more. Natively inside your product. Seamlessly managed.            </p>
             <div className="flex items-center gap-4">
               <a

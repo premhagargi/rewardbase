@@ -45,7 +45,7 @@ export default function ProblemSolution() {
             >
               Your users are the most powerful growth drivers - yet the most overlooked
             </h2>
-            <div className="space-y-4 component-subtext text-muted leading-relaxed">
+            <div className="space-y-4 text-[15px] text-muted leading-relaxed">
               <p>
                 People who love your product naturally talk about you, recommend you,<br />
                 and support you in ways no other channel can.
