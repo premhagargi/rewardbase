@@ -65,7 +65,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {/* Left — free trial info (no card) */}
           <div className="flex flex-col pt-6 pr-6">
             <h3 className="h3 font-semibold text-foreground mb-1.5">
