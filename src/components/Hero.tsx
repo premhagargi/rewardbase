@@ -58,7 +58,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { brand: "g2", action: "Review us on G2", reward: "$25 Starbucks Giftcard" },
       { icon: "RedditIconDual", action: "Recommend on Reddit", reward: "250 Reward Points" },
       { brand: "ph", action: "Upvote on Product Hunt", reward: "50 AI Credits" },
-      { icon: "NewTwitterRectangleIconDual", action: "Write a Testimonial", reward: "$100 off Invoice" },
+      { icon: "StarSquareIconDual", action: "Write a Testimonial", reward: "$100 off Invoice" },
     ],
   },
   B2C: {
@@ -69,7 +69,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { icon: "InstagramIconDual", action: "Repost as Instagram Story", reward: "100 Reward Points" },
     ],
     Activate: [
-      { icon: "UserListIconDual", action: "Complete User Profile", reward: "50 Welcome Credits" },
+      { icon: "UserListIconDual", action: "Complete Your Profile", reward: "50 Welcome Credits" },
       { icon: "CheckmarkCircle02IconDual", action: "Complete First Task", reward: "7-Day Premium Unlock" },
       { icon: "CalendarFoldIconDual", action: "Reach 7-Day Streak", reward: "Get a Paid Add-on" },
       { icon: "NotificationSquareIconDual", action: "Enable Notifications", reward: "100 AI Credits" },
@@ -92,7 +92,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { icon: "UserMultiple02IconDual", action: "Refer 3 Colleagues", reward: "Each Gets 1 Month Free" },
       { icon: "Share07IconDual", action: "Share Resource with Team", reward: "50% Off Next Workshop" },
       { icon: "Linkedin01IconDual", action: "Post a Snippet on LinkedIn", reward: "100 Wallet Points" },
-      { icon: "NewTwitterIconDual", action: "Repost with Caption", reward: "Unlock Swipe File Library" },
+      { icon: "NewTwitterRectangleIconDual", action: "Repost with Caption", reward: "Unlock Swipe File Library" },
     ],
     Activate: [
       { icon: "UserListIconDual", action: "Complete Your Profile", reward: "Unlock Starter Resource Pack" },
@@ -107,9 +107,9 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { icon: "ZoomIconDual", action: "Attend Live AMA", reward: "50% Off Mentor Session" },
     ],
     Advocate: [
-      { icon: "StarSquareIconDual", action: "Write Public Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: "StarSquareIconDual", action: "Write a Testimonial", reward: "$50 Amazon Gift Card" },
       { icon: "RedditIconDual", action: "Recommend on Reddit", reward: "200 Wallet Points" },
-      { icon: "NewTwitterIconDual", action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
+      { icon: "NewTwitterRectangleIconDual", action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
       { icon: "SpotlightIconDual", action: "Get Featured in Spotlight", reward: "Free Merchandise" },
     ],
   },
