@@ -58,7 +58,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { brand: "g2", action: "Review us on G2", reward: "$25 Starbucks Giftcard" },
       { icon: "RedditIconDual", action: "Recommend on Reddit", reward: "250 Reward Points" },
       { brand: "ph", action: "Upvote on Product Hunt", reward: "50 AI Credits" },
-      { icon: "StarSquareIconDual", action: "Write a Testimonial", reward: "$100 off Invoice" },
+      { icon: "Starsquaredual", action: "Write a Testimonial", reward: "$100 off Invoice" },
     ],
   },
   B2C: {
@@ -107,7 +107,7 @@ const data: Record<Category, Record<Stage, Reward[]>> = {
       { icon: "ZoomIconDual", action: "Attend Live AMA", reward: "50% Off Mentor Session" },
     ],
     Advocate: [
-      { icon: "StarSquareIconDual", action: "Write a Testimonial", reward: "$50 Amazon Gift Card" },
+      { icon: "Starsquaredual", action: "Write a Testimonial", reward: "$50 Amazon Gift Card" },
       { icon: "RedditIconDual", action: "Recommend on Reddit", reward: "200 Wallet Points" },
       { icon: "NewTwitterRectangleIconDual", action: "Share Your Stack on X", reward: "Unlock Pro Content Vault" },
       { icon: "SpotlightIconDual", action: "Get Featured in Spotlight", reward: "Free Merchandise" },
