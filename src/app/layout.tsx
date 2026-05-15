@@ -10,7 +10,7 @@ const inter = Inter({
 
 const siteName = "RewardBase";
 const siteUrl = "https://rewardbase.app";
-const siteTitle = "RewardBase | Reward Programs That Turn Users Into Growth";
+const siteTitle = "RewardBase | Reward Programs for User-Driven Growth";
 const siteDescription =
   "Create reward programs that incentivize users for referrals, reviews, feedback, and more – Turn everyday user actions into a repeatable growth engine.";
 const ogImage = `${siteUrl}/metadata/og-image.png`;
