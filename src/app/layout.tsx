@@ -13,7 +13,7 @@ const siteUrl = "https://rewardbase.app";
 const siteTitle = "RewardBase | Reward Programs That Turn Users Into Growth";
 const siteDescription =
   "Create reward programs that incentivize users for referrals, reviews, feedback, and more – Turn everyday user actions into a repeatable growth engine.";
-const ogImage = "/metadata/og-image.png";
+const ogImage = `${siteUrl}/metadata/og-image.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
