@@ -8,29 +8,39 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteTitle = "RewardBase — Turn your users into your growth engine";
+const siteName = "RewardBase";
+const siteTitle = "RewardBase | Reward Programs That Turn Users Into Growth";
 const siteDescription =
-  "Incentivize users to share, review, and refer with automated reward programs. Start free, live in 3 minutes.";
-const ogImage = "/assets/RewardBase Icon (White).png";
+  "Create reward programs that incentivize users for referrals, reviews, feedback, and more – Turn everyday user actions into a repeatable growth engine.";
+const ogImage = "/metadata/og-image.png";
 
 export const metadata: Metadata = {
   title: siteTitle,
   description: siteDescription,
+  applicationName: siteName,
+  icons: {
+    icon: [
+      { url: "/metadata/icon-gradient.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/metadata/icon-gradient.svg",
+    apple: "/metadata/icon-gradient.svg",
+  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
+    siteName,
     type: "website",
     images: [
       {
         url: ogImage,
-        width: 360,
-        height: 360,
-        alt: "RewardBase",
+        width: 1200,
+        height: 674,
+        alt: siteName,
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
     images: [ogImage],

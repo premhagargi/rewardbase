@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; img=Image.open\\('public/Webapp.webp'\\); print\\('Webapp:', img.size\\); img=Image.open\\('public/Widget.webp'\\); print\\('Widget:', img.size\\)\")",
+      "Bash(powershell -Command 'Add-Type -AssemblyName System.Drawing; $img=[System.Drawing.Image]::FromFile\\(\\(Resolve-Path '\\\\''public/Webapp.webp'\\\\''\\)\\); Write-Host '\\\\''Webapp:'\\\\'' $img.Width '\\\\''x'\\\\'' $img.Height; $img.Dispose\\(\\); $img=[System.Drawing.Image]::FromFile\\(\\(Resolve-Path '\\\\''public/Widget.webp'\\\\''\\)\\); Write-Host '\\\\''Widget:'\\\\'' $img.Width '\\\\''x'\\\\'' $img.Height; $img.Dispose\\(\\)')"
+    ]
+  }
+}
