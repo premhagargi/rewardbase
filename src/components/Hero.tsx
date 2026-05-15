@@ -336,7 +336,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
                 transform:
                   scrollPos === 0
                     ? "translateX(0)"
-                    : `translateX(calc(-1 * (max(40px, (100vw - 1152px)/2 + 48px) - 16px) - ${(scrollPos - 1) * 325}px))`,
+                    : `translateX(calc(-1 * (max(16px, (100vw - 1152px)/2 + 24px) - 16px) - ${(scrollPos - 1) * 325}px))`,
               }}
             >
               {stages.map((stage) => (
@@ -346,16 +346,16 @@ RewardBase helps you run reward programs that incentivize user actions that help
           </div>
 
           {showLeftFade && (
-            <div className="sm:hidden pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="sm:hidden pointer-events-none absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-background to-transparent z-10" />
           )}
           {showRightFade && (
-            <div className="sm:hidden pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="sm:hidden pointer-events-none absolute inset-y-0 right-0 w-3 bg-gradient-to-l from-background to-transparent z-10" />
           )}
           {(scrollPos > 0 || showLeftFade) && (
-            <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
           )}
           {(scrollPos < 1 && showRightFade) && (
-            <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-16 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-16 w-24 bg-gradient-to-l from-background to-transparent z-10" />
           )}
         </div>
       </div>
