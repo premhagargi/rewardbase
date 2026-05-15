@@ -47,16 +47,16 @@ export default function ProblemSolution() {
             </h2>
             <div className="space-y-4 text-[15px] text-muted leading-relaxed">
               <p>
-                People who love your product naturally talk about you, recommend you,<br />
+                People who love your product naturally talk about you, recommend you,<br className="hidden lg:inline" />
                 and support you in ways no other channel can.
               </p>
               <p>
-                But most teams leave this to chance, with no system to nurture and scale<br />
+                But most teams leave this to chance, with no system to nurture and scale<br className="hidden lg:inline" />
                 these behaviors – leaving valuable growth potential untapped.
               </p>
               <p>
-                RewardBase changes that. It helps you create structured programs that<br />
-                activate and nurture these behaviors, turning them into a repeatable<br />
+                RewardBase changes that. It helps you create structured programs that<br className="hidden lg:inline" />
+                activate and nurture these behaviors, turning them into a repeatable<br className="hidden lg:inline" />
                 growth engine.
               </p>
             </div>

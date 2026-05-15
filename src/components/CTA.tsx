@@ -37,7 +37,7 @@ export default function CTA() {
             </h2>
             <p className="component-description !text-white leading-relaxed mb-6" style={{ color: "#ffffff" }}>
               Don&apos;t leave user-led growth to chance. Give users a reason
-              to support you<br className="hidden lg:inline"/> through Reward Programs &ndash; and turn them
+              to support you <br className="hidden lg:inline"/> through Reward Programs &ndash; and turn them
               into your growth engine.
             </p>
 
