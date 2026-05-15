@@ -328,7 +328,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
         <div className="relative -mx-3 sm:mx-0 sm:w-screen sm:left-1/2 sm:right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:pr-16">
           <div
             ref={scrollerRef}
-            className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-y [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <div
               className="flex gap-5 transition-transform duration-500 ease-out pb-4 sm:pl-14 lg:pl-[max(64px,calc((100vw-1152px)/2+64px))]"
