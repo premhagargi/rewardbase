@@ -1,0 +1,22 @@
+# RewardBase
+
+> RewardBase helps teams create reward programs that incentivize users for referrals, reviews, feedback, and more — turning everyday user actions into a repeatable growth engine.
+
+RewardBase is a platform for designing and running reward programs. Customers configure programs that track user actions (referrals, reviews, feedback submissions, shares, and other custom events), validate participation, and distribute rewards. The product is aimed at growth, marketing, and product teams who want user-driven acquisition and retention loops without building tracking, attribution, and reward fulfillment in-house.
+
+## Core pages
+
+- [Home](https://rewardbase.app): Product overview, how it works, and use cases for reward programs.
+- [Privacy Policy](https://rewardbase.app/privacy): How RewardBase collects, uses, and protects customer and end-user data.
+- [Terms of Service](https://rewardbase.app/terms): Terms governing use of the RewardBase platform.
+
+## What RewardBase does
+
+- Reward programs: Build referral, review, feedback, and custom-action programs that pay out rewards based on validated user behavior.
+- Tracking and attribution: Capture user actions and attribute them to the right participant for accurate reward fulfillment.
+- Validation: Detect and prevent fraud, abuse, and invalid participation before rewards are issued.
+- Integrations: Embed via scripts, widgets, or APIs into existing customer products.
+
+## Contact
+
+- Email: team@rewardbase.app
