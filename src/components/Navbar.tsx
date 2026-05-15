@@ -21,7 +21,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
-            src="/assets/RewardBase%20Logo%20(Gradient%20-%20Blacktext).svg"
+            src="/assets/RewardBase_Logo.svg"
             alt="RewardBase"
             className="h-8 md:h-10 w-auto"
           />

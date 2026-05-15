@@ -7,7 +7,7 @@
           <div className="lg:max-w-sm">
             <a href="#" className="flex items-center mb-4">
               <img
-                src="/assets/RewardBase%20Logo%20(Gradient%20-%20Blacktext).svg"
+                src="/assets/RewardBase_Logo.svg"
                 alt="RewardBase"
                 className="h-9 w-auto"
               />

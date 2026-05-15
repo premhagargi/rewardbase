@@ -9,18 +9,21 @@ const inter = Inter({
 });
 
 const siteName = "RewardBase";
+const siteUrl = "https://rewardbase.app";
 const siteTitle = "RewardBase | Reward Programs That Turn Users Into Growth";
 const siteDescription =
   "Create reward programs that incentivize users for referrals, reviews, feedback, and more – Turn everyday user actions into a repeatable growth engine.";
 const ogImage = "/metadata/og-image.png";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: siteTitle,
   description: siteDescription,
   applicationName: siteName,
   icons: {
     icon: [
-      { url: "/metadata/icon-gradient.svg", type: "image/svg+xml" },
+      { url: "/metadata/icon-gradient.svg", type: "image/svg+xml", media: "(prefers-color-scheme: light)" },
+      { url: "/metadata/icon-white.svg", type: "image/svg+xml", media: "(prefers-color-scheme: dark)" },
     ],
     shortcut: "/metadata/icon-gradient.svg",
     apple: "/metadata/icon-gradient.svg",
@@ -55,6 +58,30 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: siteName,
+              alternateName: siteName,
+              url: siteUrl,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: siteName,
+              url: siteUrl,
+              logo: `${siteUrl}/assets/RewardBase_Logo.svg`,
+            }),
+          }}
+        />
         <SmoothScroll />
         {children}
       </body>

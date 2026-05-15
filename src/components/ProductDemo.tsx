@@ -25,9 +25,10 @@ Add RewardBase to your app or website – customize to your brand, auto-identify
 
         {/* Mockup container */}
         <div className="relative rounded-2xl border border-border bg-card-surface p-6 sm:p-10 lg:p-12">
-          <div className="relative max-w-4xl mx-auto">
-            {/* Webapp mockup */}
-            <div className="rounded-2xl overflow-hidden shadow-lg">
+          {/* Desktop / tablet: webapp + floating widget overlay */}
+          <div className="relative max-w-4xl mx-auto hidden sm:block">
+            {/* Webapp mockup — nudged left so widget can overlap on the right */}
+            <div className="rounded-2xl overflow-hidden shadow-lg lg:w-[92%]">
               <Image
                 src="/Webapp.webp"
                 alt="RewardBase web app mockup"
@@ -38,26 +39,27 @@ Add RewardBase to your app or website – customize to your brand, auto-identify
               />
             </div>
 
-            {/* Floating Widget phone — overlaps bottom-right corner of the webapp */}
-            <div className="absolute -right-6 -bottom-4 z-20 hidden lg:block">
+            {/* Floating Widget — overlaps right side of the webapp, vertically centered/upper */}
+            <div className="absolute right-4 lg:right-4 bottom-0 translate-y-8 z-20">
               <Image
-                src="/Widget.webp"
+                src="/Widget_(1).webp"
                 alt="RewardBase widget on mobile"
                 width={2846}
                 height={4568}
-                className="w-[240px] h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.25)]"
+                className="w-[220px] lg:w-[290px] h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.32)]"
               />
             </div>
           </div>
 
-          {/* Mobile widget — below the webapp */}
-          <div className="lg:hidden mt-6 flex justify-center">
+          {/* Mobile: phone widget only */}
+          <div className="sm:hidden flex justify-center">
             <Image
-              src="/Widget.webp"
+              src="/Widget_(1).webp"
               alt="RewardBase widget on mobile"
               width={2846}
               height={4568}
-              className="w-[220px] h-auto drop-shadow-[0_25px_50px_rgba(0,0,0,0.25)]"
+              className="w-[260px] h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.32)]"
+              priority
             />
           </div>
         </div>

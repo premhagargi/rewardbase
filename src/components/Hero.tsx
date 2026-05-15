@@ -325,15 +325,18 @@ RewardBase helps you run reward programs that incentivize user actions that help
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative -mx-3 sm:mx-0 sm:w-screen sm:left-1/2 sm:right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:pr-4">
+        <div className="relative -mx-3 sm:mx-0 sm:w-screen sm:left-1/2 sm:right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:pr-32">
           <div
             ref={scrollerRef}
             className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-y [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             <div
-              className="flex gap-5 transition-transform duration-500 ease-out pb-4 sm:pl-12 lg:pl-[max(56px,calc((100vw-1152px)/2+56px))]"
+              className="flex gap-5 transition-transform duration-500 ease-out pb-4 sm:pl-14 lg:pl-[max(64px,calc((100vw-1152px)/2+64px))]"
               style={{
-                transform: `translateX(-${scrollPos * 325}px)`,
+                transform:
+                  scrollPos === 0
+                    ? "translateX(0)"
+                    : `translateX(calc(-1 * (max(40px, (100vw - 1152px)/2 + 56px) - 16px) - ${(scrollPos - 1) * 325}px))`,
               }}
             >
               {stages.map((stage) => (
@@ -346,7 +349,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
             <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10" />
           )}
           {(scrollPos < 1 && showRightFade) && (
-            <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-4 w-12 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-32 w-12 bg-gradient-to-l from-background to-transparent z-10" />
           )}
         </div>
       </div>
