@@ -325,7 +325,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
         </div>
 
         {/* Stage Cards Carousel */}
-        <div className="relative -mx-3 sm:mx-0 sm:w-screen sm:left-1/2 sm:right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:pr-32">
+        <div className="relative -mx-3 sm:mx-0 sm:w-screen sm:left-1/2 sm:right-1/2 sm:-ml-[50vw] sm:-mr-[50vw] sm:pr-16">
           <div
             ref={scrollerRef}
             className="overflow-x-auto sm:overflow-hidden snap-x snap-mandatory sm:snap-none touch-pan-y [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -349,7 +349,7 @@ RewardBase helps you run reward programs that incentivize user actions that help
             <div className="hidden sm:block pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background to-transparent z-10" />
           )}
           {(scrollPos < 1 && showRightFade) && (
-            <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-32 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+            <div className="hidden sm:block pointer-events-none absolute inset-y-0 right-16 w-32 bg-gradient-to-l from-background to-transparent z-10" />
           )}
         </div>
       </div>
