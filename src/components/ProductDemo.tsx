@@ -30,7 +30,7 @@ Add RewardBase to your app or website – customize to your brand, auto-identify
             {/* Webapp mockup — nudged left so widget can overlap on the right */}
             <div className="rounded-2xl overflow-hidden shadow-lg lg:w-[92%]">
               <Image
-                src="/Webapp.webp"
+                src="/Screenshot.webp"
                 alt="RewardBase web app mockup"
                 width={4302}
                 height={2436}
