@@ -42,7 +42,7 @@ Add RewardBase to your app or website – customize to your brand, auto-identify
             {/* Floating Widget — overlaps right side of the webapp, vertically centered/upper */}
             <div className="absolute right-4 lg:right-4 bottom-0 translate-y-8 z-20">
               <Image
-                src="/Widget_(1).webp"
+                src="/Widget (2).webp"
                 alt="RewardBase widget on mobile"
                 width={2846}
                 height={4568}
@@ -54,7 +54,7 @@ Add RewardBase to your app or website – customize to your brand, auto-identify
           {/* Mobile: phone widget only */}
           <div className="sm:hidden flex justify-center">
             <Image
-              src="/Widget_(1).webp"
+              src="/Widget (2).webp"
               alt="RewardBase widget on mobile"
               width={2846}
               height={4568}
